@@ -1,5 +1,5 @@
 # mudlet-scripts
-Official Mudlet scripts
+
+Skrypty do Warlocka - wersja oficjalna pre-release.
 
 
-https://github.com/Talisterus/warlock-script
