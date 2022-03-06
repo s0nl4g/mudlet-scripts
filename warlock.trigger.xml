@@ -2967,17 +2967,18 @@ remember("akcja")</script>
 				<Alias isActive="yes" isFolder="no">
 					<name>roomInfo</name>
 					<script>--/roomInfo
-echo("Obszar: " .. getRoomAreaName(currentRoom.areaId) .. "(" .. currentRoom.areaId .. "), lokacji: " .. table.size(getAreaRooms(currentRoom.areaId)) .. "\n")
-echo("Nazwa lokacji: " .. getRoomName(currentRoom.id) .. "(" .. currentRoom.id .. ")\n")
+echo("Obszar: " .. getRoomAreaName(currentRoom.areaId) .. " (id: " .. currentRoom.areaId .. "), lokacji: " .. table.size(getAreaRooms(currentRoom.areaId)) .. "\n")
+echo("Nazwa lokacji: " .. getRoomName(currentRoom.id) .. " (id: " .. currentRoom.id .. ") (hash: " .. getRoomHashByID(currentRoom.id) .. ")\n")
 local x,y,z = getRoomCoordinates(currentRoom.id)
 echo("Wspolrzedne: " .. x .. ", " .. y .. ", " .. z .. "\n")
 echo("Rodzaj lokacji: " .. env[getRoomEnv(currentRoom.id) - ENV_START_NUM].type .. "\n")
 local serv = getRoomUserData(currentRoom.id, "service")
-if(serv ~= nil) then
-   serv = yajl.to_value(serv)
-   if(serv.type ~= nil) then
-		echo("Usluga na lokacji: " .. serv.type .. "\n")
-	end
+display(serv)
+if(serv ~= nil and serv ~= "") then
+  serv = yajl.to_value(serv)
+  if(serv.type ~= nil) then
+    echo("Usluga na lokacji: " .. serv.type .. "\n")
+  end
 end</script>
 					<command></command>
 					<packageName></packageName>
@@ -4165,10 +4166,15 @@ function getShiftedRoomCoordinates(fromId, komenda)
 end
 
 function updateRoomAreaData(room)
-	if(room.czas ~= nil) then
-		local roomId = getRoomIDbyHash(room.id)
-		setRoomUserData(roomId, "czas", tostring(room.czas))
-	end
+  if(room.czas ~= nil) then
+    local roomId = getRoomIDbyHash(room.id)
+    setRoomUserData(roomId, "czas", tostring(room.czas))
+    local areaId = getRoomArea(roomId)
+    if(getAreaUserData(areaId, "czas") == nil) then
+      display(room)
+      setAreaUserData(areaId, "czas", tostring(room.czas))
+    end
+  end
 end
 
 function updateNewRoom(newId, room)
@@ -4271,15 +4277,15 @@ function makeMapStubRoom(room)
 end
 
 function makeMapRoom(room)
-	local areaId = getAreaId(room.obszar)
-	local roomId = getRoomIDbyHash(room.id)
-	local prevId = getRoomIDbyHash(room.idprev)
+  local areaId = getAreaId(room.obszar)
+  local roomId = getRoomIDbyHash(room.id)
+  local prevId = getRoomIDbyHash(room.idprev)
   local prevAreaId = getRoomArea(prevId)
 
-	if(roomId == -1) then
-		roomId = createNewRoom(room, areaId)
-	end
-	connectExits(room, roomId, prevId)
+  if(roomId == -1) then
+    roomId = createNewRoom(room, areaId)
+  end
+  connectExits(room, roomId, prevId)
   if(areaId ~= prevAreaId and room.komenda[1] ~= "X" and prevAreaId ~= nil) then
     local labelId = getRoomUserData(prevId, "labelIdDo" .. areaId)
     if(labelId == nil or not table.contains(getMapLabels(prevAreaId), tonumber(labelId))) then
@@ -4290,14 +4296,14 @@ function makeMapRoom(room)
     end
   end
 
-	centerview(roomId)
-	currentRoom.id = roomId
-	currentRoom.prevId = prevId
-	currentRoom.cmd = room.komenda
+  centerview(roomId)
+  currentRoom.id = roomId
+  currentRoom.prevId = prevId
+  currentRoom.cmd = room.komenda
   currentRoom.areaId = areaId
   currentRoom.room = room
-	insertDoors(room)
-	return roomId,areaId
+  insertDoors(room)
+  return roomId,areaId
 end
 
 function connectExitStubRpl(roomId, prevRoomId, directionId, reverseDirectionId)
@@ -4346,8 +4352,8 @@ function displaySpecialExits(exits)
 	for k, v in ipairs(exits) do
 		fg(minimapExits.name, "dark_olive_green")
 		echo(minimapExits.name, " | ")
-		fg(minimapExits.name, "DarkSlateBlue")
-		echoLink(minimapExits.name, v, [[send("]] .. v .. [[")]], "Wyjscie specjalne: " .. v, true)		
+		fg(minimapExits.name, "slate_blue")
+		echoLink(minimapExits.name, v, [[send("]] .. v .. [[")]], "Wyjscie specjalne: " .. v, true)
 	end
 	if #exits &gt; 0 then
 		fg(minimapExits.name, "dark_olive_green")
@@ -4997,21 +5003,21 @@ end</script>
 						<script>--gmcp_Room_Info
 --move_living
 function gmcp_Room_Info(event)
-	--display(gmcp.Room)
-	if(gmcp.Room.Info == nil) then return end
-	if(type(gmcp.Room.Info.komenda) ~= "table") then
-		gmcp.Room.Info.komenda = {"X", "", "", 0}
-	end
+  --display(gmcp.Room)
+  if(gmcp.Room.Info == nil) then return end
+  if(type(gmcp.Room.Info.komenda) ~= "table") then
+    gmcp.Room.Info.komenda = {"X", "", "", 0}
+  end
   makeMapRoom(gmcp.Room.Info)
-	if(gmcp.Room.Area ~= nil and gmcp.Room.Area.Update ~= nil) then
-		updateRoomAreaData(gmcp.Room.Area.Update)
-		gmcp.Room.Area.Update = nil
-	end
-	drawExitsOnConsole({})
-	adjustCombatOnMove()
-	--echo("Area: " .. gmcp.Room.Info.obszar .. "\n")
-	raiseEvent("warlock.newRoom", gmcp.Room.Info.id)
-	gmcp.Room.Info = nil
+  if(gmcp.Room.Area ~= nil and gmcp.Room.Area.Update ~= nil) then
+    updateRoomAreaData(gmcp.Room.Area.Update)
+    gmcp.Room.Area.Update = nil
+  end
+  drawExitsOnConsole({})
+  adjustCombatOnMove()
+  --echo("Area: " .. gmcp.Room.Info.obszar .. "\n")
+  raiseEvent("warlock.newRoom", gmcp.Room.Info.id)
+  gmcp.Room.Info = nil
 end</script>
 						<eventHandlerList>
 							<string>gmcp.Room.Info</string>
@@ -5181,20 +5187,21 @@ end
 					<packageName></packageName>
 					<script>-- gmcp_Area_Update
 function gmcp_Area_Update()
-	if(gmcp.Room.Area.Update == nil) then return end
-	--display(gmcp.Room.Area.Update)
-	local roomId = getRoomIDbyHash(gmcp.Room.Area.Update.id)
-	if(roomId ~= -1) then
-		local czas = gmcp.Room.Area.Update.czas
-		local zapisany = getRoomUserData(roomId, "czas");
-		if(zapisany ~= tostring(czas)) then
-			local areaId = getAreaId(gmcp.Room.Area.Update.obszar)
-			echo(" * Kasuje obszar '" .. getRoomAreaName(areaId) .. "', wykryte zmiany.\n")
-			deleteArea(areaId)
-		end
-	end
-	--echo(" * rID: " .. roomId .. ", czas: " .. czas .. " vs zapisany czas: " .. zapisany .. "\n")
-	--gmcp.Room.Area.Update = nil
+  if(gmcp.Room.Area.Update == nil) then return end
+  --display(gmcp.Room.Area.Update)
+  local areaId = getAreaId(gmcp.Room.Area.Update.obszar)
+  if(areaId ~= -1) then
+    -- czas jest ustawiany w makeMapRoom.
+    -- setAreaUserData(areaId, "czas", gmcp.Room.Area.Update.czas)
+    local czas = tostring(gmcp.Room.Area.Update.czas)
+    local zapisany = getAreaUserData(areaId, "czas") or "&lt;brak&gt;"
+    if(zapisany ~= czas) then
+      --echo(" * areaId: " .. areaId .. ", czas: " .. czas .. " vs zapisany czas: " .. zapisany .. "\n")
+      local areaId = getAreaId(gmcp.Room.Area.Update.obszar)
+      echo(" * Kasuje obszar '" .. getRoomAreaName(areaId) .. "', wykryte zmiany.\n")
+      deleteArea(areaId)
+    end
+  end
 end</script>
 					<eventHandlerList>
 						<string>gmcp.Room.Area.Update</string>
@@ -5220,77 +5227,78 @@ scriptsVersion = "3.8.0"
 cecho("\n&lt;white&gt;Wpisz /help aby uzyskac pomoc.\n\n")
 
 function makeHelpLink(tekst, description)
-	selectString(tekst, 1);
-	fg("white");
-	setUnderline(true);
-	setLink([[send("?]] .. tekst .. [[")]], description);
-	resetFormat();
-	deselect()
+ selectString(tekst, 1);
+ fg("white");
+ setUnderline(true);
+ setLink([[send("?]] .. tekst .. [[")]], description);
+ resetFormat();
+ deselect()
 end
 
 function makeHelpLinksFromSeeAlso(linia)
-	local tematy = linia:gsub(" ", ""):gsub("\t", ""):split(",")
-	for i,v in pairs(tematy) do
-		makeHelpLink(v, v);
-	end
+ local tematy = linia:gsub(" ", ""):gsub("\t", ""):split(",")
+ for i,v in pairs(tematy) do
+  makeHelpLink(v, v);
+ end
 end
 
 function handleHelpCommands(eventName, cmd)
-	if(cmd:sub(1, 1) == "?") then
-		--zadanie pomocy!
-		local temat = cmd:sub(2)
-		local trigs = {}
-		if(temat == "ogolne") then
-			table.insert(trigs, tempRegexTrigger("([a-z]+)[ ]+-[ ]+([a-zA-Z]+.*)", [[
-				makeHelpLink(matches[2], matches[3]);
-			]]));
-		end
-		table.insert(trigs, tempRegexTrigger("(ZOBACZ TEZ|PATRZ TEZ|ZOBACZ TAKZE)", [[
-			tempLineTrigger(1, 1, "makeHelpLinksFromSeeAlso(line)");
-		]]));
-		local s = ""
-		for i, v in pairs(trigs) do
-			s = s .. "killTrigger(" .. v .. ");\n"
-		end
-		s = s .. [[ killTrigger(trigKoniecPomocy); ]]
-		trigKoniecPomocy = tempRegexTrigger("^(EOF|Nie ma pomocy na ten temat.)", s);
-	end	
+ if(cmd:sub(1, 1) == "?") then
+  --zadanie pomocy!
+  local temat = cmd:sub(2)
+  local trigs = {}
+  if(temat == "ogolne") then
+   table.insert(trigs, tempRegexTrigger("([a-z]+)[ ]+-[ ]+([a-zA-Z]+.*)", [[
+    makeHelpLink(matches[2], matches[3]);
+   ]]));
+  end
+  table.insert(trigs, tempRegexTrigger("(ZOBACZ TEZ|PATRZ TEZ|ZOBACZ TAKZE)", [[
+   tempLineTrigger(1, 1, "makeHelpLinksFromSeeAlso(line)");
+  ]]));
+  local s = ""
+  for i, v in pairs(trigs) do
+   s = s .. "killTrigger(" .. v .. ");\n"
+  end
+  s = s .. [[ killTrigger(trigKoniecPomocy); ]]
+  trigKoniecPomocy = tempRegexTrigger("^(EOF|Nie ma pomocy na ten temat.)", s);
+ end
 end
 
 function displayHelp()
-	echo("    Aliasy:\n")
-	echo("/version - informacja o wersji skryptow (" .. scriptsVersion .. ")\n")
-	echo("/paste &lt;komenda&gt; - wklejanie tekstu uzywajac komendy\n")
-	echo("/eval &lt;skrypt&gt; - wykonanie skryptu LUA z linii komend\n")
-	echo("/zabici - pokazanie statystyk zabitych wrogow\n")
-	echo("/drzwi (n|e|s|w|ne|...) (0|1|2|3) - dodaje drzwi w danym kierunku\n")
-	echo("/quit - wyjscie (moze psuc profil)\n")
-	echo("/kolory - pokazuje tablice nazwanych kolorow\n")
-	echo("/akcja (przeciwnik|druzyna|inni) komenda - ustawianie akcji dodatkowych (pod literka S)\n")
-	echo("\n")
-	echo("    Klawisze:\n")
-	echo("Klawiatura numeryczna:\n")
-	echo("  0..9 - chodzenie (+ctrl - przemykanie, +ctrl+alt - przemykanie z druzyna\n")
-	echo("  - - wyjscie\n")
-	echo("  + - wyjscie specjalne lub jedno z (schody, wejscie)\n")
-	echo("  * - lazik traktowy\n")
-	echo("Klawisze funkcyjne:\n")
-	echo("  F5 - kondycja\n")
-	echo("  F6 - kondycja przeciwnika\n")
-	echo("  F8 - stan\n")
-	echo("  F12- przerwanie auto-chodzika\n")
-	echo("\n")
-	echo("Obsluga mapy:\n")
-	echo("  kolko myszy - przyblizanie/oddalanie\n")
-	echo("  ALT + przycisk myszy - przesuwanie mapy\n")
-	echo("  lewy przycisk myszy - zaznaczanie lokacji (pojedynczo lub wiele naraz)\n")
-	echo("  CTRL + lewy przycisk - dodawanie/odejmowanie lokacji z zaznaczenia\n")
-	echo("  prawy przycisk myszy - menu kontekstowe do zaznaczonych wczesniej lokacji\n")
-	echo("\n")
-  echo("Okienka:\n")
-  echo("  Domyslnie okienka rozmow, mapy oraz kondycji sa zablokowane. Pod prawym klawiszem myszy\n")
-  echo("  na okienku pojawia sie menu kontekstowe gdzie mozna modyfikowac stan okienka, ukrywac, odblokowac.\n")
-  echo("  Odblokowane okienka mozna przesuwac i zmieniac ich wielkosc.\n")
+ echo("    Aliasy:\n")
+ echo("/version - informacja o wersji skryptow (" .. scriptsVersion .. ")\n")
+ echo("/paste &lt;komenda&gt; - wklejanie tekstu uzywajac komendy\n")
+ echo("/eval &lt;skrypt&gt; - wykonanie skryptu LUA z linii komend\n")
+ echo("/zabici - pokazanie statystyk zabitych wrogow\n")
+ echo("/drzwi (n|e|s|w|ne|...) (0|1|2|3) - dodaje drzwi w danym kierunku\n")
+ echo("/quit - wyjscie (moze psuc profil)\n")
+ echo("/kolory - pokazuje tablice nazwanych kolorow\n")
+ echo("/akcja (przeciwnik|druzyna|inni) komenda - ustawianie akcji dodatkowych (pod literka S)\n")
+ echo("/statsfix - usuwa zagubione statystyki\n")
+ echo("\n")
+ echo("    Klawisze:\n")
+ echo("Klawiatura numeryczna:\n")
+ echo("  0..9 - chodzenie (+ctrl - przemykanie, +ctrl+alt - przemykanie z druzyna\n")
+ echo("  - - wyjscie\n")
+ echo("  + - wyjscie specjalne lub jedno z (schody, wejscie)\n")
+ echo("  * - lazik traktowy\n")
+ echo("Klawisze funkcyjne:\n")
+ echo("  F5 - kondycja\n")
+ echo("  F6 - kondycja przeciwnika\n")
+ echo("  F8 - stan\n")
+ echo("  F12- przerwanie auto-chodzika\n")
+ echo("\n")
+ echo("Obsluga mapy:\n")
+ echo("  kolko myszy - przyblizanie/oddalanie\n")
+ echo("  ALT + przycisk myszy - przesuwanie mapy\n")
+ echo("  lewy przycisk myszy - zaznaczanie lokacji (pojedynczo lub wiele naraz)\n")
+ echo("  CTRL + lewy przycisk - dodawanie/odejmowanie lokacji z zaznaczenia\n")
+ echo("  prawy przycisk myszy - menu kontekstowe do zaznaczonych wczesniej lokacji\n")
+ echo("\n")
+ echo("Okienka:\n")
+ echo("  Domyslnie okienka rozmow, mapy oraz kondycji sa zablokowane. Pod prawym klawiszem myszy\n")
+ echo("  na okienku pojawia sie menu kontekstowe gdzie mozna modyfikowac stan okienka, ukrywac, odblokowac.\n")
+ echo("  Odblokowane okienka mozna przesuwac i zmieniac ich wielkosc.\n")
 end
 
 registerAnonymousEventHandler("sysDataSendRequest", handleHelpCommands)
