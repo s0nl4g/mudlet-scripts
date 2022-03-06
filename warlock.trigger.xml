@@ -3524,17 +3524,18 @@ function getStylesheetForStat(args)
 end
 
 buttons_enemy = {
-	{name = "hide_me", message = "x", callback = "hideEnemyStatsFor", args = {}},
-	{name = "compare_me", message = "P", callback = "commandEnemyById", args = {"porownaj sie z"}},
-	{name = "kill_me", message = "Z", callback = "commandEnemyById", args = {"zabij"}},
-	{name = "point_me", message = "W", callback = "commandEnemyById", args = {"wskaz"}},
-	{name = "script_me", message = "S", callback = "callScriptById", args = {"przeciwnik"}},
+	{name = "hide_me", message = "x", tooltip = "Zamknij", callback = "hideEnemyStatsFor", args = {}},
+	{name = "compare_me", message = "P", tooltip = "Porównaj się z ...", callback = "commandEnemyById", args = {"porownaj sie z"}},
+	{name = "kill_me", message = "Z", tooltip = "Zabij ...", callback = "commandEnemyById", args = {"zabij"}},
+	{name = "point_me", message = "W", tooltip = "Wskaz ...", callback = "commandEnemyById", args = {"wskaz"}},
+	{name = "script_me", message = "S", tooltip = "Akcja specjalna (/akcja przeciwnik)", callback = "callScriptById", args = {"przeciwnik"}},
 }
 buttons_druzyna = {
-	{name = "leave_me", message = "X", callback = "commandEnemyById", args = {"porzuc"}},
-	{name = "assist_me", message = "A", callback = "commandEnemyById", args = {"wesprzyj"}},
-	{name = "point_me", message = "W", callback = "commandEnemyById", args = {"wskaz"}},
-	{name = "script_me", message = "S", callback = "callScriptById", args = {"druzyna"}},
+  {name = "leave_me", message = "X", tooltip = "Porzuc ...", callback = "commandEnemyById", args = {"porzuc"}},
+  {name = "assist_me", message = "A", tooltip = "Wesprzyj ...", callback = "commandEnemyById", args = {"wesprzyj"}},
+  {name = "point_me", message = "z", tooltip = "Przejdz przed ...", callback = "commandEnemyById", args = {"przejdz przed"}},
+  {name = "point_me", message = "W", tooltip = "Wskaz ...", callback = "commandEnemyById", args = {"wskaz"}},
+  {name = "script_me", message = "S", tooltip = "Akcja specjalna (/akcja druzyna)", callback = "callScriptById", args = {"druzyna"}},
 }
 buttons_own = {}
 
@@ -3546,9 +3547,10 @@ function createButtonsForStat(args, parent)
 	local step_x = -15
 	for i, v in pairs(buttons) do
 		parent[v.name] = createNewLabel({
-			name = v.name .. "_" .. seq, message = v.message, fgColor = "white", color = "black", fontSize = 7,
+			name = v.name .. "_" .. seq, message = v.message, tooltip = v.tooltip, fgColor = "white", color = "black", fontSize = 7,
 			width = 10, height = 10, x = start_x, y = -10,
 		}, parent)
+    parent[v.name]:setToolTip(v.tooltip)
 		start_x = start_x + step_x
 	end
 end
