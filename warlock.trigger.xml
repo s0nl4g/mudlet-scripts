@@ -4165,18 +4165,6 @@ function getShiftedRoomCoordinates(fromId, komenda)
 	return x, y, z
 end
 
-function updateRoomAreaData(room)
-  if(room.czas ~= nil) then
-    local roomId = getRoomIDbyHash(room.id)
-    setRoomUserData(roomId, "czas", tostring(room.czas))
-    local areaId = getRoomArea(roomId)
-    if(getAreaUserData(areaId, "czas") == nil) then
-      display(room)
-      setAreaUserData(areaId, "czas", tostring(room.czas))
-    end
-  end
-end
-
 function updateNewRoom(newId, room)
 	local prevId = getRoomIDbyHash(room.idprev)
 	local x, y, z;
@@ -4236,12 +4224,22 @@ function getRoomsThatLeadHere(toId)
 	return leads
 end
 
+function createOrUpdateArea(area_data)
+  local areaId = nil
+  local nazwa = area_data.obszar
+  if(table.contains(getAreaTable(), nazwa)) then
+    areaId = getAreaTable()[nazwa]
+  else
+    areaId = addAreaName(nazwa)
+  end
+  if(area_data.czas ~= nil) then
+    setAreaUserData(areaId, "czas", tostring(area_data.czas))
+  end
+  return areaId
+end
+
 function getAreaId(nazwa)
-	if(table.contains(getAreaTable(), nazwa)) then
-		return getAreaTable()[nazwa]
-	else
-		return addAreaName(nazwa)
-	end
+  return createOrUpdateArea({obszar = nazwa, czas = nil})
 end
 
 -- Na razie takie zeby cokolwiek bylo.
@@ -5009,10 +5007,6 @@ function gmcp_Room_Info(event)
     gmcp.Room.Info.komenda = {"X", "", "", 0}
   end
   makeMapRoom(gmcp.Room.Info)
-  if(gmcp.Room.Area ~= nil and gmcp.Room.Area.Update ~= nil) then
-    updateRoomAreaData(gmcp.Room.Area.Update)
-    gmcp.Room.Area.Update = nil
-  end
   drawExitsOnConsole({})
   adjustCombatOnMove()
   --echo("Area: " .. gmcp.Room.Info.obszar .. "\n")
@@ -5197,9 +5191,9 @@ function gmcp_Area_Update()
     local zapisany = getAreaUserData(areaId, "czas") or "&lt;brak&gt;"
     if(zapisany ~= czas) then
       --echo(" * areaId: " .. areaId .. ", czas: " .. czas .. " vs zapisany czas: " .. zapisany .. "\n")
-      local areaId = getAreaId(gmcp.Room.Area.Update.obszar)
       echo(" * Kasuje obszar '" .. getRoomAreaName(areaId) .. "', wykryte zmiany.\n")
       deleteArea(areaId)
+      createOrUpdateArea(gmcp.Room.Area.Update)
     end
   end
 end</script>
