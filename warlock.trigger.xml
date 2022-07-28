@@ -674,7 +674,7 @@ flashChatContainerButton(chatContainer)</script>
 				</TriggerGroup>
 			</TriggerGroup>
 			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-				<name>kondycja</name>
+				<name>Stan</name>
 				<script></script>
 				<triggerType>0</triggerType>
 				<conditonLineDelta>0</conditonLineDelta>
@@ -695,6 +695,7 @@ kto = #matches[3] &gt; 0 and matches[3] or matches[4]
 poziom = matches[6]
 ipoz, max = jakiPoziomOpisu(kondycje, poziom)
 if(ipoz) then
+  prefix("["..kondycjekolory[ipoz].."&lt;reset&gt;] ", cecho)
 	selectCaptureGroup(6)
 	setFgColor(255 - (ipoz * 255 / max), ipoz * 255 / max, 60);
 end
@@ -832,6 +833,70 @@ resetFormat();</script>
 						<string> i jestes (w pelni wypoczet(y|a)|wypoczet(y|a)|troche zmeczon(y|a)|zmeczon(y|a)|bardzo zmeczon(y|a)|nieco wyczerpan(y|a)|wyczerpan(y|a)|bardzo wyczerpan(y|a)|wycienczon(y|a)|calkowicie wycienczon(y|a))[\., ]</string>
 					</regexCodeList>
 					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>cechy</name>
+					<script>function cechy_liczby(sila,zrecznosc,wytrzymalosc,inteligencja,madrosc,odwaga)
+  local s = silaall[sila];
+  local z = zrecznoscall[zrecznosc];
+  local w = wytkaall[wytrzymalosc];
+  local i = intall[inteligencja];
+  local m = madroscall[madrosc];
+  local o = odwagaall[odwaga]
+
+cecho(sila.." &lt;yellow_green&gt;("..s.."), ")
+cecho(zrecznosc.." &lt;yellow_green&gt;("..z.."), ")
+cecho(wytrzymalosc.." &lt;yellow_green&gt;("..w.."), ")
+cecho(inteligencja.." &lt;yellow_green&gt;("..i.."), ")
+cecho(madrosc.." &lt;yellow_green&gt;(" ..m..") i ")
+cecho(odwaga.." &lt;yellow_green&gt;("..o..").")
+cechy_policzlvl(s,z,w,i,m,o)
+end
+
+function postepy_wyswietl(postep)
+ cecho(postepyall[postep].." postepy, odkad pojawilas sie w tym swiecie.")
+end
+
+function cechy_policzlvl(sila,zrecznosc,wytrzymalosc,inteligencja,madrosc,odwaga)
+  local level = sila+zrecznosc+wytrzymalosc+inteligencja+madrosc+odwaga
+  local bojowe = sila+zrecznosc+wytrzymalosc
+  local mentalne = inteligencja+madrosc
+  local procentbojowych = bojowe/level*100
+  local procentmentalnych = mentalne/level*100
+  cecho("\n&lt;dark_goldenrod&gt;Masz "..level.."/312 cech. Bojowe: "..bojowe.." ("..math.floor(procentbojowych).."%), mentalne: "..mentalne.." ("..math.floor(procentmentalnych).."%).")
+end
+
+
+-- PO FUNKCJACH, WYWOLANIE
+
+local sila = matches[2]
+local zrecznosc = matches[3]
+local wytrzymalosc = matches[4]
+local inteligencja = matches[5]
+local madrosc = matches[6]
+local odwaga = matches[7]
+
+selectString(matches[1], 1)
+replace("Jestes ")
+cechy_liczby(sila,zrecznosc,wytrzymalosc,inteligencja,madrosc,odwaga)</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Jestes (slabiutka|slabowita|watla|cherlawa|slaba|krzepka|silna|mocna|tega|potezna|mocarna|tytaniczna|wszechmocna|slabiutka jak na legende|slabowita jak na legende|watla jak na legende|cherlawa jak na legende|slaba jak na legende|krzepka jak na legende|silna jak na legende|mocna jak na legende|tega jak na legende|potezna jak na legende|mocarna jak na legende|tytaniczna jak na legende|wszechmocna jak na legende|slabiutka jak na polboginie|slabowita jak na polboginie|watla jak na polboginie|cherlawa jak na polboginie|slaba jak na polboginie|krzepka jak na polboginie|silna jak na polboginie|mocna jak na polboginie|tega jak na polboginie|potezna jak na polboginie|mocarna jak na polboginie|tytaniczna jak na polboginie|wszechmocna jak na polboginie|slabiutka jak na boginie|slabowita jak na boginie|watla jak na boginie|cherlawa jak na boginie|slaba jak na boginie|krzepka jak na boginie|silna jak na boginie|mocna jak na boginie|tega jak na boginie|potezna jak na boginie|mocarna jak na boginie|tytaniczna jak na boginie|wszechmocna jak na boginie), (nieskoordynowana|niezdarna|niezreczna|niezgrabna|niewprawna|sprawna|zreczna|szybka|wprawna|zwinna|gibka|akrobatyczna|ekwilibrystyczna|nieskoordynowana jak na legende|niezdarna jak na legende|niezreczna jak na legende|niezgrabna jak na legende|niewprawna jak na legende|sprawna jak na legende|zreczna jak na legende|szybka jak na legende|wprawna jak na legende|zwinna jak na legende|gibka jak na legende|akrobatyczna jak na legende|ekwilibrystyczna jak na legende|nieskoordynowana jak na polboginie|niezdarna jak na polboginie|niezreczna jak na polboginie|niezgrabna jak na polboginie|niewprawna jak na polboginie|sprawna jak na polboginie|zreczna jak na polboginie|szybka jak na polboginie|wprawna jak na polboginie|zwinna jak na polboginie|gibka jak na polboginie|akrobatyczna jak na polboginie|ekwilibrystyczna jak na polboginie|nieskoordynowana jak na boginie|niezdarna jak na boginie|niezreczna jak na boginie|niezgrabna jak na boginie|niewprawna jak na boginie|sprawna jak na boginie|zreczna jak na boginie|szybka jak na boginie|wprawna jak na boginie|zwinna jak na boginie|gibka jak na boginie|akrobatyczna jak na boginie|ekwilibrystyczna jak na boginie), (delikatna|chorowita|rachityczna|mizerny|mizerna|krucha|dobrze zbudowany|dobrze zbudowana|wytrzymaly|wytrzymala|odporny|odporna|masywny|masywna|twardy|twarda|umiesniona|muskularna|atletyczna|delikatna jak na legende|chorowita jak na legende|rachityczna jak na legende|mizerna jak na legende|krucha jak na legende|dobrze zbudowana jak na legende|wytrzymala jak na legende|odporna jak na legende|masywna jak na legende|twarda jak na legende|umiesniona jak na legende|muskularna jak na legende|atletyczna jak na legende|delikatna jak na polboginie|chorowita jak na polboginie|rachityczna jak na polboginie|mizerna jak na polboginie|krucha jak na polboginie|dobrze zbudowana jak na polboginie|wytrzymala jak na polboginie|odporna jak na polboginie|masywna jak na polboginie|twarda jak na polboginie|umiesniona jak na polboginie|muskularna jak na polboginie|atletyczna jak na polboginie|delikatna jak na boginie|chorowita jak na boginie|rachityczna jak na boginie|mizerna jak na boginie|krucha jak na boginie|dobrze zbudowana jak na boginie|wytrzymala jak na boginie|odporna jak na boginie|masywna jak na boginie|twarda jak na boginie|umiesniona jak na boginie|muskularna jak na boginie|atletyczna jak na boginie), (bezmyslna|ciemna|tepa|nierozumna|ograniczona|rozgarnieta|pojetna|zmyslna|inteligentna|lotna|bystra|blyskotliwa|genialna|bezmyslna jak na legende|ciemna jak na legende|tepa jak na legende|nierozumna jak na legende|ograniczona jak na legende|rozgarnieta jak na legende|pojetna jak na legende|zmyslna jak na legende|inteligentna jak na legende|lotna jak na legende|bystra jak na legende|blyskotliwa jak na legende|genialna jak na legende|bezmyslna jak na polboginie|ciemna jak na polboginie|tepa jak na polboginie|nierozumna jak na polboginie|ograniczona jak na polboginie|rozgarnieta jak na polboginie|pojetna jak na polboginie|zmyslna jak na polboginie|inteligentna jak na polboginie|lotna jak na polboginie|bystra jak na polboginie|blyskotliwa jak na polboginie|genialna jak na polboginie|bezmyslna jak na boginie|ciemna jak na boginie|tepa jak na boginie|nierozumna jak na boginie|ograniczona jak na boginie|rozgarnieta jak na boginie|pojetna jak na boginie|zmyslna jak na boginie|inteligentna jak na boginie|lotna jak na boginie|bystra jak na boginie|blyskotliwa jak na boginie|genialna jak na boginie), (glupia|durna|zacofana|niemadra|niewyksztalcona|roztropna|wyksztalcona|rozsadna|logiczna|madra|uczona|oswiecona|wszechwiedzaca|glupia jak na legende|durna jak na legende|zacofana jak na legende|niemadra jak na legende|niewyksztalcona jak na legende|roztropna jak na legende|wyksztalcona jak na legende|rozsadna jak na legende|logiczna jak na legende|madra jak na legende|uczona jak na legende|oswiecona jak na legende|wszechwiedzaca jak na legende|glupia jak na polboginie|durna jak na polboginie|zacofana jak na polboginie|niemadra jak na polboginie|niewyksztalcona jak na polboginie|roztropna jak na polboginie|wyksztalcona jak na polboginie|rozsadna jak na polboginie|logiczna jak na polboginie|madra jak na polboginie|uczona jak na polboginie|oswiecona jak na polboginie|wszechwiedzaca jak na polboginie|glupia jak na boginie|durna jak na boginie|zacofana jak na boginie|niemadra jak na boginie|niewyksztalcona jak na boginie|roztropna jak na boginie|wyksztalcona jak na boginie|rozsadna jak na boginie|logiczna jak na boginie|madra jak na boginie|uczona jak na boginie|oswiecona jak na boginie|wszechwiedzaca jak na boginie) i (tchorzliwa|strachliwa|bojazliwa|lekliwa|niepewna|zdecydowana|niezachwiana|odwazna|dzielna|nieugieta|mezna|braterska|heroiczna|tchorzliwa jak na legende|strachliwa jak na legende|bojazliwa jak na legende|lekliwa jak na legende|niepewna jak na legende|zdecydowana jak na legende|niezachwiana jak na legende|odwazna jak na legende|dzielna jak na legende|nieugieta jak na legende|mezna jak na legende|braterska jak na legende|heroiczna jak na legende|tchorzliwa jak na polboginie|strachliwa jak na polboginie|bojazliwa jak na polboginie|lekliwa jak na polboginie|niepewna jak na polboginie|zdecydowana jak na polboginie|niezachwiana jak na polboginie|odwazna jak na polboginie|dzielna jak na polboginie|nieugieta jak na polboginie|mezna jak na polboginie|braterska jak na polboginie|heroiczna jak na polboginie|tchorzliwa jak na boginie|strachliwa jak na boginie|bojazliwa jak na boginie|lekliwa jak na boginie|niepewna jak na boginie|zdecydowana jak na boginie|niezachwiana jak na boginie|odwazna jak na boginie|dzielna jak na boginie|nieugieta jak na boginie|mezna jak na boginie|braterska jak na boginie|heroiczna jak na boginie).</string>
+						<string>Jestes (slabiutki|slabowity|watly|cherlawy|slaby|krzepki|silny|mocny|tegi|potezny|mocarny|tytaniczny|wszechmocny|slabiutki jak na legende|slabowity jak na legende|watly jak na legende|cherlawy jak na legende|slaby jak na legende|krzepki jak na legende|silny jak na legende|mocny jak na legende|tegi jak na legende|potezny jak na legende|mocarny jak na legende|tytaniczny jak na legende|wszechmocny jak na legende|slabiutki jak na polboga|slabowity jak na polboga|watly jak na polboga|cherlawy jak na polboga|slaby jak na polboga|krzepki jak na polboga|silny jak na polboga|mocny jak na polboga|tegi jak na polboga|potezny jak na polboga|mocarny jak na polboga|tytaniczny jak na polboga|wszechmocny jak na polboga|slabiutki jak na boga|slabowity jak na boga|watly jak na boga|cherlawy jak na boga|slaby jak na boga|krzepka|silny jak na boga|mocny jak na boga|tegi jak na boga|potezny jak na boga|mocarny jak na boga|tytaniczny jak na boga|wszechmocny jak na boga), (nieskoordynowany|niezdarny|niezreczny|niezgrabny|niewprawny|sprawny|zreczny|szybki|wprawny|zwinny|gibki|akrobatyczny|ekwilibrystyczny|nieskoordynowany jak na legende|niezdarny jak na legende|niezreczny jak na legende|niezgrabny jak na legende|niewprawny jak na legende|sprawny jak na legende|zreczny jak na legende|szybki jak na legende|wprawny jak na legende|zwinny jak na legende|gibki jak na legende|akrobatyczny jak na legende|ekwilibrystyczny jak na legende|nieskoordynowany jak na polboga|niezdarny jak na polboga|niezreczny jak na polboga|niezgrabny jak na polboga|niewprawny jak na polboga|sprawny jak na polboga|zreczny jak na polboga|szybki jak na polboga|wprawny jak na polboga|zwinny jak na polboga|gibki jak na polboga|akrobatyczny jak na polboga|ekwilibrystyczny jak na polboga|nieskoordynowany jak na boga|niezdarny jak na boga|niezreczny jak na boga|niezgrabny jak na boga|niewprawny jak na boga|sprawny jak na boga|zreczny jak na boga|szybki jak na boga|wprawny jak na boga|zwinny jak na boga|gibki jak na boga|akrobatyczny jak na boga|ekwilibrystyczny jak na boga), (delikatny|chorowity|rachityczny|mizerny|kruchy|dobrze zbudowany|wytrzymaly|odporny|masywny|twardy|umiesniony|muskularny|atletyczny|delikatny jak na legende|chorowity jak na legende|rachityczny jak na legende|mizerny jak na legende|kruchy jak na legende|dobrze zbudowany jak na legende|wytrzymaly jak na legende|odporny jak na legende|masywny jak na legende|twardy jak na legende|umiesniony jak na legende|muskularny jak na legende|atletyczny jak na legende|delikatny jak na polboga|chorowity jak na polboga|rachityczny jak na polboga|mizerny jak na polboga|kruchy jak na polboga|dobrze zbudowany jak na polboga|wytrzymaly jak na polboga|odporny jak na polboga|masywny jak na polboga|twardy jak na polboga|umiesniony jak na polboga|muskularny jak na polboga|atletyczny jak na polboga|delikatny jak na boga|chorowity jak na boga|rachityczny jak na boga|mizerny jak na boga|kruchy jak na boga|dobrze zbudowany jak na boga|wytrzymaly jak na boga|odporny jak na boga|masywny jak na boga|twardy jak na boga|umiesniony jak na boga|muskularny jak na boga|atletyczny jak na boga), (bezmyslny|ciemny|tepy|nierozumny|ograniczony|rozgarniety|pojetny|zmyslny|inteligentny|lotny|bystry|blyskotliwy|genialny|bezmyslny jak na legende|ciemny jak na legende|tepy jak na legende|nierozumny jak na legende|ograniczony jak na legende|rozgarniety jak na legende|pojetny jak na legende|zmyslny jak na legende|inteligentny jak na legende|lotny jak na legende|bystry jak na legende|blyskotliwy jak na legende|genialny jak na legende|bezmyslny jak na polboga|ciemny jak na polboga|tepy jak na polboga|nierozumny jak na polboga|ograniczony jak na polboga|rozgarniety jak na polboga|pojetny jak na polboga|zmyslny jak na polboga|inteligentny jak na polboga|lotny jak na polboga|bystry jak na polboga|blyskotliwy jak na polboga|genialny jak na polboga|bezmyslny jak na boga|ciemny jak na boga|tepy jak na boga|nierozumny jak na boga|ograniczony jak na boga|rozgarniety jak na boga|pojetny jak na boga|zmyslny jak na boga|inteligentny jak na boga|lotny jak na boga|bystry jak na boga|blyskotliwy jak na boga|genialny jak na boga), (glupi|durny|zacofany|niemadry|niewyksztalcony|roztropny|wyksztalcony|rozsadny|logiczny|madry|uczony|oswiecony|wszechwiedzacy|glupi jak na legende|durny jak na legende|zacofany jak na legende|niemadry jak na legende|niewyksztalcony jak na legende|roztropny jak na legende|wyksztalcony jak na legende|rozsadny jak na legende|logiczny jak na legende|madry jak na legende|uczony jak na legende|oswiecony jak na legende|wszechwiedzacy jak na legende|glupi jak na polboga|durny jak na polboga|zacofany jak na polboga|niemadry jak na polboga|niewyksztalcony jak na polboga|roztropny jak na polboga|wyksztalcony jak na polboga|rozsadny jak na polboga|logiczny jak na polboga|madry jak na polboga|uczony jak na polboga|oswiecony jak na polboga|wszechwiedzacy jak na polboga|glupi jak na boga|durny jak na boga|zacofany jak na boga|niemadry jak na boga|niewyksztalcony jak na boga|roztropny jak na boga|wyksztalcony jak na boga|rozsadny jak na boga|logiczny jak na boga|madry jak na boga|uczony jak na boga|oswiecony jak na boga|wszechwiedzacy jak na boga) i (tchorzliwy|strachliwy|bojazliwy|lekliwy|niepewny|zdecydowany|niezachwiany|odwazny|dzielny|nieugiety|mezny|braterski|heroiczny|tchorzliwy jak na legende|strachliwy jak na legende|bojazliwy jak na legende|lekliwy jak na legende|niepewny jak na legende|zdecydowany jak na legende|niezachwiany jak na legende|odwazny jak na legende|dzielny jak na legende|nieugiety jak na legende|mezny jak na legende|braterski jak na legende|heroiczny jak na legende|tchorzliwy jak na polboga|strachliwy jak na polboga|bojazliwy jak na polboga|lekliwy jak na polboga|niepewny jak na polboga|zdecydowany jak na polboga|niezachwiany jak na polboga|odwazny jak na polboga|dzielny jak na polboga|nieugiety jak na polboga|mezny jak na polboga|braterski jak na polboga|heroiczny jak na polboga|tchorzliwy jak na boga|strachliwy jak na boga|bojazliwy jak na boga|lekliwy jak na boga|niepewny jak na boga|zdecydowany jak na boga|niezachwiany jak na boga|odwazny jak na boga|dzielny jak na boga|nieugiety jak na boga|mezny jak na boga|braterski jak na boga|heroiczny jak na boga).</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
 						<integer>1</integer>
 					</regexCodePropertyList>
 				</Trigger>
@@ -4748,13 +4813,331 @@ end</script>
 			<ScriptGroup isActive="yes" isFolder="yes">
 				<name>opisy_poziomow</name>
 				<packageName></packageName>
-				<script>--opisy poziomow
+				<script></script>
+				<eventHandlerList />
+				<ScriptGroup isActive="yes" isFolder="yes">
+					<name>opis_cech_poziomu</name>
+					<packageName></packageName>
+					<script>-- LEVELE
+lvlall = {}
+lvlnazwy = {}
+lvlall[1] = 6;  lvlnazwy[1] = "(Poziom 1/13)"; -- do 6
+lvlall[2] = 12; lvlnazwy[2]="(Poziom 2/13)"; -- do 12
+lvlall[3] = 18; lvlnazwy[3] = "(Poziom 3/13)"; -- do 18
+lvlall[4] = 24; lvlnazwy[4] = "(Poziom 4/13)"; -- do 24
+lvlall[5] = 30; lvlnazwy[5] = "(Poziom 5/13)"; -- do 30
+lvlall[6] = 36; lvlnazwy[6] = "(Poziom 6/13)"; -- do 36
+lvlall[7] = 42; lvlnazwy[7] ="(Poziom 7/13)"; -- do 42
+lvlall[8] = 48; lvlnazwy[8] = "(Poziom 8/13)"; -- do 48
+lvlall[9] = 54; lvlnazwy[9] ="(Poziom 9/13)"; -- do 54
+lvlall[10]= 60; lvlnazwy[10] ="(Poziom 10/13)"; -- do 60
+lvlall[11]= 66; lvlnazwy[11] = "(Poziom 11/13)"; -- do 66
+lvlall[12]= 70; lvlnazwy[12] ="(Poziom 12/13)"; -- do 72
+lvlall[13]= 78; lvlnazwy[13] = "(Poziom 13/13)"; -- do 78
+
+-- CECHY SILA
+silaall = {}
+silaall["slabiutka"] = "1"; silaall["slabiutki"] = "1";
+silaall["slabowity"] = "2"; silaall["slabowita"] = "2";
+silaall["watly"] = "3"; silaall["watla"] = "3";
+silaall["cherlawy"] = "4"; silaall["cherlawa"] = "4";
+silaall["slaba"] = "5"; silaall["slaby"] = "5";
+silaall["krzepki"] = "6"; silaall["krzepka"] = "6";
+silaall["silny"] = "7"; silaall["silna"] = "7";
+silaall["mocny"] = "8"; silaall["mocna"] = "8";
+silaall["tega"] = "9"; silaall["tegi"] = "9";
+silaall["potezny"] = "10"; silaall["potezna"] = "10";
+silaall["mocarny"] = "11"; silaall["mocarna"] = "11";
+silaall["tytaniczny"] = "12"; silaall["tytaniczna"] = "12";
+silaall["wszechmocny"] = "13"; silaall["wszechmocna"] = "13";
+
+silaall["slabiutki jak na polboga"] = "14"; silaall["slabiutka jak na polboginie"] = "14";
+silaall["slabowity jak na polboga"] = "15"; silaall["slabowita jak na polboginie"] = "15";
+silaall["watly jak na polboga"] = "16"; silaall["watla jak na polboginie"] = "16";
+silaall["cherlawy jak na polboga"] = "17"; silaall["cherlawa jak na polboginie"] = "17";
+silaall["slaby jak na polboga"] = "18"; silaall["slaba jak na polboginie"] = "18";
+silaall["krzepki jak na polboga"] = "19"; silaall["krzepka jak na polboginie"] = "19";
+silaall["silny jak na polboga"] = "20"; silaall["silna jak na polboginie"] = "20";
+silaall["mocny jak na polboga"] = "21"; silaall["mocna jak na polboginie"] = "21";
+silaall["tega jak na polboga"] = "22"; silaall["tegi jak na polboginie"] = "22";
+silaall["potezny jak na polboga"] = "23"; silaall["potezna jak na polboginie"] = "23";
+silaall["mocarny jak na polboga"] = "24"; silaall["mocarna jak na polboginie"] = "24";
+silaall["tytaniczny jak na polboga"] = "25"; silaall["tytaniczna jak na polboginie"] = "25";
+silaall["wszechmocny jak na polboga"] = "26"; silaall["wszechmocna jak na polboginie"] = "26";
+
+silaall["slabiutki jak na boga"] = "27"; silaall["slabiutka jak na boginie"] = "27";
+silaall["slabowity jak na boga"] = "28"; silaall["slabowita jak na boginie"] = "28";
+silaall["watly jak na boga"] = "29"; silaall["watla jak na boginie"] = "29";
+silaall["cherlawy jak na boga"] = "30"; silaall["cherlawa jak na boginie"] = "30";
+silaall["slaby jak na boga"] = "31"; silaall["slaba jak na boginie"] = "31";
+silaall["krzepki jak na boga"] = "32"; silaall["krzepka jak na boginie"] = "32";
+silaall["silny jak na boga"] = "33"; silaall["silna jak na boginie"] = "33";
+silaall["mocny jak na boga"] = "34"; silaall["mocna jak na boginie"] = "34";
+silaall["tega jak na boga"] = "35"; silaall["tegi jak na boginie"] = "35";
+silaall["potezny jak na boga"] = "36"; silaall["potezna jak na boginie"] = "36";
+silaall["mocarny jak na boga"] = "37"; silaall["mocarna jak na boginie"] = "37";
+silaall["tytaniczny jak na boga"] = "38"; silaall["tytaniczna jak na boginie"] = "38";
+silaall["wszechmocny jak na boga"] = "39"; silaall["wszechmocna jak na boginie"] = "39";
+
+
+
+
+
+-- CECHY ZRECZNOSC
+zrecznoscall ={}
+zrecznoscall["nieskoordynowany"] = "1"; zrecznoscall["nieskoordynowana"] = "1";
+zrecznoscall["niezdarny"] = "2"; zrecznoscall["niezdarna"] = "2";
+zrecznoscall["niezreczny"] = "3"; zrecznoscall["niezreczna"] = "3";
+zrecznoscall["niezgrabny"] = "4"; zrecznoscall["niezgrabna"] = "4";
+zrecznoscall["niewprawny"] = "5"; zrecznoscall["niewprawna"] = "5";
+zrecznoscall["sprawny"] = "6"; zrecznoscall["sprawna"] = "6";
+zrecznoscall["zreczny"] = "7"; zrecznoscall["zreczna"] = "7";
+zrecznoscall["szybki"] = "8"; zrecznoscall["szybka"] = "8";
+zrecznoscall["wprawny"] = "9"; zrecznoscall["wprawna"] = "9";
+zrecznoscall["zwinny"] = "10"; zrecznoscall["zwinna"] = "10";
+zrecznoscall["gibki"] = "11"; zrecznoscall["gibka"] = "11";
+zrecznoscall["akrobatyczny"] = "12"; zrecznoscall["akrobatyczna"] = "12";
+zrecznoscall["ekwilibrystyczny"] = "13"; zrecznoscall["ekwilibrystyczna"] = "13"
+
+zrecznoscall["nieskoordynowany jak na polboga"] = "14"; zrecznoscall["nieskoordynowana jak na polboginie"] = "14";
+zrecznoscall["niezdarny jak na polboga"] = "15"; zrecznoscall["niezdarna jak na polboginie"] = "15";
+zrecznoscall["niezreczny jak na polboga"] = "16"; zrecznoscall["niezreczna jak na polboginie"] = "16";
+zrecznoscall["niezgrabny jak na polboga"] = "17"; zrecznoscall["niezgrabna jak na polboginie"] = "17";
+zrecznoscall["niewprawny jak na polboga"] = "18"; zrecznoscall["niewprawna jak na polboginie"] = "18";
+zrecznoscall["sprawny jak na polboga"] = "19"; zrecznoscall["sprawna jak na polboginie"] = "19";
+zrecznoscall["zreczny jak na polboga"] = "20"; zrecznoscall["zreczna jak na polboginie"] = "20";
+zrecznoscall["szybki jak na polboga"] = "21"; zrecznoscall["szybka jak na polboginie"] = "21";
+zrecznoscall["wprawny jak na polboga"] = "22"; zrecznoscall["wprawna jak na polboginie"] = "22";
+zrecznoscall["zwinny jak na polboga"] = "23"; zrecznoscall["zwinna jak na polboginie"] = "23";
+zrecznoscall["gibki jak na polboga"] = "24"; zrecznoscall["gibka jak na polboginie"] = "24";
+zrecznoscall["akrobatyczny jak na polboga"] = "25"; zrecznoscall["akrobatyczna jak na polboginie"] = "25";
+zrecznoscall["ekwilibrystyczny jak na polboga"] = "26"; zrecznoscall["ekwilibrystyczna jak na polboginie"] = "26"
+
+zrecznoscall["nieskoordynowany jak na boga"] = "27"; zrecznoscall["nieskoordynowana jak na boginie"] = "27";
+zrecznoscall["niezdarny jak na boga"] = "28"; zrecznoscall["niezdarna jak na boginie"] = "28";
+zrecznoscall["niezreczny jak na boga"] = "29"; zrecznoscall["niezreczna jak na boginie"] = "29";
+zrecznoscall["niezgrabny jak na boga"] = "30"; zrecznoscall["niezgrabna jak na boginie"] = "30";
+zrecznoscall["niewprawny jak na boga"] = "31"; zrecznoscall["niewprawna jak na boginie"] = "31";
+zrecznoscall["sprawny jak na boga"] = "32"; zrecznoscall["sprawna jak na boginie"] = "32";
+zrecznoscall["zreczny jak na boga"] = "33"; zrecznoscall["zreczna jak na boginie"] = "33";
+zrecznoscall["szybki jak na boga"] = "34"; zrecznoscall["szybka jak na boginie"] = "34";
+zrecznoscall["wprawny jak na boga"] = "35"; zrecznoscall["wprawna jak na boginie"] = "35";
+zrecznoscall["zwinny jak na boga"] = "36"; zrecznoscall["zwinna jak na boginie"] = "36";
+zrecznoscall["gibki jak na boga"] = "37"; zrecznoscall["gibka jak na boginie"] = "37";
+zrecznoscall["akrobatyczny jak na boga"] = "38"; zrecznoscall["akrobatyczna jak na boginie"] = "38";
+zrecznoscall["ekwilibrystyczny jak na boga"] = "39"; zrecznoscall["ekwilibrystyczna jak na boginie"] = "39"
+
+
+
+
+-- CECHY WYTRZYMALOSC
+wytkaall ={}
+wytkaall["delikatny"] = "1"; wytkaall["delikatna"] = "1";
+wytkaall["chorowity"] = "2"; wytkaall["chorowita"] = "2";
+wytkaall["rachityczny"] = "3"; wytkaall["rachityczna"] = "3";
+wytkaall["mizerny"] = "4"; wytkaall["mizerna"] = "4";
+wytkaall["kruchy"] = "5"; wytkaall["krucha"] = "5";
+wytkaall["dobrze zbudowany"] = "6"; wytkaall["dobrze zbudowana"] = "6";
+wytkaall["wytrzymaly"] = "7"; wytkaall["wytrzymala"] = "7";
+wytkaall["odporny"] = "8"; wytkaall["odporna"] = "8";
+wytkaall["masywny"] = "9"; wytkaall["masywna"] = "9";
+wytkaall["twardy"] = "10"; wytkaall["twarda"] = "10";
+wytkaall["umiesniony"] = "11"; wytkaall["umiesniona"] = "11";
+wytkaall["muskularny"] = "12"; wytkaall["muskularna"] = "12";
+wytkaall["atletyczny"] = "13"; wytkaall["atletyczna"] = "13"
+
+wytkaall["delikatny jak na polboga"] = "1"; wytkaall["delikatna jak na polboginie"] = "1";
+wytkaall["chorowity jak na polboga"] = "2"; wytkaall["chorowita jak na polboginie"] = "2";
+wytkaall["rachityczny jak na polboga"] = "3"; wytkaall["rachityczna jak na polboginie"] = "3";
+wytkaall["mizerny jak na polboga"] = "4"; wytkaall["mizerna jak na polboginie"] = "4";
+wytkaall["kruchy jak na polboga"] = "5"; wytkaall["krucha jak na polboginie"] = "5";
+wytkaall["dobrze zbudowany jak na polboga"] = "6"; wytkaall["dobrze zbudowana jak na polboginie"] = "6";
+wytkaall["wytrzymaly jak na polboga"] = "7"; wytkaall["wytrzymala jak na polboginie"] = "7";
+wytkaall["odporny jak na polboga"] = "8"; wytkaall["odporna jak na polboginie"] = "8";
+wytkaall["masywny jak na polboga"] = "9"; wytkaall["masywna jak na polboginie"] = "9";
+wytkaall["twardy jak na polboga"] = "10"; wytkaall["twarda jak na polboginie"] = "10";
+wytkaall["umiesniony jak na polboga"] = "11"; wytkaall["umiesniona jak na polboginie"] = "11";
+wytkaall["muskularny jak na polboga"] = "12"; wytkaall["muskularna jak na polboginie"] = "12";
+wytkaall["atletyczny jak na polboga"] = "13"; wytkaall["atletyczna jak na polboginie"] = "13"
+
+wytkaall["delikatny jak na boga"] = "1"; wytkaall["delikatna jak na boginie"] = "1";
+wytkaall["chorowity jak na boga"] = "2"; wytkaall["chorowita jak na boginie"] = "2";
+wytkaall["rachityczny jak na boga"] = "3"; wytkaall["rachityczna jak na boginie"] = "3";
+wytkaall["mizerny jak na boga"] = "4"; wytkaall["mizerna jak na boginie"] = "4";
+wytkaall["kruchy jak na boga"] = "5"; wytkaall["krucha jak na boginie"] = "5";
+wytkaall["dobrze zbudowany jak na boga"] = "6"; wytkaall["dobrze zbudowana jak na boginie"] = "6";
+wytkaall["wytrzymaly jak na boga"] = "7"; wytkaall["wytrzymala jak na boginie"] = "7";
+wytkaall["odporny jak na boga"] = "8"; wytkaall["odporna jak na boginie"] = "8";
+wytkaall["masywny jak na boga"] = "9"; wytkaall["masywna jak na boginie"] = "9";
+wytkaall["twardy jak na boga"] = "10"; wytkaall["twarda jak na boginie"] = "10";
+wytkaall["umiesniony jak na boga"] = "11"; wytkaall["umiesniona jak na boginie"] = "11";
+wytkaall["muskularny jak na boga"] = "12"; wytkaall["muskularna jak na boginie"] = "12";
+wytkaall["atletyczny jak na boga"] = "13"; wytkaall["atletyczna jak na boginie"] = "13"
+
+
+
+
+
+-- CECHY INTELIGENCJA
+intall = {}
+intall["bezmyslny"] = "1"; intall["bezmyslna"] = "1";
+intall["ciemny"] = "2"; intall["ciemna"] = "2";
+intall["tepy"] = "3"; intall["tepa"] = "3";
+intall["nierozumny"] = "4"; intall["nierozumna"] = "4";
+intall["ograniczony"] = "5"; intall["ograniczona"] = "5";
+intall["rozgarniety"] = "6"; intall["rozgarnieta"] = "6";
+intall["pojetny"] = "7"; intall["pojetna"] = "7";
+intall["zmyslny"] = "8"; intall["zmyslna"] = "8";
+intall["inteligentny"] = "9"; intall["inteligentna"] = "9";
+intall["lotny"] = "10"; intall["lotna"] = "10";
+intall["bystry"] = "11"; intall["bystra"] = "11";
+intall["blyskotliwy"] = "12"; intall["blyskotliwa"] = "12";
+intall["genialny"] = "13"; intall["genialna"] = "13"
+
+intall["bezmyslny jak na polboga"] = "14"; intall["bezmyslna jak na polboginie"] = "14";
+intall["ciemny jak na polboga"] = "15"; intall["ciemna jak na polboginie"] = "15";
+intall["tepy jak na polboga"] = "16"; intall["tepa jak na polboginie"] = "16";
+intall["nierozumny jak na polboga"] = "17"; intall["nierozumna jak na polboginie"] = "17";
+intall["ograniczony jak na polboga"] = "18"; intall["ograniczona jak na polboginie"] = "18";
+intall["rozgarniety jak na polboga"] = "19"; intall["rozgarnieta jak na polboginie"] = "19";
+intall["pojetny jak na polboga"] = "20"; intall["pojetna jak na polboginie"] = "20";
+intall["zmyslny jak na polboga"] = "21"; intall["zmyslna jak na polboginie"] = "21";
+intall["inteligentny jak na polboga"] = "22"; intall["inteligentna jak na polboginie"] = "22";
+intall["lotny jak na polboga"] = "23"; intall["lotna jak na polboginie"] = "23";
+intall["bystry jak na polboga"] = "24"; intall["bystra jak na polboginie"] = "24";
+intall["blyskotliwy jak na polboga"] = "25"; intall["blyskotliwa jak na polboginie"] = "25";
+intall["genialny jak na polboga"] = "26"; intall["genialna jak na polboginie"] = "26"
+
+
+intall["bezmyslny jak na boga"] = "27"; intall["bezmyslna jak na boginie"] = "27";
+intall["ciemny jak na boga"] = "28"; intall["ciemna jak na boginie"] = "28";
+intall["tepy jak na boga"] = "29"; intall["tepa jak na boginie"] = "29";
+intall["nierozumny jak na boga"] = "30"; intall["nierozumna jak na boginie"] = "30";
+intall["ograniczony jak na boga"] = "31"; intall["ograniczona jak na boginie"] = "31";
+intall["rozgarniety jak na boga"] = "32"; intall["rozgarnieta jak na boginie"] = "32";
+intall["pojetny jak na boga"] = "33"; intall["pojetna jak na boginie"] = "33";
+intall["zmyslny jak na boga"] = "34"; intall["zmyslna jak na boginie"] = "34";
+intall["inteligentny jak na boga"] = "35"; intall["inteligentna jak na boginie"] = "35";
+intall["lotny jak na boga"] = "36"; intall["lotna jak na boginie"] = "36";
+intall["bystry jak na boga"] = "37"; intall["bystra jak na boginie"] = "37";
+intall["blyskotliwy jak na boga"] = "38"; intall["blyskotliwa jak na boginie"] = "38";
+intall["genialny jak na boga"] = "39"; intall["genialna jak na boginie"] = "39"
+
+
+
+
+-- CECHY MADROSC
+madroscall = {}
+madroscall["glupi"] = "1"; madroscall["glupia"] = "1";
+madroscall["durny"] = "2"; madroscall["durna"] = "2";
+madroscall["zacofany"] = "3"; madroscall["zacofana"] = "3";
+madroscall["niemadry"] = "4"; madroscall["niemadra"] = "4";
+madroscall["niewyksztalcony"] = "5"; madroscall["niewyksztalcona"] = "5";
+madroscall["roztropny"] = "6"; madroscall["roztropna"] = "6";
+madroscall["wyksztalcony"] = "7"; madroscall["wyksztalcona"] = "7";
+madroscall["rozsadny"] = "8"; madroscall["rozsadna"] = "8";
+madroscall["logiczny"] = "9"; madroscall["logiczna"] = "9";
+madroscall["madry"] = "10"; madroscall["madra"] = "10";
+madroscall["uczony"] = "11"; madroscall["uczona"] = "11";
+madroscall["oswiecony"] = "12"; madroscall["oswiecona"] = "12";
+madroscall["wszechwiedzacy"] = "13"; madroscall["wszechwiedzaca"] = "13"
+
+madroscall["glupi jak na polboga"] = "14"; madroscall["glupia jak na polboginie"] = "14";
+madroscall["durny jak na polboga"] = "15"; madroscall["durna jak na polboginie"] = "15";
+madroscall["zacofany jak na polboga"] = "16"; madroscall["zacofana jak na polboginie"] = "16";
+madroscall["niemadry jak na polboga"] = "17"; madroscall["niemadra jak na polboginie"] = "17";
+madroscall["niewyksztalcony jak na polboga"] = "18"; madroscall["niewyksztalcona jak na polboginie"] = "18";
+madroscall["roztropny jak na polboga"] = "19"; madroscall["roztropna jak na polboginie"] = "19";
+madroscall["wyksztalcony jak na polboga"] = "20"; madroscall["wyksztalcona jak na polboginie"] = "20";
+madroscall["rozsadny jak na polboga"] = "21"; madroscall["rozsadna jak na polboginie"] = "21";
+madroscall["logiczny jak na polboga"] = "22"; madroscall["logiczna jak na polboginie"] = "22";
+madroscall["madry jak na polboga"] = "23"; madroscall["madra jak na polboginie"] = "23";
+madroscall["uczony jak na polboga"] = "24"; madroscall["uczona jak na polboginie"] = "24";
+madroscall["oswiecony jak na polboga"] = "25"; madroscall["oswiecona jak na polboginie"] = "25";
+madroscall["wszechwiedzacy jak na polboga"] = "26"; madroscall["wszechwiedzaca jak na polboginie"] = "26"
+
+madroscall["glupi jak na boga"] = "27"; madroscall["glupia jak na boginie"] = "27";
+madroscall["durny jak na boga"] = "28"; madroscall["durna jak na boginie"] = "28";
+madroscall["zacofany jak na boga"] = "29"; madroscall["zacofana jak na boginie"] = "29";
+madroscall["niemadry jak na boga"] = "30"; madroscall["niemadra jak na boginie"] = "30";
+madroscall["niewyksztalcony jak na boga"] = "31"; madroscall["niewyksztalcona jak na boginie"] = "31";
+madroscall["roztropny jak na boga"] = "32"; madroscall["roztropna jak na boginie"] = "32";
+madroscall["wyksztalcony jak na boga"] = "33"; madroscall["wyksztalcona jak na boginie"] = "33";
+madroscall["rozsadny jak na boga"] = "34"; madroscall["rozsadna jak na boginie jak na boginie"] = "34";
+madroscall["logiczny jak na boga"] = "35"; madroscall["logiczna jak na boginie"] = "35";
+madroscall["madry jak na boga"] = "36"; madroscall["madra jak na boginie"] = "36";
+madroscall["uczony jak na boga"] = "37"; madroscall["uczona jak na boginie"] = "37";
+madroscall["oswiecony jak na boga"] = "38"; madroscall["oswiecona jak na boginie"] = "38";
+madroscall["wszechwiedzacy jak na boga"] = "39"; madroscall["wszechwiedzaca jak na boginie"] = "39"
+
+-- CECHY ODWAGA
+odwagaall={}
+odwagaall["tchorzliwy"] ="1"; odwagaall["tchorzliwa"] ="1";
+odwagaall["strachliwy"] ="2"; odwagaall["strachliwa"] ="2";
+odwagaall["bojazliwy"] ="3"; odwagaall["bojazliwa"] ="3";
+odwagaall["lekliwy"] ="4"; odwagaall["lekliwa"] ="4";
+odwagaall["niepewny"] ="5"; odwagaall["niepewna"] ="5";
+odwagaall["zdecydowany"] ="6"; odwagaall["zdecydowana"] ="6";
+odwagaall["niezachwiany"] ="7"; odwagaall["niezachwiana"] ="7";
+odwagaall["odwazny"] ="8"; odwagaall["odwazna"] ="8";
+odwagaall["dzielny"] = "9"; odwagaall["dzielna"] = "9";
+odwagaall["nieugiety"] = "10"; odwagaall["nieugieta"] = "10";
+odwagaall["mezny"] = "11"; odwagaall["mezna"] = "11";
+odwagaall["bohaterski"] = "12"; odwagaall["braterska"] = "12";
+odwagaall["heroiczny"] = "13"; odwagaall["heroiczna"] = "13";
+
+odwagaall["tchorzliwy jak na polboga"] ="14"; odwagaall["tchorzliwa jak na polboginie"] ="14";
+odwagaall["strachliwy jak na polboga"] ="15"; odwagaall["strachliwa jak na polboginie"] ="15";
+odwagaall["bojazliwy jak na polboga"] ="16"; odwagaall["bojazliwa jak na polboginie"] ="16";
+odwagaall["lekliwy jak na polboga"] ="17"; odwagaall["lekliwa jak na polboginie"] ="17";
+odwagaall["niepewny jak na polboga"] ="18"; odwagaall["niepewna jak na polboginie"] ="18";
+odwagaall["zdecydowany jak na polboga"] ="19"; odwagaall["zdecydowana jak na polboginie"] ="19";
+odwagaall["niezachwiany jak na polboga"] ="20"; odwagaall["niezachwiana jak na polboginie"] ="20";
+odwagaall["odwazny jak na polboga"] ="21"; odwagaall["odwazna jak na polboginie"] ="21";
+odwagaall["dzielny jak na polboga"] = "22"; odwagaall["dzielna jak na polboginie"] = "22";
+odwagaall["nieugiety jak na polboga"] = "23"; odwagaall["nieugieta jak na polboginie"] = "23";
+odwagaall["mezny jak na polboga"] = "24"; odwagaall["mezna jak na polboginie"] = "24";
+odwagaall["bohaterski jak na polboga"] = "25"; odwagaall["braterska jak na polboginie"] = "25";
+odwagaall["heroiczny jak na polboga"] = "26"; odwagaall["heroiczna jak na polboginie"] = "26";
+
+odwagaall["tchorzliwy jak na boga"] ="27"; odwagaall["tchorzliwa jak na boginie"] ="27";
+odwagaall["strachliwy jak na boga"] ="28"; odwagaall["strachliwa jak na boginie"] ="28";
+odwagaall["bojazliwy jak na boga"] ="29"; odwagaall["bojazliwa jak na boginie"] ="29";
+odwagaall["lekliwy jak na boga"] ="30"; odwagaall["lekliwa jak na boginie"] ="30";
+odwagaall["niepewny jak na boga"] ="31"; odwagaall["niepewna jak na boginie"] ="31";
+odwagaall["zdecydowany jak na boga"] ="32"; odwagaall["zdecydowana jak na boginie"] ="32";
+odwagaall["niezachwiany jak na boga"] ="33"; odwagaall["niezachwiana jak na boginie"] ="33";
+odwagaall["odwazny jak na boga"] ="34"; odwagaall["odwazna jak na boginie"] ="34";
+odwagaall["dzielny jak na boga"] = "35"; odwagaall["dzielna jak na boginie"] = "35";
+odwagaall["nieugiety jak na boga"] = "36"; odwagaall["nieugieta jak na boginie"] = "36";
+odwagaall["mezny jak na boga"] = "37"; odwagaall["mezna jak na boginie"] = "37";
+odwagaall["bohaterski jak na boga"] = "38"; odwagaall["braterska jak na boginie"] = "38";
+odwagaall["heroiczny jak na boga"] = "39"; odwagaall["heroiczna jak na boginie"] = "39";</script>
+					<eventHandlerList />
+				</ScriptGroup>
+				<ScriptGroup isActive="yes" isFolder="yes">
+					<name>opisy_pozostale</name>
+					<packageName></packageName>
+					<script>--opisy poziomow
 require "rex_pcre"
 rex_pcre = rex_pcre or package.loaded.rex_pcre
 
 kondycje = {"na skraju smierci", "ledwo zyw(y|a|e)", "zmasakrowan(y|a|e)", "ciezko rann(y|a|e)", "w zlym stanie",
 	"w zlej kondycji", "rann(y|a|e)", "poranion(y|a|e)", "pokiereszowan(y|a|e)", "lekko rann(y|a|e)", "poturbowan(y|a|e)",
 	"w dobrym stanie", "w swietnej kondycji", "w pelni zdrow(|a|e)"}
+
+kondycjekolory = {
+"&lt;sandy_brown&gt;#      ", "&lt;green&gt;#      ",
+"&lt;green&gt;#&lt;sandy_brown&gt;#     ", "&lt;green&gt;##     ",
+"&lt;green&gt;#&lt;sandy_brown&gt;#     ", "&lt;green&gt;##     ",
+"&lt;green&gt;#&lt;sandy_brown&gt;#     ", "&lt;green&gt;##     ",
+"&lt;green&gt;##&lt;sandy_brown&gt;#    ", "&lt;green&gt;###    ",
+"&lt;green&gt;###&lt;sandy_brown&gt;#   ", "&lt;green&gt;####   ",
+"&lt;green&gt;####&lt;sandy_brown&gt;#  ", "&lt;green&gt;#####  ",
+"&lt;green&gt;#####&lt;sandy_brown&gt;# ", "&lt;green&gt;###### ",
+"&lt;green&gt;######&lt;sandy_brown&gt;#", "&lt;green&gt;#######"
+}
+
 
 mana = {"u kresu sil", "wykonczon(y|a|e)", "wyczerpan(y|a|e)", "w zlej kondycji", "bardzo zmeczon(y|a|e)",
 	"zmeczon(y|a|e)", "znuzon(y|a|e)", "oslabion(y|a|e)", "nadwyrezon(y|a|e)", "lekko oslabion(y|a|e)",
@@ -4870,7 +5253,8 @@ function jakaPozycjaOpisu(tabelka, opis)
 end
 
 </script>
-				<eventHandlerList />
+					<eventHandlerList />
+				</ScriptGroup>
 			</ScriptGroup>
 			<ScriptGroup isActive="yes" isFolder="yes">
 				<name>Walka</name>
@@ -5181,12 +5565,18 @@ end
 function gmcp_Area_Update()
 	if(gmcp.Room.Area.Update == nil) then return end
 	--display(gmcp.Room.Area.Update)
-	local roomId = getRoomIDbyHash(gmcp.Room.Area.Update.id)
-	if(roomId ~= -1) then
-		local czas = gmcp.Room.Area.Update.czas
-		local zapisany = getRoomUserData(roomId, "czas");
-		if(zapisany ~= tostring(czas)) then
-			local areaId = getAreaId(gmcp.Room.Area.Update.obszar)
+  local areaId = getAreaId(gmcp.Room.Area.Update.obszar)
+	if(areaId ~= -1) then
+		local toDelete = true
+		local roomId = getRoomIDbyHash(gmcp.Room.Area.Update.id)
+		if(roomId ~= -1) then
+			local czas = gmcp.Room.Area.Update.czas
+			local zapisany = getRoomUserData(roomId, "czas");
+			if(zapisany == tostring(czas)) then
+				toDelete = false
+			end
+		end
+		if(toDelete) then   
 			echo(" * Kasuje obszar '" .. getRoomAreaName(areaId) .. "', wykryte zmiany.\n")
 			deleteArea(areaId)
 		end
