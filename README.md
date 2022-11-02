@@ -9,7 +9,6 @@ To repozytorium zawiera paczkę podstawowych skryptów przeznaczonych dla polski
 * Strona gry: http://warlock.pl/
 * GitHub Mudlet: https://github.com/Mudlet/Mudlet
 * Installer Mudlet: https://github.com/Mudlet/installers
-* Pierwotne źródło skryptów: https://github.com/Talisterus/warlock-script
 
 
 ## Instrukcja obsługi
