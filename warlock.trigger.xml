@@ -4409,7 +4409,7 @@ function displaySpecialExits(exits)
 	for k, v in ipairs(exits) do
 		fg(minimapExits.name, "dark_olive_green")
 		echo(minimapExits.name, " | ")
-		fg(minimapExits.name, "DarkSlateBlue")
+		fg(minimapExits.name, "yellow")
 		echoLink(minimapExits.name, v, [[send("]] .. v .. [[")]], "Wyjscie specjalne: " .. v, true)		
 	end
 	if #exits &gt; 0 then
