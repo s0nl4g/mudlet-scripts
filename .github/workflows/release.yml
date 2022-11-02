@@ -6,10 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Pack
+        run: zip scripts.zip . -i config.lua warlock.trigger.xml
       - name: Release
         uses: fnkr/github-action-ghr@v1
         if: startsWith(github.ref, 'refs/tags/')
-        env:
-          GHR_COMPRESS: zip
-          GHR_PATH: config.lua warlock.trigger.xml
+        env: 
+          GHR_PATH: scripts.zip
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
