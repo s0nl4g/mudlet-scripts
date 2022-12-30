@@ -22,7 +22,7 @@ local scriptsZip = getMudletHomeDir() .. "/warlock_scripts.zip"
 local installerXML = getMudletHomeDir() .. "/WarlockScriptsInstaller.xml"
 local unzipDirectory = ""
 local scriptsDirectory = getMudletHomeDir() .. "/warlock_scripts/"
-local unzippedDirectoryName = "warlock_scripts-"
+local unzippedDirectoryName = "mudlet-scripts-"
 
 if lfs.isdir(scriptsDirectory .. ".git/") then
     cecho("\n&lt;CadetBlue&gt;(skrypty)&lt;tomato&gt;: Katalog " .. scriptsDirectory .. " to repozytorium .git\n")
