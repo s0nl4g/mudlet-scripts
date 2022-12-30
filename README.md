@@ -10,6 +10,20 @@ To repozytorium zawiera paczkę podstawowych skryptów przeznaczonych dla polski
 * GitHub Mudlet: https://github.com/Mudlet/Mudlet
 * Installer Mudlet: https://github.com/Mudlet/installers
 
+## Jak zainstalować skrypty
+
+Na chwile obecną skrypty należy zainstalować manualnie. Tworzymy nowy profil w mudlecie, bądź wykorzystujemy aktualny. W ustawieniach (settings) odznaczamy ptaszka przy: Allow server to install script packages.
+
+
+Przeciągnij poniższy link na okienko Mudleta.
+[https://github.com/WarlockMud/mudlet-scripts/releases/latest/download/WarlockScriptsInstaller.xml](https://github.com/WarlockMud/mudlet-scripts/releases/latest/download/WarlockScriptsInstaller.xml)
+
+lub wpisz:
+
+```
+lua installPackage("https://github.com/WarlockMud/mudlet-scripts/releases/latest/download/WarlockScriptsInstaller.xml")
+```
+
 
 ## Instrukcja obsługi
 

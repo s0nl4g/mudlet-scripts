@@ -1,6 +1,6 @@
 -- author: https://github.com/tjurczyk/arkadia
 scripts.installer = scripts.installer or {}
-scripts.installer.main_repo = "bfraszczyk/warlock_scripts"
+scripts.installer.main_repo = "WarlockMud/mudlet-scripts"
 
 function scripts.installer:update_scripts_to_latest_release()
     scripts.latest:get_latest_version(function(release_info) scripts.installer:on_scripts_version(release_info.tag_name) end)
