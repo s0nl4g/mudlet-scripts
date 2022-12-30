@@ -16,12 +16,12 @@ Na chwile obecną skrypty należy zainstalować manualnie. Tworzymy nowy profil 
 
 
 Przeciągnij poniższy link na okienko Mudleta.
-[https://github.com/bfraszczyk/warlock_scripts/releases/latest/download/WarlockScriptsInstaller.xml](https://github.com/bfraszczyk/warlock_scripts/releases/latest/download/WarlockScriptsInstaller.xml)
+[https://github.com/WarlockMud/mudlet-scripts/releases/latest/download/WarlockScriptsInstaller.xml](https://github.com/WarlockMud/mudlet-scripts/releases/latest/download/WarlockScriptsInstaller.xml)
 
 lub wpisz:
 
 ```
-lua installPackage("https://github.com/bfraszczyk/warlock_scripts/releases/latest/download/WarlockScriptsInstaller.xml")
+lua installPackage("https://github.com/WarlockMud/mudlet-scripts/releases/latest/download/WarlockScriptsInstaller.xml")
 ```
 
 
