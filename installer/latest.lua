@@ -1,6 +1,6 @@
 -- author: https://github.com/tjurczyk/arkadia
 scripts.latest = scripts.latest or {
-    url = "https://api.github.com/repos/bfraszczyk/warlock_scripts/releases/latest",
+    url = "https://api.github.com/repos/WarlockMud/mudlet-scripts/releases/latest",
     file_name = getMudletHomeDir() .. "/latest.json"
 }
 

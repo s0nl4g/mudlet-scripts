@@ -14,8 +14,8 @@ function lfs.isdir(dir)
     return exists
 end
 
-local latest_release = "https://api.github.com/repos/bfraszczyk/warlock_scripts/releases/latest"
-local download_base_url = "https://codeload.github.com/bfraszczyk/warlock_scripts/zip/"
+local latest_release = "https://api.github.com/repos/WarlockMud/mudlet-scripts/releases/latest"
+local download_base_url = "https://codeload.github.com/WarlockMud/mudlet-scripts/zip/"
 
 local latest_file = getMudletHomeDir() .. "/latest.json"
 local scriptsZip = getMudletHomeDir() .. "/warlock_scripts.zip"
@@ -87,8 +87,7 @@ function handleUnzipEvents(event, ...)
         disableScript("WarlockScriptsInstaller")
         uninstallPackage("warlock")
         uninstallPackage("Warlock")
-        uninstallPackage("generic_mapper")        
-        uninstallPackage(installer.name)
+        uninstallPackage("generic_mapper")                
         tempTimer(2, function()
             os.rename(getMudletHomeDir() .. "/" .. unzippedDirectoryName, scriptsDirectory)
             installPackage(scriptsDirectory .. "warlock_scripts.xml")
