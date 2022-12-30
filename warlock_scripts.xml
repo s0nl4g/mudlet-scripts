@@ -1,0 +1,2945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>warlock</name>
+			<script></script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName>warlock</packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList />
+			<regexCodePropertyList />
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>Prompt</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>jest_prompt</name>
+					<script>trigger_jest_prompt_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>return isPrompt()</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>4</integer>
+					</regexCodePropertyList>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>usun_prompt</name>
+						<script>trigger_usun_prompt_func()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>&gt; </string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>3</integer>
+						</regexCodePropertyList>
+					</Trigger>
+				</TriggerGroup>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>podmieniaj_taby</name>
+					<script>trigger_podmieniaj_taby_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>\t</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>Chodzenie</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>brak_przejscia</name>
+					<script>trigger_brak_przejscia_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#000000</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Nie widzisz zadnego wyjscia prowadzacego na (.+)\.$</string>
+						<string>^Schodzisz z traktu na (.+), lecz zawracasz nie znalazlszy sciezki.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Nie_przeszlismy</name>
+					<script>trigger_nie_przeszlismy_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Jestes tak zmeczony|a, ze nie mozesz isc (w tym kierunku).$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>drzwi_zamkniete</name>
+					<script>trigger_drzwi_zamkniete_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^(.+ (drzwi|wrota|brama)) (sa|jest) (zamkniete|zamknieta|zamkniety).$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>Lokacja</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#00aa00</mFgColor>
+				<mBgColor>#000000</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Opis</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList />
+					<regexCodePropertyList />
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>ciemno_nie_widac</name>
+						<script>trigger_ciemno_nie_widac_func()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>Panujacy mrok nie pozwala ci dokladnie okreslic gdzie sie znajdujesz.</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>0</integer>
+						</regexCodePropertyList>
+					</Trigger>
+				</TriggerGroup>
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Wyjscia</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList />
+					<regexCodePropertyList />
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>widoczne_wyjscia</name>
+						<script>trigger_widoczne_wyjscia_func()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#00aa00</mFgColor>
+						<mBgColor>#000000</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>^Sa tutaj (.+) widoczne wyjscia: (.+)\.$</string>
+							<string>^Jest tutaj (.+) widoczne wyjscie: (.+)\.$</string>
+							<string>^Jest tutaj (.+) widocznych wyjsc: (.+)\.$</string>
+							<string>^(Jedyne) widoczne wyjscie to: (.+)\.$</string>
+							<string>^(Zdaje ci sie) ze mozna by stad wyjsc gdzies na (.+)\.$</string>
+							<string>^Zdaje ci sie ze (jedyne) wyjscie stad to (.+)\.$</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+							<integer>1</integer>
+							<integer>1</integer>
+							<integer>1</integer>
+							<integer>1</integer>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>ciemno_brak_wyjsc</name>
+						<script>trigger_ciemno_brak_wyjsc_func()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>Wyjsc chyba bedziesz musial szukac po omacku.</string>
+							<string>Zdaje ci sie ze nie ma stad wyjscia.</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>3</integer>
+							<integer>3</integer>
+						</regexCodePropertyList>
+					</Trigger>
+				</TriggerGroup>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>kondycja</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>moje_cudze_hp</name>
+					<script>trigger_moje_cudze_hp_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^((Jestes)|(.+) jest) (fizycznie |)(na skraju smierci|ledwo zyw(y|a|e)|zmasakrowan(y|a|e)|ciezko rann(y|a|e)|w zlym stanie|w zlej kondycji|rann(y|a|e)|poranion(y|a|e)|pokiereszowan(y|a|e)|lekko rann(y|a|e)|poturbowan(y|a|e)|w dobrym stanie|w swietnej kondycji|w pelni zdrow(|a|e))[\.,]</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>moja_mana</name>
+					<script>trigger_moja_mana_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>(^Jestes|, zas) mentalnie (u kresu sil|wykonczon(y|a)|wyczerpan(y|a)|w zlej kondycji|bardzo zmeczon(y|a)|zmeczon(y|a)|znuzon(y|a)|oslabion(y|a)|nadwyrezon(y|a)|lekko oslabion(y|a)|nadwatlon(y|a)|w pelni sil)\.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>panika</name>
+					<script>trigger_panika_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Czujesz sie (bardzo bezpiecznie|bezpiecznie|spokojnie|zaniepokojon(y|a)|nieswojo|niespokojnie|lekliwie|trwozliwie|strachliwie|nerwowo|przerazon(y|a)|histerycznie przerazon(y|a)|smiertelnie przerazon(y|a))[\. ]</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>picie_jedzenie</name>
+					<script>trigger_picie_jedzenie_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^(Chce ci sie bardzo pic|Chce ci sie pic|Troche chce ci sie pic|Nie chce ci sie pic) i jestes (bardzo glodn(y|a)|glodn(y|a)|najedzon(y|a)|bardzo najedzon(y|a)).</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>zmeczenie</name>
+					<script>trigger_zmeczenie_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string> i jestes (w pelni wypoczet(y|a)|wypoczet(y|a)|troche zmeczon(y|a)|zmeczon(y|a)|bardzo zmeczon(y|a)|nieco wyczerpan(y|a)|wyczerpan(y|a)|bardzo wyczerpan(y|a)|wycienczon(y|a)|calkowicie wycienczon(y|a))[\., ]</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>walka</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>zgony</name>
+					<script>trigger_zgony_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^()Zabil(a|e|o)s (.+).</string>
+						<string>(.+) zabil(|a|o) (.+).</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ataki</name>
+					<script>trigger_ataki_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^()Atakujesz (.+)$</string>
+						<string>(.+) atakuje (.+)(.|!)$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>bez_obrazen</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>unika</string>
+						<string>paruje</string>
+						<string>zastawia</string>
+						<string>zatrzymuje</string>
+						<string>nie udaje sie trafic</string>
+						<string>udaje sie uniknac</string>
+						<string>wyparowany</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
+					</regexCodePropertyList>
+					<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>uniki</name>
+						<script></script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>unika</string>
+							<string>uniknac</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>0</integer>
+							<integer>0</integer>
+						</regexCodePropertyList>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>uniki_moje</name>
+							<script>trigger_uniki_moje_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>^(Powolnie|Niezgrabnie|Nieporadnie|Szczesliwie|Niezrecznie|Niemrawo|Wprawnie|Pewnie|Plynnie|Prosto|Zwinnie|Zrecznie|Pewnie|Zrecznie|Dynamicznie|Plynnie|Zgrabnie|Blyskawicznie|Mistrzowsko|Perfekcyjnie) unikasz (ciecia|pchniecia|uderzenia) (.+).$</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>uniki_moje_ani</name>
+							<script>trigger_uniki_moje_ani_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(.+) probuje cie trafic (.+), lecz tobie udaje sie uniknac tego ciosu.$</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>uniki_czyjes</name>
+							<script>trigger_uniki_czyjes_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(.+) (powolnie|niezgrabnie|nieporadnie|szczesliwie|niezrecznie|niemrawo|wprawnie|pewnie|plynnie|prosto|zwinnie|zrecznie|pewnie|zrecznie|dynamicznie|plynnie|zgrabnie|blyskawicznie|mistrzowsko|perfekcyjnie) unika (twojego) (ciecia|pchniecia|uderzenia) (.+).$</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>uniki_ktos_kogos</name>
+							<script>trigger_uniki_ktos_kogos_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(.+) (powolnie|niezgrabnie|nieporadnie|szczesliwie|niezrecznie|niemrawo|wprawnie|pewnie|plynnie|prosto|zwinnie|zrecznie|pewnie|zrecznie|dynamicznie|plynnie|zgrabnie|blyskawicznie|mistrzowsko|perfekcyjnie) unika (ciecia|pchniecia|uderzenia) (.+).$</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+					</TriggerGroup>
+					<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>parowanie</name>
+						<script></script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>paruje</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>0</integer>
+						</regexCodePropertyList>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>parowania_moje</name>
+							<script>trigger_parowania_moje_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(.+) wyprowadza (uderzenie|ciecie|pchniecie) (.+), lecz (szczesliwie|niemrawo|z trudem|z wysilkiem|z mozolem|pewnie|zgrabnie|umiejetnie|wprawnie|zrecznie|zwinnie|szybko|perfekcyjnie) (parujesz) je (.+).$</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>parowania_czyjes</name>
+							<script>trigger_parowania_czyjes_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>^Wyprowadzasz (uderzenie|ciecie|pchniecie) (.+), lecz (.+) (szczesliwie|niemrawo|z trudem|z wysilkiem|z mozolem|pewnie|zgrabnie|umiejetnie|wprawnie|zrecznie|zwinnie|szybko|perfekcyjnie) (paruje) je (.+).$</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+					</TriggerGroup>
+					<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>tarcza</name>
+						<script></script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>zastawia</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>0</integer>
+						</regexCodePropertyList>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>tarcza_moja</name>
+							<script>trigger_tarcza_moja_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(.+) wyprowadza (ciecie|pchniecie|uderzenie) (.+), lecz (zastawiasz sie) (.+).</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>tarcza_czyjas</name>
+							<script>trigger_tarcza_czyjas_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(.+) wyprowadza (ciecie|pchniecie|uderzenie) (.+), lecz (.+) (zastawia sie) (.+).</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>tarcza_ja_kogos</name>
+							<script>trigger_tarcza_ja_kogos_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(Uderzasz|Tniesz|Pchasz|Wyprowadzasz ciecie|pchniecie|uderzenie) (.+), lecz (.+) (zastawia sie) (.+).</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+					</TriggerGroup>
+					<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>zbroja</name>
+						<script></script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>zatrzymuje</string>
+							<string>wyparowany</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>0</integer>
+							<integer>0</integer>
+						</regexCodePropertyList>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>zbroja_moja</name>
+							<script>trigger_zbroja_moja_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(.+) (uderza|tnie|kluje) cie (.+) w (.+), lecz (jego|jej) (bron|cios) ((przebijajac|zesliznawszy sie) .+ |)(zatrzymuje sie) na twojej (.+).</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>zbroja_czyjas</name>
+							<script>trigger_zbroja_czyjas_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(.+) (uderza|tnie|kluje) (.+) w (.+), lecz (twoj|jeg|jego) cios (zatrzymuje sie) na (jego|jej) (.+).</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>zbroja_czyjas_ani</name>
+							<script>trigger_zbroja_czyjas_ani_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(.+) trafia (.+) w (.+), lecz caly impet uderzenia (wyparowany) zostaje przez (.+).</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>zbroja_moja_ani</name>
+							<script>trigger_zbroja_moja_ani_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(.+) trafia cie (.+) w (.+), lecz caly impet uderzenia (wyparowany) zostaje przez (.+).</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+					</TriggerGroup>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>pudlo</name>
+						<script>trigger_pudlo_func()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#000000</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>(.+) nie udaje sie trafic</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+				</TriggerGroup>
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ciosy_obrazenia</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string> trafiajac w </string>
+						<string> trafiajac (go|ja|je|jego) w </string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>ciosy_hum</name>
+						<script>trigger_ciosy_hum_func()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>(.+) (szczesliwie|ledwo|niezdarnie|z trudem|z wysilkiem|udanie|wprawnie|prosto|gladko|umiejetnie|z latwoscia|bez trudu|bez problemu|z latwoscia|dokladnie|perfekcyjnie) (.+? (cie |).+) trafiajac w (.+).$</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>moje</name>
+						<script>trigger_ciosy_moje_func()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>^(Szczesliwie|Ledwo|Niezdarnie|Z trudem|Z wysilkiem|Udanie|Wprawnie|Prosto|Gladko|Umiejetnie|Z latwoscia|Bez trudu|Bez problemu|Z latwoscia|Dokladnie|Perfekcyjnie) ((.+)sz) (.+) trafiajac w (.+).$</string>
+							<string>^()((Nacina|Rozcina|Tnie|Siecze|Rabie|Rznie)sz) (.+) (.+), trafiajac (go|ja|je|jego) w (.+).$</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>ciosy_ani</name>
+						<script>trigger_ciosy_ani_func()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>(.+) (ledwo muska|lekko rani|rani|powaznie rani|bardzo ciezko rani|potwornie rani|masakruje) (.+), trafiajac (cie|go|ja|je) w (.+).</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+				</TriggerGroup>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>opis_walki</name>
+					<script>trigger_opis_walki_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Walczy z </string>
+						<string>Walczysz z </string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>2</integer>
+						<integer>2</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>spece</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList />
+					<regexCodePropertyList />
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>szermierze</name>
+						<script></script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>markuje cios w kierunku</string>
+							<string>probuje piruetem wyminac</string>
+							<string>wirujac w zgrabnym piruecie przepuszcza cios</string>
+							<string>perfekcyjnie wykorzystujac przewage wyszkolenia w fechtunku zwodniczo mlynkuje</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</regexCodePropertyList>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>pudlo</name>
+							<script></script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#aaffff</mFgColor>
+							<mBgColor>#000000</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>lecz on uchyla sie przed tym ciosem.</string>
+								<string>ale mu sie to nie udaje</string>
+								<string>Ostrze mija jednak cel o centymetry</string>
+								<string>uchyla sie przed tym ciosem</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>0</integer>
+								<integer>0</integer>
+								<integer>0</integer>
+								<integer>0</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>obrazenia</name>
+							<script></script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ffaa7f</mFgColor>
+							<mBgColor>#000000</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(spora rane|przedziurawione na wylot cialo)</string>
+								<string>zauwazalna rane</string>
+								<string>zostawiajac po sobie gleboka rane</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+								<integer>0</integer>
+								<integer>0</integer>
+							</regexCodePropertyList>
+						</Trigger>
+					</Trigger>
+					<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>Bractwo_switu</name>
+						<script></script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>ciecie</string>
+							<string>tniesz</string>
+							<string>rownowag</string>
+							<string>Spokojnie...</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</regexCodePropertyList>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>ciecie</name>
+							<script></script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>ciecie</string>
+								<string>tnie</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>0</integer>
+								<integer>0</integer>
+							</regexCodePropertyList>
+							<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+								<name>trafienie</name>
+								<script></script>
+								<triggerType>0</triggerType>
+								<conditonLineDelta>0</conditonLineDelta>
+								<mStayOpen>0</mStayOpen>
+								<mCommand></mCommand>
+								<packageName></packageName>
+								<mFgColor>#ff0000</mFgColor>
+								<mBgColor>#ffff00</mBgColor>
+								<mSoundFile></mSoundFile>
+								<colorTriggerFgColor>#000000</colorTriggerFgColor>
+								<colorTriggerBgColor>#000000</colorTriggerBgColor>
+								<regexCodeList>
+									<string>trafia</string>
+								</regexCodeList>
+								<regexCodePropertyList>
+									<integer>0</integer>
+								</regexCodePropertyList>
+								<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+									<name>zbroja</name>
+									<script></script>
+									<triggerType>0</triggerType>
+									<conditonLineDelta>0</conditonLineDelta>
+									<mStayOpen>0</mStayOpen>
+									<mCommand></mCommand>
+									<packageName></packageName>
+									<mFgColor>#aaffff</mFgColor>
+									<mBgColor>#000000</mBgColor>
+									<mSoundFile></mSoundFile>
+									<colorTriggerFgColor>#000000</colorTriggerFgColor>
+									<colorTriggerBgColor>#000000</colorTriggerBgColor>
+									<regexCodeList>
+										<string>(.*) cieciem z (gory|dolu|boku) trafia(sz|) .* w .*, lecz (twoj|twoja|jego|jej) .* niweluje sile ciosu\.</string>
+									</regexCodeList>
+									<regexCodePropertyList>
+										<integer>1</integer>
+									</regexCodePropertyList>
+								</Trigger>
+								<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+									<name>skora</name>
+									<script></script>
+									<triggerType>0</triggerType>
+									<conditonLineDelta>0</conditonLineDelta>
+									<mStayOpen>0</mStayOpen>
+									<mCommand></mCommand>
+									<packageName></packageName>
+									<mFgColor>#aaffff</mFgColor>
+									<mBgColor>#000000</mBgColor>
+									<mSoundFile></mSoundFile>
+									<colorTriggerFgColor>#000000</colorTriggerFgColor>
+									<colorTriggerBgColor>#000000</colorTriggerBgColor>
+									<regexCodeList>
+										<string>(.*) cieciem z (gory|dolu|boku) trafia(sz|) .* w .*, lecz nie wyrzadzasz (jemu|jej) zadnej krzywdy\.</string>
+										<string>(.*) cieciem z (gory|dolu|boku) trafia(sz|) .* w .*, lecz (jego|jej) cios nie wyrzadza ci zadnej szkody\.</string>
+									</regexCodeList>
+									<regexCodePropertyList>
+										<integer>1</integer>
+										<integer>1</integer>
+									</regexCodePropertyList>
+								</Trigger>
+								<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="yes" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+									<name>obrazenia</name>
+									<script>trigger_bractwo_spec_obrazenia_func()</script>
+									<triggerType>0</triggerType>
+									<conditonLineDelta>0</conditonLineDelta>
+									<mStayOpen>0</mStayOpen>
+									<mCommand></mCommand>
+									<packageName></packageName>
+									<mFgColor>#ff0000</mFgColor>
+									<mBgColor>#ffff00</mBgColor>
+									<mSoundFile></mSoundFile>
+									<colorTriggerFgColor>#000000</colorTriggerFgColor>
+									<colorTriggerBgColor>#000000</colorTriggerBgColor>
+									<regexCodeList>
+										<string>(Kolejnym |^[&gt; ]*)([^.]+?) cieciem z (gory|boku|dolu) trafiasz .*? w .*?, pozostawiajac ([^.]+?)\.</string>
+										<string>(Kolejnym |^[&gt; ]*)([^.]+?) cieciem z (gory|boku|dolu) .*? trafia cie w .*?, pozostawiajac ([^.]+?)\.</string>
+										<string>(Kolejnym |^[&gt; ]*)([^.]+?) cieciem z (gory|boku|dolu) .*? trafia .*? w .*?, pozostawiajac ([^.]+?)\.</string>
+									</regexCodeList>
+									<regexCodePropertyList>
+										<integer>1</integer>
+										<integer>1</integer>
+										<integer>1</integer>
+									</regexCodePropertyList>
+								</Trigger>
+							</Trigger>
+							<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+								<name>pudlo</name>
+								<script></script>
+								<triggerType>0</triggerType>
+								<conditonLineDelta>0</conditonLineDelta>
+								<mStayOpen>0</mStayOpen>
+								<mCommand></mCommand>
+								<packageName></packageName>
+								<mFgColor>#aaffff</mFgColor>
+								<mBgColor>#000000</mBgColor>
+								<mSoundFile></mSoundFile>
+								<colorTriggerFgColor>#000000</colorTriggerFgColor>
+								<colorTriggerBgColor>#000000</colorTriggerBgColor>
+								<regexCodeList>
+									<string>(.*? (wyprowadza|wykonuje)|Wyprowadzasz|Wykonujesz) ciecie .*? w (.*?), lecz ((on|ona|ono) uchyla|uchylasz) sie przed tym ciosem\.</string>
+									<string>Plynnie kontynuujac ruch[,] tnie(sz|) .* w (.*), lecz ((on|ona|ono) uchyla|uchylasz) sie przed tym ciosem\.</string>
+								</regexCodeList>
+								<regexCodePropertyList>
+									<integer>1</integer>
+									<integer>1</integer>
+								</regexCodePropertyList>
+							</Trigger>
+						</Trigger>
+						<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>mlynek</name>
+							<script></script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>poziomym cieciem z obrotu</string>
+								<string>Z furkotem brutalnie rozcinanego powietrza</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>0</integer>
+								<integer>0</integer>
+							</regexCodePropertyList>
+						</TriggerGroup>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>jest_rownowaga</name>
+							<script></script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#55aa00</mFgColor>
+							<mBgColor>#000000</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>Czujesz, ze odzyskujesz rytm i rownowage.</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>0</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>brak_rownowagi</name>
+							<script></script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#aa5500</mFgColor>
+							<mBgColor>#000000</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>^(Jeszcze nie odzyskal(es|as|os) rownowagi\.)$</string>
+								<string>Spokojnie... walka dopiero sie zaczela, musisz chwilke poczekac aby poznac swojego przeciwnika.</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+								<integer>0</integer>
+							</regexCodePropertyList>
+						</Trigger>
+					</TriggerGroup>
+				</TriggerGroup>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>Druzyna</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>druzynie</string>
+					<string>Druzyne</string>
+					<string>druzyny</string>
+					<string>druzyne</string>
+					<string>przedstawia sie</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>0</integer>
+					<integer>2</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+				</regexCodePropertyList>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>zaprasza</name>
+					<script>trigger_druzyna_zaprasza_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>(.+) zaprasza (.+) do swojej druzyny\.$</string>
+						<string>^()Zapraszasz (.+) do druzyny\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>dolacza</name>
+					<script>trigger_druzyna_dolacza_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>(.+) dolacza do druzyny (.+)\.$</string>
+						<string>(.+) dolacza do (twojej) druzyny\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ja dolaczam</name>
+					<script>trigger_druzyna_ja_dolaczam_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Dolaczasz do druzyny (.+)\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>porzucanie</name>
+					<script>trigger_druzyna_porzucanie_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Porzucasz swoja druzyne.</string>
+						<string>(.+) porzuca twoja druzyne\.$</string>
+						<string>(.+) porzuca druzyne (.+)\.$</string>
+						<string>Porzucasz druzyne, ktorej przewodziles.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>2</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>2</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>brak_druzyny</name>
+					<script>trigger_druzyna_brak_druzyny_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#55aa00</mFgColor>
+					<mBgColor>#000000</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Nie jestes aktualnie w zadnej druzynie.</string>
+						<string>Nie jestes czlonkiem zadnej druzyny.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>2</integer>
+						<integer>2</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>opis_druzyny</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Przewodzisz druzynie, </string>
+						<string>Druzyne prowadzi</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>2</integer>
+						<integer>2</integer>
+					</regexCodePropertyList>
+					<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>dowodca</name>
+						<script></script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#00aa00</mFgColor>
+						<mBgColor>#000000</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>Przewodzisz druzynie, </string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>2</integer>
+						</regexCodePropertyList>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="yes" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>opis_szereg_wspolne_i_dalsze</name>
+							<script>trigger_opis_szereg_wspolne_i_dalsze_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(W|w ktorej w) (.+?) szeregu(, oprocz ciebie,|) (stoi|stoja) (.+?)\.</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>opis_szereg_samotnie</name>
+							<script>trigger_opis_szereg_samotnie_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>stojac (samotnie) w (.+?) szeregu\.</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+					</TriggerGroup>
+					<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>czlonek</name>
+						<script>trigger_druzyna_czlonek_func()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>Druzyne prowadzi (.+?) stojac(y|a|e) (samotnie()|razem z (.+?)) w (.+?) szeregu\.</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="yes" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>moj_szereg</name>
+							<script>trigger_druzyna_moj_szereg_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>Stoisz(, razem (z|ze) (.+?),| ()(samotnie)) w (.+?) szeregu\.</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>szereg_nie_moj</name>
+							<script>trigger_druzyna_szereg_nie_moj_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>W (.+?) szeregu sto(i|ja) (.+?)\.</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+					</TriggerGroup>
+				</TriggerGroup>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>przejscia</name>
+					<script>trigger_druzyna_przejscia_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>(.+) przechodzi do (.+) szeregu druzyny, chowajac sie za (.+)\.</string>
+						<string>(.+) przechodzi do (.+) szeregu druzyny\.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>rozwiazuje</name>
+					<script>trigger_druzyna_rozwiazuje_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>(.+) rozwiazuje druzyne.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>przedstawia</name>
+					<script>trigger_druzyna_przedstawia_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>1</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>(.+) przedstawia sie jako:</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>magia</name>
+				<script>
+</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>koncentr</string>
+					<string>zaklec</string>
+					<string>czar</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>0</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+				</regexCodePropertyList>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>koncentracja</name>
+					<script>trigger_magia_koncentracja_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>(.+) zaczyna miarowo oddychac, czujesz bijaca od (niego|niej) fale spokoju i gromadzacej sie mocy.$</string>
+						<string>Oddalasz sie myslami, pograzajac umysl w glebokiej koncentracji.</string>
+						<string>^Miarowo oddychasz, a fala spokoju zalewa twe mysli. Czujesz narastajaca w sobie moc, twoj umysl jest wyciszony a ty jestes w pelni skoncentrowan(y|a|e). Nic nie rozprasza juz twej uwagi.$</string>
+						<string>(.+) odcina swoj umysl od wszelkich bodzcow i pograza sie w glebokiej modlitwie.$</string>
+						<string>koncentruje sie i zaczyna powtarzac jakas cicha mantre.</string>
+						<string>(.+) koncentruje swoje moce\.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>0</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>0</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>oddychasz</name>
+						<script></script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#55aaff</mFgColor>
+						<mBgColor>#000000</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>Nic nie rozprasza juz twej uwagi.</string>
+							<string>Osiagasz stan naboznego skupienia niezbedny do odprawienia modlitwy.</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>0</integer>
+							<integer>0</integer>
+						</regexCodePropertyList>
+					</Trigger>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>brak_koncentracji</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ffa200</mFgColor>
+					<mBgColor>#000000</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Nie jestes skoncentrowan(y|a|e).</string>
+						<string>Nie udaje ci sie skoncentrowac nad zakleciem.</string>
+						<string>Nie udaje ci sie dostatecznie skoncentrowac.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>0</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>wyciszony</name>
+					<script>trigger_magia_wyciszony_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Wyciszasz umysl. Mozesz sie ponownie skoncentrowac.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>cooldown</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ffa200</mFgColor>
+					<mBgColor>#000000</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Ochlon, zanim ponownie sie skoncentrujesz.</string>
+						<string>Jeszcze nie jestes gotowy aby ponownie uzyc tego zaklecia.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>porazka_czarowania</name>
+					<script>trigger_magia_porazka_czarowania_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Probujesz opanowac zaklecie, ale masz zbyt male umiejetnosci, by temu sprostac.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>mozliwy_ponownie</name>
+					<script>trigger_magia_mozliwy_ponownie_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Mozesz sie ponownie skoncentrowac nad zakleciem (.+).</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>dekoncentracja</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ffa200</mFgColor>
+					<mBgColor>#000000</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>(.+) dekoncentruje sie.$</string>
+						<string>Dekoncentrujesz sie.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>3</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>poczatek_czarowania</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#55aaff</mFgColor>
+					<mBgColor>#000000</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Bierzesz gleboki oddech, probujac skoncentrowac sie i wyciszyc swoj umysl.</string>
+						<string>unosi do gory rece i koncentruje sie nad modlitwa.</string>
+						<string>Unosisz do gory rece i koncentrujesz sie nad modlitwa.</string>
+						<string>bierze gleboki oddech, probujac skoncentrowac sie i wyciszyc swoj umysl.</string>
+						<string>inkantuje slowa zaklecia.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>Mowienie</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>mowa</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Mowisz</string>
+						<string>Krzyczysz</string>
+						<string>Wrzeszczysz</string>
+						<string>mowi|dudni|szepce|spiewa|pomrukuje|piszczy|bulgocze|krzyczy|wrzeszczy|szepcze|mruczy|syczy|huczy|charczy|grzmi|nuci</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>2</integer>
+						<integer>2</integer>
+						<integer>2</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>mowienie</name>
+						<script>trigger_mowienie_func()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>(.+) (mowi|dudni|szepce|spiewa|pomrukuje|piszczy|bulgocze|krzyczy|wrzeszczy|szepcze|mruczy|syczy|huczy|charczy|grzmi|nuci)()( do (.+)|): (.+)</string>
+							<string>(.+) (mowi|dudni|szepce|spiewa|pomrukuje|piszczy|bulgocze|krzyczy|wrzeszczy|szepcze|mruczy|syczy|huczy|charczy|grzmi|nuci)( .*?|)( do (.+)|): (.+)</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>ja mowie</name>
+						<script>trigger_ja_mowie_func()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#000000</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>^(Mowisz|Krzyczysz|Wrzeszczysz|Szepczesz)( .*?|)( do (.+)|): (.+)</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+				</TriggerGroup>
+			</TriggerGroup>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>ekwipunek</name>
+				<script>trigger_ekwipunek_func()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>Masz na sobie</string>
+					<string>Masz przy sobie</string>
+					<string>^Trzyma(sz|) (.+) w (lewej|prawej) rece.</string>
+					<string>^Trzyma(sz|) oburacz</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>2</integer>
+					<integer>2</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>Skrzynie</name>
+				<script>trigger_skrzynie_func()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^(.+) zawiera(ja|) nastepujace (bronie|zbroje|jedzenie|przedmioty|ziola|pojemniki|mikstury|kosztownosci): </string>
+					<string>^(Ponadto|Dodatkowo w srodku|Oprocz tego wewnatrz|We wnetrzu) (zauwazasz|dostrzegasz|widzisz|spostrzegasz tez) (bronie|zbroje|jedzenie|przedmioty|ziola|pojemniki|mikstury|kosztownosci): </string>
+					<string>^(Dodatkowo polozone|Ponadto na (nim|niej)|Oprocz tego na wierzchu) (zauwazasz|dostrzegasz|widzisz|spostrzegasz) (bronie|zbroje|jedzenie|przedmioty|ziola|pojemniki|mikstury|kosztownosci): </string>
+					<string>^Na (.+) leza nastepujace (bronie|zbroje|jedzenie|przedmioty|ziola|pojemniki|mikstury|kosztownosci): </string>
+					<string>^We wnetrzu spostrzegasz (bronie|zbroje|jedzenie|przedmioty|ziola|pojemniki|mikstury|kosztownosci):</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>statystyka</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>runy</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList />
+					<regexCodePropertyList />
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="yes" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>runy_ilosc</name>
+						<script>trigger_runy_ilosc_func()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>1</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>^Oceniasz, ze.*(run|runy|runa) (.*) waz.*$</string>
+							<string>^Wydaje ci sie, (ze jest to|ze sa to) (\d+).*$</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>zdobyto_rune</name>
+						<script>trigger_zdobyto_rune_func()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>W twoim reku materializuje sie runa (.*)\.</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>zdobyto_runy</name>
+						<script>trigger_zdobyto_runy_func()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>^W twoim reku materializuja sie runa (.*) i runa (.*).$</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+				</TriggerGroup>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>postac</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>cechy</name>
+					<script>trigger_licznik_cech_cechy_func()
+</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Jestes (.*),(.*),(.*),(.*),(.*) i(.*).$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+		</TriggerGroup>
+	</TriggerPackage>
+	<TimerPackage />
+	<AliasPackage>
+		<AliasGroup isActive="yes" isFolder="yes">
+			<name>warlock</name>
+			<script></script>
+			<command></command>
+			<packageName>warlock</packageName>
+			<regex></regex>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>aliasy</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>eval</name>
+					<script>alias_eval_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/eval (.*)</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>version</name>
+					<script>alias_version_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/version$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>help</name>
+					<script>alias_help_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/(help|pomoc)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>zabici2</name>
+					<script>alias_licznik_zabici2_short_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/zabici2$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>debug</name>
+					<script>alias_debug_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/debug($| (.*))</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>del_enemy</name>
+					<script>alias_del_enemy_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/del_enemy (.+)</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>akcja</name>
+					<script>alias_akcja_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/akcja( (.+)|$)</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>kolory</name>
+					<script>alias_kolory_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/kolory$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>statsfix</name>
+					<script>alias_statsfix_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/statsfix$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>zabici2!</name>
+					<script>alias_licznik_zabici2_long_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/zabici2!$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>zabici2_data</name>
+					<script>alias_licznik_zabici2_date_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/zabici2 (.*)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>zabici2_reset</name>
+					<script>alias_zabici2_reset_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/zabici2_reset$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>/reload</name>
+					<script>load_scripts(true)</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/reload$</regex>
+				</Alias>
+			</AliasGroup>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>Wyjscia</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>roomInfo</name>
+					<script>alias_roominfo_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/roomInfo$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>clearArea</name>
+					<script>alias_cleararea_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/clearArea$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>clearMap</name>
+					<script>alias_clearmap_func()
+</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/clearMap$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>areas</name>
+					<script>alias_areas_func()
+
+</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/areas$</regex>
+				</Alias>
+				<AliasGroup isActive="yes" isFolder="yes">
+					<name>drzwi</name>
+					<script></script>
+					<command></command>
+					<packageName></packageName>
+					<regex></regex>
+					<Alias isActive="yes" isFolder="no">
+						<name>addDoor</name>
+						<script>alias_add_door_func()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/drzwi ([a-z]+) (0|1|2|3)</regex>
+					</Alias>
+				</AliasGroup>
+			</AliasGroup>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>Kontenery</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>cont_reset</name>
+					<script>function deleteSaveFile(cont)
+  --display(cont.name)
+  cont:deleteSaveFile()
+end
+
+Adjustable.Container:doAll(deleteSaveFile)
+</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/cont_reset$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>cont_show_all</name>
+					<script>alias_cont_show_all_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/cont_show_all$</regex>
+				</Alias>
+			</AliasGroup>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>statystyka</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<AliasGroup isActive="yes" isFolder="yes">
+					<name>runy</name>
+					<script></script>
+					<command></command>
+					<packageName></packageName>
+					<regex></regex>
+					<Alias isActive="yes" isFolder="no">
+						<name>runy</name>
+						<script>alias_runy_func()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/runy$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>pokaz_runy</name>
+						<script>alias_pokaz_runy_func()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/pokazruny$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>resetuj_runy</name>
+						<script>alias_resetuj_runy_func()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/resetujruny$</regex>
+					</Alias>
+				</AliasGroup>
+				<AliasGroup isActive="yes" isFolder="yes">
+					<name>counter</name>
+					<script></script>
+					<command></command>
+					<packageName></packageName>
+					<regex></regex>
+					<Alias isActive="yes" isFolder="no">
+						<name>zabici</name>
+						<script>alias_zabici_func()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/zabici$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>reset_zabici</name>
+						<script>alias_reset_zabici_func()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/zabici_reset$</regex>
+					</Alias>
+				</AliasGroup>
+				<AliasGroup isActive="yes" isFolder="yes">
+					<name>postepy</name>
+					<script></script>
+					<command></command>
+					<packageName></packageName>
+					<regex></regex>
+					<Alias isActive="yes" isFolder="no">
+						<name>postepy</name>
+						<script>alias_postepy_func()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/postepy$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>postepy_reset</name>
+						<script>alias_postepy_reset_func()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/postepy_reset$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>postepy2</name>
+						<script>alias_postepy2_func()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/postepy2$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>postepy3</name>
+						<script>alias_postepy3_func()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/postepy3$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>postepy2_reset</name>
+						<script>alias_postepy2_reset_func()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/postepy2_reset$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>postepy2+</name>
+						<script>alias_postepy2_plus_func()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/postepy2\+$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>postepy2+_val</name>
+						<script>alias_postepy2_plus_val_func()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/postepy2\+ ([0-9]+)(?: ([\d+]))?$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>postepy2-</name>
+						<script>alias_postepy2_minus_func()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/postepy2- (\d+)$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>postepy2- val</name>
+						<script>alias_postepy2_minus_val_func()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/postepy2- (\d+) (\d+)$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>postepy2_off</name>
+						<script>alias_postepy2_off_func()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/postepy2_off$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>postepy2_on</name>
+						<script>alias_postepy2_on_func()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/postepy2_on$</regex>
+					</Alias>
+				</AliasGroup>
+			</AliasGroup>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>Chodzik</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>opoz</name>
+					<script>alias_opoz_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/opoz (.*)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>chodzik_stop</name>
+					<script>alias_chodzik_stop_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/stop$</regex>
+				</Alias>
+			</AliasGroup>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>installer</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>aktualizuj_skrypty</name>
+					<script>alias_func_skrypty_installer_aktualizuj_skrypty()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/aktualizuj_skrypty$</regex>
+				</Alias>
+			</AliasGroup>
+		</AliasGroup>
+	</AliasPackage>
+	<ActionPackage>
+		<ActionGroup isActive="yes" isFolder="yes" isPushButton="no" isFlatButton="no" useCustomLayout="no">
+			<name>warlock</name>
+			<packageName>warlock</packageName>
+			<script></script>
+			<css></css>
+			<commandButtonUp></commandButtonUp>
+			<commandButtonDown></commandButtonDown>
+			<icon></icon>
+			<orientation>0</orientation>
+			<location>0</location>
+			<posX>0</posX>
+			<posY>0</posY>
+			<mButtonState>1</mButtonState>
+			<sizeX>0</sizeX>
+			<sizeY>0</sizeY>
+			<buttonColumn>1</buttonColumn>
+			<buttonRotation>0</buttonRotation>
+			<buttonColor>#ffffff</buttonColor>
+			<ActionGroup isActive="yes" isFolder="yes" isPushButton="no" isFlatButton="no" useCustomLayout="no">
+				<name>warlock</name>
+				<packageName>warlock</packageName>
+				<script></script>
+				<css></css>
+				<commandButtonUp></commandButtonUp>
+				<commandButtonDown></commandButtonDown>
+				<icon></icon>
+				<orientation>0</orientation>
+				<location>0</location>
+				<posX>0</posX>
+				<posY>0</posY>
+				<mButtonState>1</mButtonState>
+				<sizeX>0</sizeX>
+				<sizeY>0</sizeY>
+				<buttonColumn>1</buttonColumn>
+				<buttonRotation>0</buttonRotation>
+				<buttonColor>#ffffff</buttonColor>
+				<ActionGroup isActive="no" isFolder="yes" isPushButton="no" isFlatButton="yes" useCustomLayout="no">
+					<name>new toolbar</name>
+					<packageName></packageName>
+					<script></script>
+					<css></css>
+					<commandButtonUp></commandButtonUp>
+					<commandButtonDown></commandButtonDown>
+					<icon></icon>
+					<orientation>0</orientation>
+					<location>0</location>
+					<posX>0</posX>
+					<posY>0</posY>
+					<mButtonState>1</mButtonState>
+					<sizeX>7274605</sizeX>
+					<sizeY>7929975</sizeY>
+					<buttonColumn>4</buttonColumn>
+					<buttonRotation>0</buttonRotation>
+					<buttonColor>#ffffff</buttonColor>
+					<Action isActive="yes" isFolder="no" isPushButton="no" isFlatButton="yes" useCustomLayout="no">
+						<name>new button</name>
+						<packageName></packageName>
+						<script>echo("Test from script!\n")</script>
+						<css>background-color: green;
+</css>
+						<commandButtonUp></commandButtonUp>
+						<commandButtonDown>powiedz say from MUD</commandButtonDown>
+						<icon></icon>
+						<orientation>1</orientation>
+						<location>0</location>
+						<posX>0</posX>
+						<posY>0</posY>
+						<mButtonState>1</mButtonState>
+						<sizeX>-1</sizeX>
+						<sizeY>7602180</sizeY>
+						<buttonColumn>1</buttonColumn>
+						<buttonRotation>0</buttonRotation>
+						<buttonColor>#ffffff</buttonColor>
+					</Action>
+				</ActionGroup>
+			</ActionGroup>
+		</ActionGroup>
+	</ActionPackage>
+	<ScriptPackage>
+		<ScriptGroup isActive="yes" isFolder="yes">
+			<name>warlock</name>
+			<packageName>warlock</packageName>
+			<script></script>
+			<eventHandlerList />
+			<Script isActive="yes" isFolder="no">
+				<name>init</name>
+				<packageName></packageName>
+				<script>require("warlock_scripts")</script>
+				<eventHandlerList />
+			</Script>
+		</ScriptGroup>
+	</ScriptPackage>
+	<KeyPackage>
+		<KeyGroup isActive="yes" isFolder="yes">
+			<name>warlock</name>
+			<packageName>warlock</packageName>
+			<script></script>
+			<command></command>
+			<keyCode>0</keyCode>
+			<keyModifier>0</keyModifier>
+			<KeyGroup isActive="yes" isFolder="yes">
+				<name>kierunki_numpad</name>
+				<packageName></packageName>
+				<script></script>
+				<command></command>
+				<keyCode>-1</keyCode>
+				<keyModifier>0</keyModifier>
+				<Key isActive="yes" isFolder="no">
+					<name>north</name>
+					<packageName></packageName>
+					<script></script>
+					<command>n</command>
+					<keyCode>56</keyCode>
+					<keyModifier>536870912</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>south</name>
+					<packageName></packageName>
+					<script></script>
+					<command>s</command>
+					<keyCode>50</keyCode>
+					<keyModifier>536870912</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>east</name>
+					<packageName></packageName>
+					<script></script>
+					<command>e</command>
+					<keyCode>54</keyCode>
+					<keyModifier>536870912</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>west</name>
+					<packageName></packageName>
+					<script></script>
+					<command>w</command>
+					<keyCode>52</keyCode>
+					<keyModifier>536870912</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>nw</name>
+					<packageName></packageName>
+					<script></script>
+					<command>nw</command>
+					<keyCode>55</keyCode>
+					<keyModifier>536870912</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>ne</name>
+					<packageName></packageName>
+					<script></script>
+					<command>ne</command>
+					<keyCode>57</keyCode>
+					<keyModifier>536870912</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sw</name>
+					<packageName></packageName>
+					<script></script>
+					<command>sw</command>
+					<keyCode>49</keyCode>
+					<keyModifier>536870912</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>se</name>
+					<packageName></packageName>
+					<script></script>
+					<command>se</command>
+					<keyCode>51</keyCode>
+					<keyModifier>536870912</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>up</name>
+					<packageName></packageName>
+					<script></script>
+					<command>u</command>
+					<keyCode>53</keyCode>
+					<keyModifier>536870912</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>down</name>
+					<packageName></packageName>
+					<script></script>
+					<command>d</command>
+					<keyCode>48</keyCode>
+					<keyModifier>536870912</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>exit</name>
+					<packageName></packageName>
+					<script></script>
+					<command>wyjscie</command>
+					<keyCode>45</keyCode>
+					<keyModifier>536870912</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>pierwsze_specjalne</name>
+					<packageName></packageName>
+					<script>scripts.speedwalk:wyjdzSpecjalnym()</script>
+					<command></command>
+					<keyCode>43</keyCode>
+					<keyModifier>536870912</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_n</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie na n</command>
+					<keyCode>56</keyCode>
+					<keyModifier>603979776</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_s</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie na s</command>
+					<keyCode>50</keyCode>
+					<keyModifier>603979776</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_w</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie na w</command>
+					<keyCode>52</keyCode>
+					<keyModifier>603979776</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_e</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie na e</command>
+					<keyCode>54</keyCode>
+					<keyModifier>603979776</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_nw</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie na nw</command>
+					<keyCode>55</keyCode>
+					<keyModifier>603979776</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_ne</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie na ne</command>
+					<keyCode>57</keyCode>
+					<keyModifier>603979776</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_sw</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie na sw</command>
+					<keyCode>49</keyCode>
+					<keyModifier>603979776</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_se</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie na se</command>
+					<keyCode>51</keyCode>
+					<keyModifier>603979776</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_u</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie na u</command>
+					<keyCode>53</keyCode>
+					<keyModifier>603979776</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_d</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie na d</command>
+					<keyCode>48</keyCode>
+					<keyModifier>603979776</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_team_n</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie z druzyna na polnoc</command>
+					<keyCode>56</keyCode>
+					<keyModifier>738197504</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_team_s</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie z druzyna na s</command>
+					<keyCode>50</keyCode>
+					<keyModifier>738197504</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_team_e</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie z druzyna na e</command>
+					<keyCode>54</keyCode>
+					<keyModifier>738197504</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_team_nw</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie z druzyna na nw</command>
+					<keyCode>55</keyCode>
+					<keyModifier>738197504</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_team_ne</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie z druzyna na ne</command>
+					<keyCode>57</keyCode>
+					<keyModifier>738197504</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_team_sw</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie z druzyna na sw</command>
+					<keyCode>49</keyCode>
+					<keyModifier>738197504</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_team_se</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie z druzyna na se</command>
+					<keyCode>51</keyCode>
+					<keyModifier>738197504</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_team_u</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie z druzyna na u</command>
+					<keyCode>53</keyCode>
+					<keyModifier>738197504</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_team_d</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie z druzyna na d</command>
+					<keyCode>48</keyCode>
+					<keyModifier>738197504</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>sneak_team_w</name>
+					<packageName></packageName>
+					<script></script>
+					<command>przemknij sie z druzyna na w</command>
+					<keyCode>52</keyCode>
+					<keyModifier>738197504</keyModifier>
+				</Key>
+			</KeyGroup>
+			<KeyGroup isActive="yes" isFolder="yes">
+				<name>stan</name>
+				<packageName></packageName>
+				<script></script>
+				<command></command>
+				<keyCode>-1</keyCode>
+				<keyModifier>0</keyModifier>
+				<Key isActive="yes" isFolder="no">
+					<name>kondycja wszystkich</name>
+					<packageName></packageName>
+					<script>send("!kondycja wszystkich", false)</script>
+					<command></command>
+					<keyCode>16777268</keyCode>
+					<keyModifier>0</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>kondycja moja i wroga</name>
+					<packageName></packageName>
+					<script>send("!kondycja", false)
+send("!kondycja przeciwnika", false)</script>
+					<command></command>
+					<keyCode>16777269</keyCode>
+					<keyModifier>0</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>stan</name>
+					<packageName></packageName>
+					<script>send("!stan", false)</script>
+					<command></command>
+					<keyCode>16777271</keyCode>
+					<keyModifier>0</keyModifier>
+				</Key>
+			</KeyGroup>
+			<KeyGroup isActive="yes" isFolder="yes">
+				<name>speedwalk</name>
+				<packageName></packageName>
+				<script></script>
+				<command></command>
+				<keyCode>-1</keyCode>
+				<keyModifier>0</keyModifier>
+				<Key isActive="yes" isFolder="no">
+					<name>abort</name>
+					<packageName></packageName>
+					<script>scripts.speedwalk:abortSpeedWalk()</script>
+					<command></command>
+					<keyCode>16777275</keyCode>
+					<keyModifier>0</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>lazik</name>
+					<packageName></packageName>
+					<script>scripts.speedwalk:lazikWalkStep()</script>
+					<command></command>
+					<keyCode>42</keyCode>
+					<keyModifier>536870912</keyModifier>
+				</Key>
+			</KeyGroup>
+			<KeyGroup isActive="yes" isFolder="yes">
+				<name>pomoc</name>
+				<packageName></packageName>
+				<script></script>
+				<command></command>
+				<keyCode>16777264</keyCode>
+				<keyModifier>0</keyModifier>
+				<Key isActive="yes" isFolder="no">
+					<name>ogolne</name>
+					<packageName></packageName>
+					<script>send("?ogolne")</script>
+					<command></command>
+					<keyCode>16777265</keyCode>
+					<keyModifier>0</keyModifier>
+				</Key>
+				<Key isActive="yes" isFolder="no">
+					<name>klient</name>
+					<packageName></packageName>
+					<script>scripts.help:displayHelp()</script>
+					<command></command>
+					<keyCode>16777264</keyCode>
+					<keyModifier>0</keyModifier>
+				</Key>
+			</KeyGroup>
+		</KeyGroup>
+	</KeyPackage>
+	<HelpPackage>
+		<helpURL></helpURL>
+	</HelpPackage>
+</MudletPackage>
