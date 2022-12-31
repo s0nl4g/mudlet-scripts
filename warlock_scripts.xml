@@ -2165,13 +2165,6 @@
 					<regex>^/(help|pomoc)$</regex>
 				</Alias>
 				<Alias isActive="yes" isFolder="no">
-					<name>zabici2</name>
-					<script>alias_licznik_zabici2_short_func()</script>
-					<command></command>
-					<packageName></packageName>
-					<regex>^/zabici2$</regex>
-				</Alias>
-				<Alias isActive="yes" isFolder="no">
 					<name>debug</name>
 					<script>alias_debug_func()</script>
 					<command></command>
@@ -2367,6 +2360,13 @@ Adjustable.Container:doAll(deleteSaveFile)
 						<command></command>
 						<packageName></packageName>
 						<regex>^/zabici_reset$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>zabici2</name>
+						<script>alias_licznik_zabici2_short_func()</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/zabici2$</regex>
 					</Alias>
 				</AliasGroup>
 				<AliasGroup isActive="yes" isFolder="yes">
