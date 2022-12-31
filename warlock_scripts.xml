@@ -2129,7 +2129,22 @@
 			</TriggerGroup>
 		</TriggerGroup>
 	</TriggerPackage>
-	<TimerPackage />
+	<TimerPackage>
+		<TimerGroup isActive="yes" isFolder="yes" isTempTimer="no" isOffsetTimer="no">
+			<name>warlock</name>
+			<script></script>
+			<command></command>
+			<packageName></packageName>
+			<time>00:00:00.000</time>
+			<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+				<name>anti_idle_timer</name>
+				<script> 	send("!", false)</script>
+				<command></command>
+				<packageName></packageName>
+				<time>00:04:00.000</time>
+			</Timer>
+		</TimerGroup>
+	</TimerPackage>
 	<AliasPackage>
 		<AliasGroup isActive="yes" isFolder="yes">
 			<name>warlock</name>
@@ -2491,85 +2506,7 @@ Adjustable.Container:doAll(deleteSaveFile)
 			</AliasGroup>
 		</AliasGroup>
 	</AliasPackage>
-	<ActionPackage>
-		<ActionGroup isActive="yes" isFolder="yes" isPushButton="no" isFlatButton="no" useCustomLayout="no">
-			<name>warlock</name>
-			<packageName>warlock</packageName>
-			<script></script>
-			<css></css>
-			<commandButtonUp></commandButtonUp>
-			<commandButtonDown></commandButtonDown>
-			<icon></icon>
-			<orientation>0</orientation>
-			<location>0</location>
-			<posX>0</posX>
-			<posY>0</posY>
-			<mButtonState>1</mButtonState>
-			<sizeX>0</sizeX>
-			<sizeY>0</sizeY>
-			<buttonColumn>1</buttonColumn>
-			<buttonRotation>0</buttonRotation>
-			<buttonColor>#ffffff</buttonColor>
-			<ActionGroup isActive="yes" isFolder="yes" isPushButton="no" isFlatButton="no" useCustomLayout="no">
-				<name>warlock</name>
-				<packageName>warlock</packageName>
-				<script></script>
-				<css></css>
-				<commandButtonUp></commandButtonUp>
-				<commandButtonDown></commandButtonDown>
-				<icon></icon>
-				<orientation>0</orientation>
-				<location>0</location>
-				<posX>0</posX>
-				<posY>0</posY>
-				<mButtonState>1</mButtonState>
-				<sizeX>0</sizeX>
-				<sizeY>0</sizeY>
-				<buttonColumn>1</buttonColumn>
-				<buttonRotation>0</buttonRotation>
-				<buttonColor>#ffffff</buttonColor>
-				<ActionGroup isActive="no" isFolder="yes" isPushButton="no" isFlatButton="yes" useCustomLayout="no">
-					<name>new toolbar</name>
-					<packageName></packageName>
-					<script></script>
-					<css></css>
-					<commandButtonUp></commandButtonUp>
-					<commandButtonDown></commandButtonDown>
-					<icon></icon>
-					<orientation>0</orientation>
-					<location>0</location>
-					<posX>0</posX>
-					<posY>0</posY>
-					<mButtonState>1</mButtonState>
-					<sizeX>7274605</sizeX>
-					<sizeY>7929975</sizeY>
-					<buttonColumn>4</buttonColumn>
-					<buttonRotation>0</buttonRotation>
-					<buttonColor>#ffffff</buttonColor>
-					<Action isActive="yes" isFolder="no" isPushButton="no" isFlatButton="yes" useCustomLayout="no">
-						<name>new button</name>
-						<packageName></packageName>
-						<script>echo("Test from script!\n")</script>
-						<css>background-color: green;
-</css>
-						<commandButtonUp></commandButtonUp>
-						<commandButtonDown>powiedz say from MUD</commandButtonDown>
-						<icon></icon>
-						<orientation>1</orientation>
-						<location>0</location>
-						<posX>0</posX>
-						<posY>0</posY>
-						<mButtonState>1</mButtonState>
-						<sizeX>-1</sizeX>
-						<sizeY>7602180</sizeY>
-						<buttonColumn>1</buttonColumn>
-						<buttonRotation>0</buttonRotation>
-						<buttonColor>#ffffff</buttonColor>
-					</Action>
-				</ActionGroup>
-			</ActionGroup>
-		</ActionGroup>
-	</ActionPackage>
+	<ActionPackage />
 	<ScriptPackage>
 		<ScriptGroup isActive="yes" isFolder="yes">
 			<name>warlock</name>
@@ -2939,7 +2876,7 @@ send("!kondycja przeciwnika", false)</script>
 			</KeyGroup>
 		</KeyGroup>
 	</KeyPackage>
-	<HelpPackage>
-		<helpURL></helpURL>
-	</HelpPackage>
+	<VariablePackage>
+		<HiddenVariables />
+	</VariablePackage>
 </MudletPackage>
