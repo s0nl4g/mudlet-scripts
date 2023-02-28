@@ -22,3 +22,9 @@ function scripts:print_log_nobr(msg, new_line, color)
     end
     resetFormat()
 end
+
+function scripts:fake_text(s)
+    s = string.gsub(s, "%$", "\n")
+    feedTriggers(s .. "\n")
+    echo("\n")
+end

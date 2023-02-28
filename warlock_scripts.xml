@@ -2105,10 +2105,9 @@
 				<colorTriggerBgColor>#000000</colorTriggerBgColor>
 				<regexCodeList />
 				<regexCodePropertyList />
-				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 					<name>cechy</name>
-					<script>trigger_licznik_cech_cechy_func()
-</script>
+					<script>trigger_licznik_cech_cechy_func()</script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
 					<mStayOpen>0</mStayOpen>
@@ -2241,6 +2240,13 @@
 					<command></command>
 					<packageName></packageName>
 					<regex>^/reload$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>^/fake (.*)$</name>
+					<script>scripts:fake_text(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/fake (.*)$</regex>
 				</Alias>
 			</AliasGroup>
 			<AliasGroup isActive="yes" isFolder="yes">
@@ -2876,7 +2882,7 @@ send("!kondycja przeciwnika", false)</script>
 			</KeyGroup>
 		</KeyGroup>
 	</KeyPackage>
-	<VariablePackage>
-		<HiddenVariables />
-	</VariablePackage>
+	<HelpPackage>
+		<helpURL></helpURL>
+	</HelpPackage>
 </MudletPackage>
