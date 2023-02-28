@@ -162,7 +162,7 @@ function trigger_licznik_cech_cechy_func()
     --wytka
     --uciecie "jak na..."
     if string.find(wytrzymalosc, " ") then
-      if string.find(wytrzymalosc, " ") then
+      if string.find(wytrzymalosc, "dobrze zbudowan") then
         str = "dobrze zbudowan"
       else
        str = string.match(wytrzymalosc, '(.*) (.*) (.*) (.*) (.*)')
