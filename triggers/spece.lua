@@ -86,7 +86,6 @@ end
 
 function trigger_szermierze_spec_unik_func()
     local efekt = matches[2]
-    scripts.spece:set_color_and_prefix_of_attacker("SZ")
 
     selectCaptureGroup(2)
 
@@ -97,4 +96,5 @@ function trigger_szermierze_spec_unik_func()
     else
         fg'plum'
     end
+    scripts.spece:set_color_and_prefix_of_attacker("SZ")
 end

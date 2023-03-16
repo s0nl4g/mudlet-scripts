@@ -256,7 +256,6 @@ function trigger_ciosy_moje_func()
     fg("white")
 
     ipoz, max = scripts.opisy_poziomow:jakiPoziomOpisu(scripts.opisy_poziomow.opisy_rany, rana)
-    cecho("\n"..ipoz.."\n"..max)
     if(ipoz) then
         selectCaptureGroup(3)
         setFgColor(230 - (ipoz * 255 / max), 230 - (ipoz * 200 / max), 255);

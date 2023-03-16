@@ -1025,8 +1025,10 @@
 							<colorTriggerBgColor>#000000</colorTriggerBgColor>
 							<regexCodeList>
 								<string>(nikla ranke|zauwazalna rane|spora rane|gleboka rane|paskudna rane|przedziurawione na wylot cialo, ktore pada na ziemie)</string>
+								<string>(mija|uchyla sie)</string>
 							</regexCodeList>
 							<regexCodePropertyList>
+								<integer>1</integer>
 								<integer>1</integer>
 							</regexCodePropertyList>
 						</Trigger>
