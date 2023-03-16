@@ -36,6 +36,7 @@ return {
     "triggers/lokacja",
     "triggers/kondycja",
     "triggers/walka",
+    "triggers/spece",
     "triggers/druzyna",
     "triggers/magia",
     "triggers/skrzynie",
