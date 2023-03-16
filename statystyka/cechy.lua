@@ -100,6 +100,11 @@ scripts["licznik_cech"] = scripts["licznik_cech"] or {}
 
 
 function trigger_licznik_cech_cechy_func()  
+  -- bez tego wywola sie trigger_moje_cudze_hp_func zamiast tego
+  if string.find(matches[1], "Atakuje") or string.find(matches[1], "Atakuja") then
+    return
+  end
+
   local sila = trim_string(matches[2])
   local zrecznosc = trim_string(matches[3])
   local wytrzymalosc = trim_string(matches[4])
@@ -249,6 +254,7 @@ function trigger_licznik_cech_cechy_func()
     end
     cecho("Jestes "..s..", "..z..", "..w..", "..i..", "..m.." i "..o..".")
     scripts.licznik_cech:cechy_policz_lvl(s_l,z_l,w_l,i_l,m_l,o_l)
+
   end
 
 function scripts.licznik_cech:cechy_policz_lvl(sila,zrecznosc,wytrzymalosc,inteligencja,madrosc,odwaga)
