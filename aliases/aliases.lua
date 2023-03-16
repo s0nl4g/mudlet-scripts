@@ -120,4 +120,5 @@ function alias_repair_team_view()
     expandAlias("/statsfix", false)
     expandAlias("/eval removeTeam()", false)
     send("druzyna", false)
+    scripts:print_log("\n")
 end
