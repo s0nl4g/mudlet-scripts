@@ -141,7 +141,6 @@ function trigger_licznik_cech_cechy_func()
     s = sila.."<yellow_green> ("..s_l..")<reset>"
   end
 
-
   --zrecznosc
   --uciecie "jak na..."
     if string.find(zrecznosc, " ") then
@@ -163,7 +162,6 @@ function trigger_licznik_cech_cechy_func()
     z = zrecznosc.."<yellow_green> ("..z_l..")<reset>"
     end
     
-
     --wytka
     --uciecie "jak na..."
     if string.find(wytrzymalosc, " ") then
@@ -240,7 +238,6 @@ function trigger_licznik_cech_cechy_func()
       str = string.sub(odwaga, 0, string.len(odwaga)-1)
     end
     
-    
     if scripts.licznik_cech.odwagaall[str] then
       o_l = scripts.licznik_cech.odwagaall[str]
       if string.find(odwaga, "jak na legende") then
@@ -254,7 +251,6 @@ function trigger_licznik_cech_cechy_func()
     end
     cecho("Jestes "..s..", "..z..", "..w..", "..i..", "..m.." i "..o..".")
     scripts.licznik_cech:cechy_policz_lvl(s_l,z_l,w_l,i_l,m_l,o_l)
-
   end
 
 function scripts.licznik_cech:cechy_policz_lvl(sila,zrecznosc,wytrzymalosc,inteligencja,madrosc,odwaga)
