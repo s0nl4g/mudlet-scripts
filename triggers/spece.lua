@@ -1,6 +1,6 @@
 scripts["spece"] = scripts["spece"] or {}
 
-function scripts.spece:ustaw_kolor_i_prefiks_atakujacego(prefirks_speca, zmien_kolor)
+function scripts.spece:ustaw_kolor_i_prefiks_atakujacego(prefiks_speca, zmien_kolor)
     if czy_to_ty then
         if zmien_kolor then setFgColor(230 - (ipoz * 255 / max), 230 - (ipoz * 200 / max), 255) end
         prefix("<deep_sky_blue>["..prefiks_speca.."] ", cecho)
@@ -58,19 +58,20 @@ end
 
 function trigger_szermierze_spec_obrazenia_func(cios)
     selectCaptureGroup(2)
-    
-    if cios == "mija" or cios == "uchyla sie" then
+
+    if cios == "mija jednak cel" or cios == "uchyla sie" then
         fg'plum'
     else
         ipoz, max = scripts.opisy_poziomow:jakiPoziomOpisu(scripts.opisy_poziomow.szermierz_sila_speca, cios:lower())
+        scripts.spece:ustaw_kolor_i_prefiks_atakujacego("SZ", true)
     end
 
-    scripts.spece:ustaw_kolor_i_prefiks_atakujacego("SZ", true)
+
 end
 
 function trigger_szermierze_spec_rozbrojenie_func()
     local efekt = matches[2]
-    scripts.spece:ustaw_kolor_i_prefiks_atakujacego("SZ-", false)
+    scripts.spece:ustaw_kolor_i_prefiks_atakujacego("SZ-R", false)
     selectCaptureGroup(2)
 
     if efekt == "z okrzykiem bolu opuszcza" and czy_to_ty then
