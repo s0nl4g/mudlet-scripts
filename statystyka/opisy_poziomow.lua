@@ -96,7 +96,8 @@ scripts.opisy_poziomow["szermierz_sila_speca"] = {
 		"spora rane",
 		"gleboka rane",
 		"paskudna rane",
-		"przedziurawione na wylot cialo, ktore pada na ziemie"
+		"przedziurawione na wylot cialo, ktore pada na ziemie",
+		""
 	}
 	
 scripts.opisy_poziomow["szeregi"] = {["pierwszym"] = 1, ["drugim"] = 2, ["trzecim"] = 3}

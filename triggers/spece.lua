@@ -1,22 +1,21 @@
 scripts["spece"] = scripts["spece"] or {}
 
-function scripts.spece:set_color_and_prefix_of_attacker(prefiks)
-    if isYou then
-        setFgColor(230 - (ipoz * 255 / max), 230 - (ipoz * 200 / max), 255);
-        prefix("<deep_sky_blue>["..prefiks.."] ", cecho)
-
+function scripts.spece:ustaw_kolor_i_prefiks_atakujacego(prefirks_speca, zmien_kolor)
+    if czy_to_ty then
+        if zmien_kolor then setFgColor(230 - (ipoz * 255 / max), 230 - (ipoz * 200 / max), 255) end
+        prefix("<deep_sky_blue>["..prefiks_speca.."] ", cecho)
     else
-        setFgColor(255, 255 - (ipoz * 255 / max), 200 - (ipoz * 200 / max))
-        prefix("<orange>["..prefiks.."] ", cecho)
+        if zmien_kolor then setFgColor(255, 255 - (ipoz * 255 / max), 200 - (ipoz * 200 / max)) end
+        prefix("<orange>["..prefiks_speca.."] ", cecho)
     end
 end
 
 function trigger_spec_autor_func(autor)
-    isYou = false;
+    czy_to_ty = false;
     if autor == "" then
-        isYou = false
+        czy_to_ty = false
     else
-        isYou = true
+        czy_to_ty = true
     end
 end
 
@@ -60,41 +59,39 @@ end
 function trigger_szermierze_spec_obrazenia_func(cios)
     selectCaptureGroup(2)
     
-    if cios == "mija" or cios=="uchyla sie" then
+    if cios == "mija" or cios == "uchyla sie" then
         fg'plum'
     else
         ipoz, max = scripts.opisy_poziomow:jakiPoziomOpisu(scripts.opisy_poziomow.szermierz_sila_speca, cios:lower())
     end
 
-    scripts.spece:set_color_and_prefix_of_attacker("SZ")
+    scripts.spece:ustaw_kolor_i_prefiks_atakujacego("SZ", true)
 end
 
 function trigger_szermierze_spec_rozbrojenie_func()
     local efekt = matches[2]
+    scripts.spece:ustaw_kolor_i_prefiks_atakujacego("SZ-", false)
     selectCaptureGroup(2)
 
-    if efekt == "z okrzykiem bolu opuszcza" and isYou then
+    if efekt == "z okrzykiem bolu opuszcza" and czy_to_ty then
         fg'deep_sky_blue'
-    elseif efekt == "z okrzykiem bolu opuszcza" and not isYou then
+    elseif efekt == "z okrzykiem bolu opuszcza" and not czy_to_ty then
         fg'orange_red'
     else
         fg'plum'
-    end
-    
-    scripts.spece:set_color_and_prefix_of_attacker("SZ")
+    end    
 end
 
 function trigger_szermierze_spec_unik_func()
     local efekt = matches[2]
-
+    scripts.spece:ustaw_kolor_i_prefiks_atakujacego("SZ-U", false)
     selectCaptureGroup(2)
 
-    if efekt == "zmuszajac do odsloniecia sie" and isYou then
+    if efekt == "zmuszajac do odsloniecia sie" and czy_to_ty then
         fg'deep_sky_blue'
-    elseif efekt == "zmuszajac do odsloniecia sie" and not isYou then
+    elseif efekt == "zmuszajac do odsloniecia sie" and not czy_to_ty then
         fg'orange_red'
     else
         fg'plum'
     end
-    scripts.spece:set_color_and_prefix_of_attacker("SZ")
 end
