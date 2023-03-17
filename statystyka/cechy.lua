@@ -100,6 +100,11 @@ scripts["licznik_cech"] = scripts["licznik_cech"] or {}
 
 
 function trigger_licznik_cech_cechy_func()  
+  -- bez tego wywola sie trigger_moje_cudze_hp_func zamiast tego
+  if string.find(matches[1], "Atakuje") or string.find(matches[1], "Atakuja") then
+    return
+  end
+
   local sila = trim_string(matches[2])
   local zrecznosc = trim_string(matches[3])
   local wytrzymalosc = trim_string(matches[4])
@@ -128,14 +133,13 @@ function trigger_licznik_cech_cechy_func()
     s_l = scripts.licznik_cech.silaall[str]
     if string.find(sila, "jak na legende") then
       s_l = s_l + 13
-    elseif string.find(sila, "jak na polboga") or string.find(sila, "jak na polboginie")then
+    elseif string.find(sila, "jak na polboga") or string.find(sila, "jak na polboginie") then
       s_l = s_l + 26
-    elseif string.find(sila, "jak na boga") then
+    elseif string.find(sila, "jak na boga")  or string.find(sila, "jak na boginie") then
       s_l = s_l + 39
     end
     s = sila.."<yellow_green> ("..s_l..")<reset>"
   end
-
 
   --zrecznosc
   --uciecie "jak na..."
@@ -152,20 +156,19 @@ function trigger_licznik_cech_cechy_func()
         z_l = z_l + 13
       elseif string.find(zrecznosc, "jak na polboga") or string.find(zrecznosc, "jak na polboginie") then
         z_l = z_l + 26
-      elseif string.find(zrecznosc, "jak na boga") then
+      elseif string.find(zrecznosc, "jak na boga") or string.find(zrecznosc, "jak na boginie") then
         z_l = z_l + 39
       end
     z = zrecznosc.."<yellow_green> ("..z_l..")<reset>"
     end
     
-
     --wytka
     --uciecie "jak na..."
     if string.find(wytrzymalosc, " ") then
       if string.find(wytrzymalosc, "dobrze zbudowan") then
         str = "dobrze zbudowan"
       else
-       str = string.match(wytrzymalosc, '(.*) (.*) (.*) (.*) (.*)')
+       str = string.match(wytrzymalosc, '(.*) (.*) (.*) (.*)')
        str = string.sub(str, 0, string.len(str)-1)
       end
 
@@ -178,7 +181,7 @@ function trigger_licznik_cech_cechy_func()
         w_l = w_l + 13
       elseif string.find(wytrzymalosc, "jak na polboga") or string.find(wytrzymalosc, "jak na polboginie") then
         w_l = w_l + 26
-      elseif string.find(wytrzymalosc, "jak na boga") then
+      elseif string.find(wytrzymalosc, "jak na boga") or string.find(wytrzymalosc, "jak na boginie") then
         w_l = w_l + 39
       end
     w = wytrzymalosc.."<yellow_green> ("..w_l..")<reset>"
@@ -197,9 +200,9 @@ function trigger_licznik_cech_cechy_func()
       i_l = scripts.licznik_cech.intall[str]
       if string.find(inteligencja, "jak na legende") then
         i_l = i_l + 13
-      elseif string.find(inteligencja, "jak na polboga") then
+      elseif string.find(inteligencja, "jak na polboga") or string.find(inteligencja, "jak na polboginie") then
         i_l = i_l + 26
-      elseif string.find(inteligencja, "jak na boga") then
+      elseif string.find(inteligencja, "jak na boga") or string.find(inteligencja, "jak na boginie") then
         i_l = i_l + 39
       end
     i = inteligencja.."<yellow_green> ("..i_l..")<reset>"
@@ -218,9 +221,9 @@ function trigger_licznik_cech_cechy_func()
       m_l = scripts.licznik_cech.madroscall[str]
       if string.find(madrosc, "jak na legende") then
         m_l = m_l + 13
-      elseif string.find(madrosc, "jak na polboga") then
+      elseif string.find(madrosc, "jak na polboga") or string.find(madrosc, "jak na polboginie") then
         m_l = m_l + 26
-      elseif string.find(madrosc, "jak na boga") then
+      elseif string.find(madrosc, "jak na boga") or string.find(madrosc, "jak na boginie") then
         m_l = m_l + 39
       end
     m = madrosc.."<yellow_green> ("..m_l..")<reset>"
@@ -235,14 +238,13 @@ function trigger_licznik_cech_cechy_func()
       str = string.sub(odwaga, 0, string.len(odwaga)-1)
     end
     
-    
     if scripts.licznik_cech.odwagaall[str] then
       o_l = scripts.licznik_cech.odwagaall[str]
       if string.find(odwaga, "jak na legende") then
         o_l = o_l + 13
-      elseif string.find(odwaga, "jak na polboga") then
+      elseif string.find(odwaga, "jak na polboga") or string.find(odwaga, "jak na polboginie") then
         o_l = o_l + 26
-      elseif string.find(odwaga, "jak na boga") then
+      elseif string.find(odwaga, "jak na boga") or string.find(odwaga, "jak na boginie") then
         o_l = o_l + 39
       end
     o = odwaga.."<yellow_green> ("..o_l..")<reset>"

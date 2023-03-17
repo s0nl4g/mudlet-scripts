@@ -2235,18 +2235,25 @@
 					<regex>^/zabici2_reset$</regex>
 				</Alias>
 				<Alias isActive="yes" isFolder="no">
-					<name>/reload</name>
+					<name>reload</name>
 					<script>load_scripts(true)</script>
 					<command></command>
 					<packageName></packageName>
 					<regex>^/reload$</regex>
 				</Alias>
 				<Alias isActive="yes" isFolder="no">
-					<name>^/fake (.*)$</name>
+					<name>fake</name>
 					<script>scripts:fake_text(matches[2])</script>
 					<command></command>
 					<packageName></packageName>
 					<regex>^/fake (.*)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>team</name>
+					<script>alias_repair_team_view()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/team$</regex>
 				</Alias>
 			</AliasGroup>
 			<AliasGroup isActive="yes" isFolder="yes">
