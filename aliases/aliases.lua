@@ -115,3 +115,10 @@ function alias_cont_reset_func()
     Adjustable.Container:doAll(deleteContSaveFile)
 end
 
+function alias_repair_team_view()
+    scripts:print_log("Restartuje widok w oknie druzyny")
+    expandAlias("/statsfix", false)
+    expandAlias("/eval removeTeam()", false)
+    send("druzyna", false)
+    scripts:print_log("\n")
+end
