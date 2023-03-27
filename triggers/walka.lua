@@ -281,37 +281,3 @@ function trigger_opis_walki_func()
     fg("red")
     resetFormat()    
 end
-function trigger_bractwo_spec_obrazenia_func()
-    local bs_sily = {"delikatnym", "lekkim", "niezbyt silnym", "silnym", "mocnym", "poteznym", "niewiarygodnie poteznym"}
-    local bs_rany = {"nikly slad|nieznaczny odprysk kostny|nieznaczny uszczerbek|nikla ranke",
-                "niewielk(i|a) (slad|odprysk kostny|uszczerbek|rane)",
-                "zauwazaln(y|a) (slad|odprysk kosci|uszczerbek|rane)",
-                "spor(y|e|a) (slad|pekniecie|uszczerbek|rane)",
-                "paskudn(y|e|a) (slad|polamane kosci|uszczerbek|rane)",
-                "glebok(i|a) (slad|dziure|rane)|mocno i gleboko polamane kosci",
-                "bruzde przedzielajaca niemalze na pol|gruchoczac i lamiac kosci|prawie smiertelny w skutkach brak|prawie smiertelna rane, tnac (wysuszone miesnie|miesnie i pryskajac krwia)",
-                "bruzde na wylot|bezksztaltna mase polamanych kosci|zmasakrowane szczatki|straszliwie zmasakrowane cialo, ktore pada na ziemie( w kaluzy wlasnej krwi|)"
-    }
-
-    local ipoz, max, opis, sila, rana
-
-    for a = 0,#matches-1,5 do
-        -- kolor i styl dla calej linii
-        selectCaptureGroup(a + 1)
-        fg("PaleTurquoise")--; setBold(true)
-        -- dalej osobne kolorki dla sily ciosu i poziomu zadanej rany
-        sila = matches[a + 3]
-        rana = matches[a + 5]
-        selectCaptureGroup(a + 3)
-        ipoz, max = jakiPoziomOpisu(bs_sily, sila:lower())
-        setFgColor(255, 255 - (ipoz * 255 / max), 200 - (ipoz * 200 / max));
-        --replace(matches[a + 3] .. "(" .. ipoz .. ")")
-        selectCaptureGroup(a + 5)
-        ipoz, max = jakiPoziomOpisu(bs_rany, rana:lower())
-        setFgColor(255, 255 - (ipoz * 255 / max), 200 - (ipoz * 200 / max));
-        --replace(matches[a + 5] .. "(" .. ipoz .. ")")
-    end
-
-    deselect()
-    resetFormat()
-end

@@ -985,7 +985,7 @@
 					<regexCodePropertyList />
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>szermierze</name>
-						<script></script>
+						<script>trigger_spec_autor_func(matches[2])</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
 						<mStayOpen>0</mStayOpen>
@@ -997,65 +997,79 @@
 						<colorTriggerFgColor>#000000</colorTriggerFgColor>
 						<colorTriggerBgColor>#000000</colorTriggerBgColor>
 						<regexCodeList>
-							<string>markuje cios w kierunku</string>
-							<string>probuje piruetem wyminac</string>
-							<string>wirujac w zgrabnym piruecie przepuszcza cios</string>
-							<string>perfekcyjnie wykorzystujac przewage wyszkolenia w fechtunku zwodniczo mlynkuje</string>
+							<string>[Mm]arkuje(sz|)</string>
+							<string>[Pp]robuje(sz|) piruetem wyminac</string>
+							<string>[Ww]irujac w zgrabnym piruecie przepuszcza(sz|)</string>
+							<string>[Pp]erfekcyjnie wykorzystujac przewage wyszkolenia w fechtunku zwodniczo mlynkuje(sz|)</string>
+							<string>[Zz]decydowanie napiera(sz|)</string>
 						</regexCodeList>
 						<regexCodePropertyList>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>1</integer>
+							<integer>1</integer>
+							<integer>1</integer>
+							<integer>1</integer>
+							<integer>1</integer>
 						</regexCodePropertyList>
-						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-							<name>pudlo</name>
-							<script></script>
-							<triggerType>0</triggerType>
-							<conditonLineDelta>0</conditonLineDelta>
-							<mStayOpen>0</mStayOpen>
-							<mCommand></mCommand>
-							<packageName></packageName>
-							<mFgColor>#aaffff</mFgColor>
-							<mBgColor>#000000</mBgColor>
-							<mSoundFile></mSoundFile>
-							<colorTriggerFgColor>#000000</colorTriggerFgColor>
-							<colorTriggerBgColor>#000000</colorTriggerBgColor>
-							<regexCodeList>
-								<string>lecz on uchyla sie przed tym ciosem.</string>
-								<string>ale mu sie to nie udaje</string>
-								<string>Ostrze mija jednak cel o centymetry</string>
-								<string>uchyla sie przed tym ciosem</string>
-							</regexCodeList>
-							<regexCodePropertyList>
-								<integer>0</integer>
-								<integer>0</integer>
-								<integer>0</integer>
-								<integer>0</integer>
-							</regexCodePropertyList>
-						</Trigger>
-						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 							<name>obrazenia</name>
-							<script></script>
+							<script>trigger_szermierze_spec_obrazenia_func(matches[2])</script>
 							<triggerType>0</triggerType>
 							<conditonLineDelta>0</conditonLineDelta>
 							<mStayOpen>0</mStayOpen>
 							<mCommand></mCommand>
 							<packageName></packageName>
-							<mFgColor>#ffaa7f</mFgColor>
-							<mBgColor>#000000</mBgColor>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
 							<mSoundFile></mSoundFile>
 							<colorTriggerFgColor>#000000</colorTriggerFgColor>
 							<colorTriggerBgColor>#000000</colorTriggerBgColor>
 							<regexCodeList>
-								<string>(spora rane|przedziurawione na wylot cialo)</string>
-								<string>zauwazalna rane</string>
-								<string>zostawiajac po sobie gleboka rane</string>
+								<string>(nikla ranke|niewielka|zauwazalna rane|spora rane|gleboka rane|paskudna rane|przedziurawione na wylot cialo, ktore pada na ziemie)</string>
+								<string>(mija jednak cel|uchyla sie)</string>
 							</regexCodeList>
 							<regexCodePropertyList>
 								<integer>1</integer>
-								<integer>0</integer>
-								<integer>0</integer>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>rozbrojenie</name>
+							<script>trigger_szermierze_spec_rozbrojenie_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(z okrzykiem bolu opuszcza|nie pozwalajac jej upasc na ziemie)</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>unik</name>
+							<script>trigger_szermierze_spec_unik_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(zmuszajac do odsloniecia sie|sie to nie udaje)</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
 							</regexCodePropertyList>
 						</Trigger>
 					</Trigger>
