@@ -96,6 +96,7 @@ scripts.opisy_poziomow["szermierz_sila_speca"] = {
 		"spora rane",
 		"gleboka rane",
 		"paskudna rane",
+		"prawie smiertelna rane, tnac miesnie i pryskajac krwia",
 		"przedziurawione na wylot cialo, ktore pada na ziemie",
 		""
 	}
