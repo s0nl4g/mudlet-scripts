@@ -16,7 +16,7 @@ Na chwile obecną skrypty należy zainstalować manualnie. Tworzymy nowy profil 
 
 
 Przeciągnij poniższy link na okienko Mudleta.
-[https://github.com/WarlockMud/mudlet-scripts/releases/latest/download/WarlockScriptsInstaller.xml](https://github.com/WarlockMud/mudlet-scripts/releases/latest/download/WarlockScriptsInstaller.xml)
+https://raw.githubusercontent.com/WarlockMud/mudlet-scripts/main/WarlockScriptsInstaller.xml
 
 lub wpisz:
 
