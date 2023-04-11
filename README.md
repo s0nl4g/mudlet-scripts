@@ -21,7 +21,7 @@ https://raw.githubusercontent.com/WarlockMud/mudlet-scripts/main/WarlockScriptsI
 lub wpisz:
 
 ```
-lua installPackage("https://github.com/WarlockMud/mudlet-scripts/releases/latest/download/WarlockScriptsInstaller.xml")
+lua installPackage("https://raw.githubusercontent.com/WarlockMud/mudlet-scripts/main/WarlockScriptsInstaller.xml")
 ```
 
 
