@@ -38,6 +38,13 @@ scripts.opisy_poziomow["opisy_rany"] = {
 		{"ledwo muska", "lekko rani", "rani", "powaznie rani", "bardzo ciezko rani", "potwornie rani", "masakruje"}
 	}
 
+scripts.opisy_poziomow["opisy_rany_alter"]	={
+	"lekko raniac",
+	"raniac bolesnie",
+	"ciezko raniac",
+	"okrutnie raniac"
+}
+
 scripts.opisy_poziomow["opisy_mrany"] = {
     {"drobne iskierki wyladowan trzeszcza w ranie",
     	"niebieskie iskry wyladowan skacza po ranie",

@@ -67,6 +67,7 @@ scripts["licznik_cech"] = scripts["licznik_cech"] or {}
 
   -- CECHY MADROSC
   scripts.licznik_cech.madroscall = {}
+  scripts.licznik_cech.madroscall["glup"] = 1;
   scripts.licznik_cech.madroscall["glupi"] = 1;
   scripts.licznik_cech.madroscall["durn"] = 2;
   scripts.licznik_cech.madroscall["zacofan"] = 3;
@@ -111,6 +112,9 @@ function trigger_licznik_cech_cechy_func()
   local inteligencja = trim_string(matches[5])
   local madrosc = trim_string(matches[6])
   local odwaga = trim_string(matches[7])
+
+
+
   selectCurrentLine()
   replace("")
   s = "<red>[cos poszlo nie tak]<reset>"
@@ -216,7 +220,7 @@ function trigger_licznik_cech_cechy_func()
     else
       str = string.sub(madrosc, 0, string.len(madrosc)-1)
     end
-    
+
     if scripts.licznik_cech.madroscall[str] then
       m_l = scripts.licznik_cech.madroscall[str]
       if string.find(madrosc, "jak na legende") then
