@@ -101,18 +101,21 @@ scripts["licznik_cech"] = scripts["licznik_cech"] or {}
 
 
 function trigger_licznik_cech_cechy_func()  
-  -- bez tego wywola sie trigger_moje_cudze_hp_func zamiast tego
-  if string.find(matches[1], "Atakuje") or string.find(matches[1], "Atakuja") then
-    return
+
+  local cecha = matches[2]
+  local koncowka = matches[3]
+  local dopisek = ""
+  local bonusy = ""
+  local tymczasowa_cecha = 0
+  local wyrownanie_cech = ""
+
+  if matches[4] then
+    dopisek = matches[4]
+    dopisek = trim_string(dopisek)
   end
-
-  local sila = trim_string(matches[2])
-  local zrecznosc = trim_string(matches[3])
-  local wytrzymalosc = trim_string(matches[4])
-  local inteligencja = trim_string(matches[5])
-  local madrosc = trim_string(matches[6])
-  local odwaga = trim_string(matches[7])
-
+  if matches[5] then
+    bonusy = matches[5]
+  end
 
 
   selectCurrentLine()
@@ -124,138 +127,71 @@ function trigger_licznik_cech_cechy_func()
   m = "<red>[cos poszlo nie tak]<reset>"
   o = "<red>[cos poszlo nie tak]<reset>"
 
-  --sila
-  --uciecie "jak na..."
-  if string.find(sila, " ") then
-    str = string.match(sila, '(.*) (.*) (.*) (.*)')
-    str = string.sub(str, 0, string.len(str)-1)
+
+  if dopisek == "jak na legende" then 
+    tymczasowa_cecha = 13
+  elseif dopisek == "jak na polboga" or dopisek == "jak na polboginie" then
+    tymczasowa_cecha = 26
+  elseif dopisek == "jak na boga" or dopisek == "jak na boginie" then
+    tymczasowa_cecha = 39
   else
-    str = string.sub(sila, 0, string.len(sila)-1)
+    tymczasowa_cecha = 0
   end
 
-  if scripts.licznik_cech.silaall[str] then
-    s_l = scripts.licznik_cech.silaall[str]
-    if string.find(sila, "jak na legende") then
-      s_l = s_l + 13
-    elseif string.find(sila, "jak na polboga") or string.find(sila, "jak na polboginie") then
-      s_l = s_l + 26
-    elseif string.find(sila, "jak na boga")  or string.find(sila, "jak na boginie") then
-      s_l = s_l + 39
-    end
-    s = sila.."<yellow_green> ("..s_l..")<reset>"
-  end
+  if scripts.licznik_cech.silaall[cecha] then
+    s = tymczasowa_cecha + scripts.licznik_cech.silaall[cecha]
 
-  --zrecznosc
-  --uciecie "jak na..."
-    if string.find(zrecznosc, " ") then
-      str = string.match(zrecznosc, '(.*) (.*) (.*) (.*)')
-      str = string.sub(str, 0, string.len(str)-1)
-    else
-      str = string.sub(zrecznosc, 0, string.len(zrecznosc)-1)
+    if s < 10 then wyrownanie_cech = " "
+    else wyrownanie_cech = ""
     end
+    cecho("<gold>["..s.."]"..wyrownanie_cech.."<light_grey> Jestes "..matches[2]..matches[3]..matches[4]..matches[5]..".")
 
-    if scripts.licznik_cech.zrecznoscall[str] then
-      z_l = scripts.licznik_cech.zrecznoscall[str]
-      if string.find(zrecznosc, "jak na legende") then
-        z_l = z_l + 13
-      elseif string.find(zrecznosc, "jak na polboga") or string.find(zrecznosc, "jak na polboginie") then
-        z_l = z_l + 26
-      elseif string.find(zrecznosc, "jak na boga") or string.find(zrecznosc, "jak na boginie") then
-        z_l = z_l + 39
-      end
-    z = zrecznosc.."<yellow_green> ("..z_l..")<reset>"
-    end
-    
-    --wytka
-    --uciecie "jak na..."
-    if string.find(wytrzymalosc, " ") then
-      if string.find(wytrzymalosc, "dobrze zbudowan") then
-        str = "dobrze zbudowan"
-      else
-       str = string.match(wytrzymalosc, '(.*) (.*) (.*) (.*)')
-       str = string.sub(str, 0, string.len(str)-1)
-      end
+  elseif scripts.licznik_cech.zrecznoscall[cecha] then
+    z = tymczasowa_cecha + scripts.licznik_cech.zrecznoscall[cecha]
 
-    else
-      str = string.sub(wytrzymalosc, 0, string.len(wytrzymalosc)-1)
+    if z < 10 then wyrownanie_cech = " "
+    else wyrownanie_cech = ""
     end
-    if scripts.licznik_cech.wytkaall[str] then
-      w_l = scripts.licznik_cech.wytkaall[str]
-      if string.find(wytrzymalosc, "jak na legende") then
-        w_l = w_l + 13
-      elseif string.find(wytrzymalosc, "jak na polboga") or string.find(wytrzymalosc, "jak na polboginie") then
-        w_l = w_l + 26
-      elseif string.find(wytrzymalosc, "jak na boga") or string.find(wytrzymalosc, "jak na boginie") then
-        w_l = w_l + 39
-      end
-    w = wytrzymalosc.."<yellow_green> ("..w_l..")<reset>"
-    end
-    
-    --inteligencja
-      --uciecie "jak na..."
-    if string.find(inteligencja, " ") then
-      str = string.match(inteligencja, '(.*) (.*) (.*) (.*)')
-      str = string.sub(str, 0, string.len(str)-1)
-    else
-      str = string.sub(inteligencja, 0, string.len(inteligencja)-1)
-    end
-    
-    if scripts.licznik_cech.intall[str] then
-      i_l = scripts.licznik_cech.intall[str]
-      if string.find(inteligencja, "jak na legende") then
-        i_l = i_l + 13
-      elseif string.find(inteligencja, "jak na polboga") or string.find(inteligencja, "jak na polboginie") then
-        i_l = i_l + 26
-      elseif string.find(inteligencja, "jak na boga") or string.find(inteligencja, "jak na boginie") then
-        i_l = i_l + 39
-      end
-    i = inteligencja.."<yellow_green> ("..i_l..")<reset>"
-    end
-    
-    --madrosc
-    --uciecie "jak na..."
-    if string.find(madrosc, " ") then
-      str = string.match(madrosc, '(.*) (.*) (.*) (.*)')
-      str = string.sub(str, 0, string.len(str)-1)
-    else
-      str = string.sub(madrosc, 0, string.len(madrosc)-1)
-    end
+    cecho("<gold>["..z.."]"..wyrownanie_cech.."<light_grey> Jestes "..matches[2]..matches[3]..matches[4]..matches[5]..".")
+   
+  elseif scripts.licznik_cech.wytkaall[cecha] then
+    w = tymczasowa_cecha + scripts.licznik_cech.wytkaall[cecha]
 
-    if scripts.licznik_cech.madroscall[str] then
-      m_l = scripts.licznik_cech.madroscall[str]
-      if string.find(madrosc, "jak na legende") then
-        m_l = m_l + 13
-      elseif string.find(madrosc, "jak na polboga") or string.find(madrosc, "jak na polboginie") then
-        m_l = m_l + 26
-      elseif string.find(madrosc, "jak na boga") or string.find(madrosc, "jak na boginie") then
-        m_l = m_l + 39
-      end
-    m = madrosc.."<yellow_green> ("..m_l..")<reset>"
+    if w < 10 then wyrownanie_cech = " "
+    else wyrownanie_cech = ""
     end
+    cecho("<gold>["..w.."]"..wyrownanie_cech.."<light_grey> Jestes "..matches[2]..matches[3]..matches[4]..matches[5]..".")
+   
+  elseif scripts.licznik_cech.intall[cecha] then
+    i = tymczasowa_cecha + scripts.licznik_cech.intall[cecha]
 
-    --odwaga
-    --uciecie "jak na..."
-    if string.find(odwaga, " ") then
-      str = string.match(odwaga, '(.*) (.*) (.*) (.*)')
-      str = string.sub(str, 0, string.len(str)-1)
-    else
-      str = string.sub(odwaga, 0, string.len(odwaga)-1)
+    if i < 10 then wyrownanie_cech = " "
+    else wyrownanie_cech = ""
     end
-    
-    if scripts.licznik_cech.odwagaall[str] then
-      o_l = scripts.licznik_cech.odwagaall[str]
-      if string.find(odwaga, "jak na legende") then
-        o_l = o_l + 13
-      elseif string.find(odwaga, "jak na polboga") or string.find(odwaga, "jak na polboginie") then
-        o_l = o_l + 26
-      elseif string.find(odwaga, "jak na boga") or string.find(odwaga, "jak na boginie") then
-        o_l = o_l + 39
-      end
-    o = odwaga.."<yellow_green> ("..o_l..")<reset>"
+    cecho("<gold>["..i.."]"..wyrownanie_cech.."<light_grey> Jestes "..matches[2]..matches[3]..matches[4]..matches[5]..".")
+   
+  elseif scripts.licznik_cech.madroscall[cecha] then
+    m = tymczasowa_cecha + scripts.licznik_cech.madroscall[cecha]
+
+    if m < 10 then wyrownanie_cech = " "
+    else wyrownanie_cech = ""
     end
-    cecho("Jestes "..s..", "..z..", "..w..", "..i..", "..m.." i "..o..".")
-    scripts.licznik_cech:cechy_policz_lvl(s_l,z_l,w_l,i_l,m_l,o_l)
-  end
+    cecho("<gold>["..m.."]"..wyrownanie_cech.."<light_grey> Jestes "..matches[2]..matches[3]..matches[4]..matches[5]..".")
+   
+  elseif scripts.licznik_cech.odwagaall[cecha] then
+    o = tymczasowa_cecha + scripts.licznik_cech.odwagaall[cecha]
+
+    if o < 10 then wyrownanie_cech = " "
+    else wyrownanie_cech = ""
+    end
+    cecho("<gold>["..o.."]"..wyrownanie_cech.."<light_grey> Jestes "..matches[2]..matches[3]..matches[4]..matches[5]..".")
+   
+  end 
+
+
+  scripts.licznik_cech:cechy_policz_lvl(s,z,w,i,m,o)
+
+end
 
 function scripts.licznik_cech:cechy_policz_lvl(sila,zrecznosc,wytrzymalosc,inteligencja,madrosc,odwaga)
   local level = sila+zrecznosc+wytrzymalosc+inteligencja+madrosc+odwaga
