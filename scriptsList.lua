@@ -39,6 +39,7 @@ return {
     "triggers/spece",
     "triggers/druzyna",
     "triggers/magia",
+    "triggers/rzucanie-magii",
     "triggers/skrzynie",
     "triggers/ekwipunek",
     "triggers/mowienie",

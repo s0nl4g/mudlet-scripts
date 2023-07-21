@@ -61,6 +61,7 @@ function trigger_szermierze_spec_obrazenia_func(cios)
 
     if cios == "mija jednak cel" or cios == "uchyla sie" then
         fg'plum'
+        scripts.spece:ustaw_kolor_i_prefiks_atakujacego("SZ", false)
     else
         ipoz, max = scripts.opisy_poziomow:jakiPoziomOpisu(scripts.opisy_poziomow.szermierz_sila_speca, cios:lower())
         scripts.spece:ustaw_kolor_i_prefiks_atakujacego("SZ", true)
