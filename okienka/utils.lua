@@ -69,7 +69,33 @@ function scripts.windows:findElementsByAttribute(attr_name, attr_value, containe
 	end
 	return ret
 end
-
+function scripts.windows:findAllElementsWithId(container)
+	local tableToRet = {}
+	for i,v in pairs(container.windowList) do		
+		if v.id ~= nil then						
+			table.insert(tableToRet,v)
+		else
+			local sub = scripts.windows:findAllElementsWithId(v)
+			if sub ~= nil and table.getn(sub) > 0 then
+				for k,v in pairs(sub) do				
+					table.insert(tableToRet,v)	
+				end
+			end
+		end
+	end
+	
+	return tableToRet
+end
+function scripts.windows:cleanContainerStatsUpForNums()
+	local allEnemyContainers = scripts.windows:findAllElementsWithId(containerStats)	
+	for k,v in pairs(allEnemyContainers) do
+		if not table.contains(scripts.walka.nums, tonumber(v.id)) then						
+			local row = v.container			
+			scripts.windows:removeElement(v)
+			row:reposition()
+		end
+	end
+end
 function scripts.windows:findElementById(id, container)
 	for i, v in pairs(container.windowList) do						
 		if(v.id ~= nil and tostring(v.id) == tostring(id)) then 			

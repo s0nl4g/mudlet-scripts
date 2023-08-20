@@ -1,7 +1,6 @@
 function gmcp_Kill()
 	if(gmcp.Kill == nil) then return end
-	local a = gmcp.Kill	
-	scripts.windows:hideEnemyStatsFor(a.kogo.id)
+	local a = gmcp.Kill		
 	scripts.zabici:dodajZabitego(a.kto.nazwa, a.kogo.nazwa)
 	scripts.counter:add_killed(a.kogo.rasa,string.lower(a.kto.nazwa))
 	if scripts.character_name == string.lower(a.kto.nazwa) then

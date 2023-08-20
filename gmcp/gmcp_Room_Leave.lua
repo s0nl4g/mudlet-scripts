@@ -1,6 +1,5 @@
 function gmcp_Room_Leave()	
-	local id = gmcp.Room.Leave.id
-	scripts.windows:hideEnemyStatsFor(id)	
+	local id = gmcp.Room.Leave.id	
 end
 
 if scripts.event_handlers["scripts/gmcp/RoomLeave"] then

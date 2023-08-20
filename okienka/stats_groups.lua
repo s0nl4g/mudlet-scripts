@@ -172,11 +172,10 @@ end
 -- obsluga pokazywania i chowania statow dla siebie i czlonkow druzyny
 function scripts.windows:showStatsFor(id, imie, moje, leader, rank)
 	moje = moje or false
-	local stat = scripts.windows:findElementById(id, containerStats)	
-	if(stat == nil) then
+	local stat = scripts.windows:findElementById(id, containerStats)		
+	if(stat == nil) then		
 		scripts.windows:debugmsg("* Creating new stats for " .. imie .. " (" .. id .. ", " .. (moje and "moje" or "czyjes") .. ")")
-		local paski = moje and scripts.windows.paski_ja or scripts.windows.paski_inni
-		
+		local paski = moje and scripts.windows.paski_ja or scripts.windows.paski_inni		
 		local row = scripts.windows:createRowWrapper({height = 20 + 15 * #paski + 3, width = "100%"}, containerDruzyna)
 		
 		stat = scripts.windows:createStatsContainer({id = id, imie = imie, paski = paski, is_enemy = false, is_own = moje, is_leader = leader, team_rank = rank}, row)
@@ -277,13 +276,13 @@ function scripts.windows:getEnemiesFor(id)
 	return t
 end
 function scripts.windows:removeAllEnemiesFor(id)
-	for i, eid in ipairs(scripts.windows:getEnemiesFor(id)) do
-		scripts.windows:hideEnemyStatsFor(eid)
-	end
+	--for i, eid in ipairs(scripts.windows:getEnemiesFor(id)) do
+	--	scripts.windows:hideEnemyStatsFor(eid)
+	--end
 end
 function scripts.windows:adjustCombatOnMove()
-	local team = scripts.windows:getWholeTeam()
-	for i, data in ipairs(team) do
-		scripts.windows:removeAllEnemiesFor(data)
-	end
+--	local team = scripts.windows:getWholeTeam()
+--	for i, data in ipairs(team) do
+--		scripts.windows:removeAllEnemiesFor(data)
+--	end
 end

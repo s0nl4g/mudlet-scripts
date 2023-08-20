@@ -4,8 +4,7 @@ function gmcp_Room_Info(event)
     end    
   
     scripts.mapper:makeMapRoom(gmcp.Room.Info)
-    scripts.minimap:drawExitsOnConsole({})
-    scripts.windows:adjustCombatOnMove()    
+    scripts.minimap:drawExitsOnConsole({})    
     raiseEvent("warlock.newRoom", gmcp.Room.Info.id)    
 end
 
