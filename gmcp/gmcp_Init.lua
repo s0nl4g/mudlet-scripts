@@ -1,7 +1,7 @@
 function gmcp_Init()
 	if(gmcp.Gmcp.Init == nil) then return end	
 	for i, data in ipairs(scripts.windows:getWholeTeam()) do
-		scripts.windows:removeAllEnemiesFor(data)
+		--scripts.windows:removeAllEnemiesFor(data)
 		scripts.windows:hideStatsFor(data.id)
 	end
 	

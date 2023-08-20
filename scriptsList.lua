@@ -27,7 +27,6 @@ return {
     "gmcp/gmcp_Team_Join",
     "gmcp/gmcp_Team_Leave",
     "gmcp/gmcp_Team_Status",
-    "gmcp/gmcp_Attack",
     "gmcp/gmcp_Kill",
     "gmcp/gmcp_Area_Update",
     "gmcp/gmcp_Char_Info",
@@ -59,5 +58,8 @@ return {
     "statystyka/counter/utils",    
     "mapper/update",
     "statystyka/cechy",
-    "aliases/postepy"    
+    "aliases/postepy",
+    "walka/walka",
+    "gmcp/gmcp_Objects_Nums",
+    "gmcp/gmcp_Objects_Data"
 }
