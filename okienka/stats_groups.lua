@@ -19,7 +19,7 @@ function scripts.windows:createStatsLayout(window)
 	containerDruzyna = containerDruzyna or scripts.windows:createNewLayout({
 		align = "BOTTOM",
 		name="druzyna", x = "0px", y = "0px",
-		width="100%", height="100%",
+		width="100%", height="97%",
 		v_policy=Geyser.Fixed, h_policy=Geyser.Fixed,
 	}, containerStats)
 end

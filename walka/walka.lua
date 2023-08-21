@@ -29,14 +29,18 @@ function scripts.walka:process_attacks()
             scripts.windows:showStatsFor(tonumber(k), v.desc, v.avatar == 1, false, 0)	            
         end
         if v.enemy and v.attack_num ~= 0 then
+
             if scripts.walka.objects[tostring(v.attack_num)] ~= nil and (scripts.walka.objects[tostring(v.attack_num)].team > 0 or scripts.walka.objects[tostring(v.attack_num)].avatar > 0) then
-                local stat = scripts.windows:findElementById(v.attack_num, containerStats)
-                if(stat ~= nil and stat.is_enemy == false) then		        
-                    scripts.windows:showEnemyStatsFor(v.attack_num, tonumber(k), v.desc, true)                    
+
+                local stat = scripts.windows:findElementById(tonumber(v.attack_num), containerStats)
+                if(stat ~= nil and stat.is_enemy == false) then		                                                
+                    scripts.windows:showEnemyStatsFor(tonumber(v.attack_num), tonumber(k), v.desc, true)                    
                 end
+
                 stat = scripts.windows:findElementById(tonumber(k), containerStats)
-                if(stat ~= nil and stat.is_enemy == false) then		
-                    scripts.windows:showEnemyStatsFor(tonumber(k), v.attack_num, scripts.walka.objects[tostring(v.attack_num)].desc, false)                    
+
+                if(stat ~= nil and stat.is_enemy == false) then		                    
+                    scripts.windows:showEnemyStatsFor(tonumber(k), tonumber(v.attack_num), scripts.walka.objects[tostring(v.attack_num)].desc, false)                    
                 end
                 raiseEvent("warlock.someoneAttacks", v.desc, scripts.walka.objects[tostring(v.attack_num)].desc)
             end
