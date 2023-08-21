@@ -1642,7 +1642,7 @@
 				</Trigger>
 			</TriggerGroup>
 			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-				<name>magia</name>
+				<name>Magia rzucanie</name>
 				<script>
 </script>
 				<triggerType>0</triggerType>
@@ -2135,12 +2135,216 @@
 					<colorTriggerFgColor>#000000</colorTriggerFgColor>
 					<colorTriggerBgColor>#000000</colorTriggerBgColor>
 					<regexCodeList>
-						<string>^Jestes (.*),(.*),(.*),(.*),(.*) i(.*).$</string>
+						<string>Jestes (slabiutk|slabowit|watl|cherlaw|slab|krzepk|siln|mocn|teg|potezn|mocarn|tytaniczn|wszechmocna)(i|y|a)( jak na legende | jak na polboga | jak na polboginie | jak na boga | jak na boginie | )?(\(.*\)| |).</string>
+						<string>Jestes (nieskoordynowan|niezdarn|niezreczn|niezgrabn|niewprawn|sprawn|zreczn|szybk|wprawn|zwinn|gibk|akrobatyczn|ekwilibrystyczn)(i|y|a)( jak na legende | jak na polboga | jak na polboginie | jak na boga | jak na boginie | )?(\(.*\)| |).</string>
+						<string>Jestes (delikatn|chorowit|rachityczn|mizern|kruch|dobrze zbudowan|wytrzymal|odporn|masywn|tward|umiesnion|muskularn|atletyczn)(i|y|a)( jak na legende | jak na polboga | jak na polboginie | jak na boga | jak na boginie | )?(\(.*\)| |).</string>
+						<string>Jestes (bezmysln|ciemn|tep|nierozumn|ograniczon|rozgarniet|pojetn|zmysln|inteligentn|lotn|bystr|blyskotliw|genialn)(i|y|a)( jak na legende | jak na polboga | jak na polboginie | jak na boga | jak na boginie | |)?(\(.*\)| |)?.</string>
+						<string>Jestes (glup|durn|zacofan|niemadr|niewyksztalcon|roztropn|wyksztalcon|rozsadn|logiczn|madr|uczon|oswiecon|wszechwiedzac)(i|y|a|ia)( jak na legende | jak na polboga | jak na polboginie | jak na boga | jak na boginie | )?(\(.*\)| |).</string>
+						<string>Jestes (tchorzliw|strachliw|bojazliw|lekliw|niepewn|zdecydowan|niezachwian|odwazn|dzieln|nieugiet|mezn|bohatersk|heroiczn)(i|y|a)( jak na legende | jak na polboga | jak na polboginie | jak na boga | jak na boginie | )?(\(.*\)| |).</string>
 					</regexCodeList>
 					<regexCodePropertyList>
 						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
 					</regexCodePropertyList>
 				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>Magia</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Pasywne</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList />
+					<regexCodePropertyList />
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>Kosciany wir</name>
+						<script>selectCurrentLine()
+if matches[2]=="Wokol" then
+fg'dark_khaki'
+elseif matches[2]=="Atak" then
+fg'ansi_light_black'
+end
+prefix("[WIR] ")</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>(Wokol) .* wiruja niezliczone kosci i czaszki umarlych.</string>
+							<string>(Atak) .* spowalniaja wirujace kosci.</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>Pajecza wspinaczka</name>
+						<script>selectCurrentLine()
+fg'dark_khaki'
+prefix("[WSPINACZKA] ")</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>Dookola (ciebie|niego|niej) roztacza sie delikatna blekitna aura.</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>Kamienna skora</name>
+						<script>selectCurrentLine()
+fg'dark_khaki'
+prefix("[SKORA] ")</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>Twoja skora jest chropowata i szarawa.</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>0</integer>
+						</regexCodePropertyList>
+					</Trigger>
+				</TriggerGroup>
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Ofensywne</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList />
+					<regexCodePropertyList />
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>Promien smierci</name>
+						<script>if string.match(matches[1], 'Trafia') then
+prefix("&lt;dark_turquoise&gt;[PROMIEN] ", cecho)
+else
+prefix("&lt;thistle&gt;[PROMIEN] ", cecho)
+end</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>.* w kierunku .* wystrzeliwuje(sz|) promien mrocznej energi.*</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+				</TriggerGroup>
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Inne</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList />
+					<regexCodePropertyList />
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>Leczenie ran</name>
+						<script>local silaczaru = matches[3]
+selectCaptureGroup(1)
+
+if silaczaru == "nie niosac zadnej poprawy" then
+fg'plum'
+elseif silaczaru=="zasklepia czesciowo jedna z ran" then
+fg("light_goldenrod_yellow")
+fg'light_goldenrod_yellow'
+elseif silaczaru == "zasklepia i leczy jedna z ran" then
+fg("ansi_light_yellow")
+elseif silaczaru == "zasklepia i leczy kilka ran" then
+fg("gold")
+end
+
+resetFormat()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>^(.* wyciaga|Wyciagasz) reke .* szepczac slowa zaklecia. Chwile pozniej pojawia sie delikatne, blekitne swiatlo, .* (nie niosac zadnej poprawy|zasklepia czesciowo jedna z ran|zasklepia i leczy jedna z ran|ktore wnikajac w cialo, zasklepia i leczy kilka ran).</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+				</TriggerGroup>
 			</TriggerGroup>
 		</TriggerGroup>
 	</TriggerPackage>

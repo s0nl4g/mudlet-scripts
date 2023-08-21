@@ -38,6 +38,13 @@ scripts.opisy_poziomow["opisy_rany"] = {
 		{"ledwo muska", "lekko rani", "rani", "powaznie rani", "bardzo ciezko rani", "potwornie rani", "masakruje"}
 	}
 
+scripts.opisy_poziomow["opisy_rany_alter"]	={
+	"lekko raniac",
+	"raniac bolesnie",
+	"ciezko raniac",
+	"okrutnie raniac"
+}
+
 scripts.opisy_poziomow["opisy_mrany"] = {
     {"drobne iskierki wyladowan trzeszcza w ranie",
     	"niebieskie iskry wyladowan skacza po ranie",
@@ -96,6 +103,7 @@ scripts.opisy_poziomow["szermierz_sila_speca"] = {
 		"spora rane",
 		"gleboka rane",
 		"paskudna rane",
+		"prawie smiertelna rane, tnac miesnie i pryskajac krwia",
 		"przedziurawione na wylot cialo, ktore pada na ziemie",
 		""
 	}
