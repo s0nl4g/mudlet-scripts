@@ -105,9 +105,7 @@ local i = "<red>[cos poszlo nie tak]<reset>"
 local m = "<red>[cos poszlo nie tak]<reset>"
 local o = "<red>[cos poszlo nie tak]<reset>"
 
-
 function trigger_licznik_cech_cechy_func()
-
   local cecha = matches[2]
   local koncowka = matches[3]
   local dopisek = ""
@@ -200,8 +198,18 @@ function scripts.licznik_cech:cechy_policz_lvl(sila,zrecznosc,wytrzymalosc,intel
   local procentbojowych = bojowe/level*100
   local procentmentalnych = mentalne/level*100
   cecho("\n<dark_goldenrod>Masz "..level.."/312 cech. Bojowe: "..bojowe.." ("..math.floor(procentbojowych).."%), mentalne: "..mentalne.." ("..math.floor(procentmentalnych).."%).")
+  scripts.licznik_cech:resetuj_cechy()
 end
 
 function scripts.licznik_cech:wyswietl_ceche(cecha, wyrownanie)
   cecho("<gold>["..cecha.."]"..wyrownanie.."<lemon_chiffon> Jestes "..matches[2]..matches[3].."<light_grey>"..matches[4]..matches[5]..".")
+end
+
+function scripts.licznik_cech:resetuj_cechy()
+  s = "<red>[cos poszlo nie tak]<reset>"
+  z = "<red>[cos poszlo nie tak]<reset>"
+  w = "<red>[cos poszlo nie tak]<reset>"
+  i = "<red>[cos poszlo nie tak]<reset>"
+  m = "<red>[cos poszlo nie tak]<reset>"
+  o = "<red>[cos poszlo nie tak]<reset>"
 end
