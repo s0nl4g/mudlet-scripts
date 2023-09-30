@@ -1026,7 +1026,7 @@
 							<colorTriggerFgColor>#000000</colorTriggerFgColor>
 							<colorTriggerBgColor>#000000</colorTriggerBgColor>
 							<regexCodeList>
-								<string>(nikla ranke|niewielka|zauwazalna rane|spora rane|gleboka rane|paskudna rane|przedziurawione na wylot cialo, ktore pada na ziemie)</string>
+								<string>(nikla ranke|niewielka rane|zauwazalna rane|spora rane|gleboka rane|paskudna rane|przedziurawione na wylot cialo, ktore pada na ziemie)</string>
 								<string>(mija jednak cel|uchyla sie)</string>
 							</regexCodeList>
 							<regexCodePropertyList>
@@ -1906,13 +1906,15 @@
 						<string>Mowisz</string>
 						<string>Krzyczysz</string>
 						<string>Wrzeszczysz</string>
-						<string>mowi|dudni|szepce|spiewa|pomrukuje|piszczy|bulgocze|krzyczy|wrzeszczy|szepcze|mruczy|syczy|huczy|charczy|grzmi|nuci</string>
+						<string>mowi|dudni|szepce|warczy|zawodzi|spiewa|pomrukuje|piszczy|bulgocze|krzyczy|wrzeszczy|szepcze|mruczy|syczy|huczy|charczy|grzmi|nuci</string>
+						<string>Szepczesz</string>
 					</regexCodeList>
 					<regexCodePropertyList>
 						<integer>2</integer>
 						<integer>2</integer>
 						<integer>2</integer>
 						<integer>1</integer>
+						<integer>2</integer>
 					</regexCodePropertyList>
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>mowienie</name>
@@ -1928,8 +1930,8 @@
 						<colorTriggerFgColor>#000000</colorTriggerFgColor>
 						<colorTriggerBgColor>#000000</colorTriggerBgColor>
 						<regexCodeList>
-							<string>(.+) (mowi|dudni|szepce|spiewa|pomrukuje|piszczy|bulgocze|krzyczy|wrzeszczy|szepcze|mruczy|syczy|huczy|charczy|grzmi|nuci)()( do (.+)|): (.+)</string>
-							<string>(.+) (mowi|dudni|szepce|spiewa|pomrukuje|piszczy|bulgocze|krzyczy|wrzeszczy|szepcze|mruczy|syczy|huczy|charczy|grzmi|nuci)( .*?|)( do (.+)|): (.+)</string>
+							<string>(.+) (mowi|dudni|szepce|warczy|zawodzi|spiewa|pomrukuje|piszczy|bulgocze|krzyczy|wrzeszczy|szepcze|mruczy|syczy|huczy|charczy|grzmi|nuci)()( do (.+)|): (.+)</string>
+							<string>(.+) (mowi|dudni|szepce|warczy|zawodzi|spiewa|pomrukuje|piszczy|bulgocze|krzyczy|wrzeszczy|szepcze|mruczy|syczy|huczy|charczy|grzmi|nuci)( .*?|)( do (.+)|): (.+)</string>
 						</regexCodeList>
 						<regexCodePropertyList>
 							<integer>1</integer>
