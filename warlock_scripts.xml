@@ -901,7 +901,7 @@
 					<colorTriggerBgColor>#000000</colorTriggerBgColor>
 					<regexCodeList>
 						<string> trafiajac w </string>
-						<string> trafiajac (go|ja|je|jego) w </string>
+						<string> trafiajac (cie|go|ja|je|jego) w </string>
 					</regexCodeList>
 					<regexCodePropertyList>
 						<integer>0</integer>
@@ -963,7 +963,7 @@
 						<colorTriggerFgColor>#000000</colorTriggerFgColor>
 						<colorTriggerBgColor>#000000</colorTriggerBgColor>
 						<regexCodeList>
-							<string>(.+) (ledwo muska|lekko rani|rani|powaznie rani|bardzo ciezko rani|potwornie rani|masakruje) (.+), trafiajac (cie|go|ja|je) w (.+).</string>
+							<string>(.+?) (ledwo muska|lekko rani|rani|powaznie rani|bardzo ciezko rani|potwornie rani|masakruje) (.+), trafiajac (cie|go|ja|je) w (.+).</string>
 						</regexCodeList>
 						<regexCodePropertyList>
 							<integer>1</integer>
