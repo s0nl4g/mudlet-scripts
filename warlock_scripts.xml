@@ -901,7 +901,7 @@
 					<colorTriggerBgColor>#000000</colorTriggerBgColor>
 					<regexCodeList>
 						<string> trafiajac w </string>
-						<string> trafiajac (go|ja|je|jego) w </string>
+						<string> trafiajac (cie|go|ja|je|jego) w </string>
 					</regexCodeList>
 					<regexCodePropertyList>
 						<integer>0</integer>
@@ -963,7 +963,7 @@
 						<colorTriggerFgColor>#000000</colorTriggerFgColor>
 						<colorTriggerBgColor>#000000</colorTriggerBgColor>
 						<regexCodeList>
-							<string>(.+) (ledwo muska|lekko rani|rani|powaznie rani|bardzo ciezko rani|potwornie rani|masakruje) (.+), trafiajac (cie|go|ja|je) w (.+).</string>
+							<string>(.+?) (ledwo muska|lekko rani|rani|powaznie rani|bardzo ciezko rani|potwornie rani|masakruje) (.+), trafiajac (cie|go|ja|je) w (.+).</string>
 						</regexCodeList>
 						<regexCodePropertyList>
 							<integer>1</integer>
@@ -1928,7 +1928,7 @@
 						<string>Mowisz</string>
 						<string>Krzyczysz</string>
 						<string>Wrzeszczysz</string>
-						<string>mowi|dudni|szepce|warczy|zawodzi|spiewa|pomrukuje|piszczy|bulgocze|krzyczy|wrzeszczy|szepcze|mruczy|syczy|huczy|charczy|grzmi|nuci</string>
+						<string>mowi|dudni|szepce|skrzeczy|warczy|zawodzi|spiewa|pomrukuje|piszczy|bulgocze|krzyczy|wrzeszczy|szepcze|mruczy|syczy|huczy|charczy|grzmi|nuci</string>
 						<string>Szepczesz</string>
 					</regexCodeList>
 					<regexCodePropertyList>
@@ -1952,8 +1952,8 @@
 						<colorTriggerFgColor>#000000</colorTriggerFgColor>
 						<colorTriggerBgColor>#000000</colorTriggerBgColor>
 						<regexCodeList>
-							<string>(.+) (mowi|dudni|szepce|warczy|zawodzi|spiewa|pomrukuje|piszczy|bulgocze|krzyczy|wrzeszczy|szepcze|mruczy|syczy|huczy|charczy|grzmi|nuci)()( do (.+)|): (.+)</string>
-							<string>(.+) (mowi|dudni|szepce|warczy|zawodzi|spiewa|pomrukuje|piszczy|bulgocze|krzyczy|wrzeszczy|szepcze|mruczy|syczy|huczy|charczy|grzmi|nuci)( .*?|)( do (.+)|): (.+)</string>
+							<string>(.+) (mowi|dudni|szepce|skrzeczy|warczy|zawodzi|spiewa|pomrukuje|piszczy|bulgocze|krzyczy|wrzeszczy|szepcze|mruczy|syczy|huczy|charczy|grzmi|nuci)()( do (.+)|): (.+)</string>
+							<string>(.+) (mowi|dudni|szepce|skrzeczy|warczy|zawodzi|spiewa|pomrukuje|piszczy|bulgocze|krzyczy|wrzeszczy|szepcze|mruczy|syczy|huczy|charczy|grzmi|nuci)( .*?|)( do (.+)|): (.+)</string>
 						</regexCodeList>
 						<regexCodePropertyList>
 							<integer>1</integer>
@@ -2365,6 +2365,44 @@ resetFormat()</script>
 							<string>^(.* wyciaga|Wyciagasz) reke .* szepczac slowa zaklecia. Chwile pozniej pojawia sie delikatne, blekitne swiatlo, .* (nie niosac zadnej poprawy|zasklepia czesciowo jedna z ran|zasklepia i leczy jedna z ran|ktore wnikajac w cialo, zasklepia i leczy kilka ran).</string>
 						</regexCodeList>
 						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+				</TriggerGroup>
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Podmiana</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList />
+					<regexCodePropertyList />
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>podmiana_postepow</name>
+						<script>podmiana_postepow_func()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>^Wydaje ci sie ze poczyni(l|lo|la) (znikome|minimalne|nieznaczne|malutkie|male|nieduze|spore|znaczne|pokazne|duze|wielkie|wspaniale|wysmienite|ogromne|gigantyczne|kolosalne|niesamowite|fantastyczne) postepy jako najemnik.$</string>
+							<string>^Poczynil(es|as) (znikome|minimalne|nieznaczne|malutkie|male|nieduze|spore|znaczne|pokazne|duze|wielkie|wspaniale|wysmienite|ogromne|gigantyczne|kolosalne|niesamowite|fantastyczne) postepy, odkad pojawiles sie w tym swiecie.$</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
 							<integer>1</integer>
 						</regexCodePropertyList>
 					</Trigger>
