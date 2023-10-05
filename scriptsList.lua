@@ -43,6 +43,7 @@ return {
     "triggers/ekwipunek",
     "triggers/mowienie",
     "triggers/gonienie",
+    "triggers/podmiana",
     "http_client",
     "installer/latest",
     "installer/installer",
