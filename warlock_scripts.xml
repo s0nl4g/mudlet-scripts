@@ -1048,10 +1048,12 @@
 							<colorTriggerFgColor>#000000</colorTriggerFgColor>
 							<colorTriggerBgColor>#000000</colorTriggerBgColor>
 							<regexCodeList>
-								<string>(nikla ranke|niewielka rane|zauwazalna rane|spora rane|gleboka rane|paskudna rane|przedziurawione na wylot cialo, ktore pada na ziemie)</string>
+								<string>(nikla ranke|niewielka rane|zauwazalna rane|spora rane|gleboka rane|paskudna rane|prawie smiertelna rane, tnac miesnie i pryskajac krwia|przedziurawione na wylot cialo, ktore pada na ziemie)</string>
 								<string>(mija jednak cel|uchyla sie)</string>
+								<string>(nieznaczny uszczerbek|niewielki uszczerbek|zauwazalny uszczerbek|spory uszczerbek|gleboka dziure|paskudny uszczerbek|prawie smiertelny w skutkach brak|zmasakrowane szczatki)</string>
 							</regexCodeList>
 							<regexCodePropertyList>
+								<integer>1</integer>
 								<integer>1</integer>
 								<integer>1</integer>
 							</regexCodePropertyList>
@@ -2159,7 +2161,7 @@
 					<colorTriggerFgColor>#000000</colorTriggerFgColor>
 					<colorTriggerBgColor>#000000</colorTriggerBgColor>
 					<regexCodeList>
-						<string>^Jestes (slabiutk|slabowit|watl|cherlaw|slab|krzepk|siln|mocn|teg|potezn|mocarn|tytaniczn|wszechmocn)(i|y|a)( jak na legende | jak na polboga | jak na polboginie | jak na boga | jak na boginie | )?(\(.*\)| |).$</string>
+						<string>^Jestes (slabiutk|slabowit|watl|cherlaw|slab|krzepk|siln|mocn|teg|potezn|mocarn|tytaniczn|wszechmocna)(i|y|a)( jak na legende | jak na polboga | jak na polboginie | jak na boga | jak na boginie | )?(\(.*\)| |).$</string>
 						<string>^Jestes (nieskoordynowan|niezdarn|niezreczn|niezgrabn|niewprawn|sprawn|zreczn|szybk|wprawn|zwinn|gibk|akrobatyczn|ekwilibrystyczn)(i|y|a)( jak na legende | jak na polboga | jak na polboginie | jak na boga | jak na boginie | )?(\(.*\)| |).$</string>
 						<string>^Jestes (delikatn|chorowit|rachityczn|mizern|kruch|dobrze zbudowan|wytrzymal|odporn|masywn|tward|umiesnion|muskularn|atletyczn)(i|y|a)( jak na legende | jak na polboga | jak na polboginie | jak na boga | jak na boginie | )?(\(.*\)| |).$</string>
 						<string>^Jestes (bezmysln|ciemn|tep|nierozumn|ograniczon|rozgarniet|pojetn|zmysln|inteligentn|lotn|bystr|blyskotliw|genialn)(i|y|a)( jak na legende | jak na polboga | jak na polboginie | jak na boga | jak na boginie | |)?(\(.*\)| |)?.$</string>
