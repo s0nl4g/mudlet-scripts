@@ -428,7 +428,7 @@
 					<name>gonienie</name>
 					<script>triggers_gonienie_func()</script>
 					<triggerType>0</triggerType>
-					<conditonLineDelta>20</conditonLineDelta>
+					<conditonLineDelta>2</conditonLineDelta>
 					<mStayOpen>0</mStayOpen>
 					<mCommand></mCommand>
 					<packageName></packageName>
@@ -440,6 +440,28 @@
 					<regexCodeList>
 						<string>(.*) uciekl(|a|o) ci\.$</string>
 						<string>(.*) (odchodzi|w panice wybiega|odlatuje|wjezdza) na ([a-z-]+)\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="yes" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>gonienie_team</name>
+					<script>triggers_gonienie_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>2</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>(.*) uciekl(|a|o) ci\.$</string>
+						<string>^Razem z (.*) na ([a-z-]+) podaza (.*)\.$</string>
 					</regexCodeList>
 					<regexCodePropertyList>
 						<integer>1</integer>
