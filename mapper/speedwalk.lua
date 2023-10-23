@@ -75,26 +75,70 @@ function scripts.speedwalk:wyjdzSpecjalnym()
 		end
 	end
 	if(table.size(cmds) == 0) then
-		echo("    Brak wyjsc specjalnych.\n")
-		return
+		echo("    Brak wyjsc specjalnych.\n") -- brak wyjsc -> komunikat
+	else
+		send(cmds[1], true) -- wiecej niz zero wyjsc -> pierwsze wyjscie
 	end
-	if(table.size(cmds) == 1) then
-		send(cmds[1], true)
-		return
+end
+
+function scripts.speedwalk:wyjdzSpecjalnym2()
+	local cmdsmap = getSpecialExits(scripts.mapper.currentRoom.id) or {}
+	local cmds = scripts.mapper.currentRoom.specialExits
+
+	for k, v in pairs(cmdsmap) do
+		for kk, vv in pairs(v) do
+			if(table.index_of(cmds, kk) == nil) then
+				table.insert(cmds, kk)
+			end
+		end
 	end
-	if(table.contains(cmds, "wejscie")) then
-		send("wejscie", true)
-		return
+	if(table.size(cmds) == 0) then
+		echo("    Brak wyjsc specjalnych.\n") -- brak wyjsc -> komunikat
+	elseif(table.size(cmds) == 1) then
+		send(cmds[1], true) -- dokladnie jedno wyjscie -> pierwsze wyjscie
+	else
+		send(cmds[2], true) -- wiecej niz jedno wyjscie -> drugie wyjscie
 	end
-	if(table.contains(cmds, "schody")) then
-		send("schody", true)
-		return
+end
+
+function scripts.speedwalk:wyjdzSpecjalnym3()
+	local cmdsmap = getSpecialExits(scripts.mapper.currentRoom.id) or {}
+	local cmds = scripts.mapper.currentRoom.specialExits
+
+	for k, v in pairs(cmdsmap) do
+		for kk, vv in pairs(v) do
+			if(table.index_of(cmds, kk) == nil) then
+				table.insert(cmds, kk)
+			end
+		end
 	end
-	if(table.contains(cmds, "wyjscie")) then
-		send("wyjscie", true)
-		return
+	if(table.size(cmds) == 0) then
+		echo("    Brak wyjsc specjalnych.\n") -- brak wyjsc -> komunikat
+	elseif table.size(cmds) == 1 or table.size(cmds) == 2 then
+		send(cmds[1], true) -- jedno lub dwa wyjscia -> pierwsze wyjscie
+	else
+		send(cmds[3], true) -- wiecej niz dwa wyjscia -> trzecie wyjscie
 	end
-	echo("    Zbyt wiele wyjsc specjalnych!\n")
+end
+
+function scripts.speedwalk:wyjdzSpecjalnym4()
+	local cmdsmap = getSpecialExits(scripts.mapper.currentRoom.id) or {}
+	local cmds = scripts.mapper.currentRoom.specialExits
+
+	for k, v in pairs(cmdsmap) do
+		for kk, vv in pairs(v) do
+			if(table.index_of(cmds, kk) == nil) then
+				table.insert(cmds, kk)
+			end
+		end
+	end
+	if(table.size(cmds) == 0) then
+		echo("    Brak wyjsc specjalnych.\n") -- brak wyjsc -> komunikat
+	elseif table.size(cmds) == 1 or table.size(cmds) == 2 or table.size(cmds) == 3 then
+		send(cmds[1], true) -- jedno, dwa lub trzy wyjscia -> pierwsze wyjscie
+	else
+		send(cmds[4], true) -- wiecej niz trzy wyjscia -> czwarte wyjscie
+	end
 end
 
 if scripts.event_handlers["scipts/mapper/speedwalk/newroom"] then
