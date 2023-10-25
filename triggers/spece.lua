@@ -61,13 +61,16 @@ function trigger_szermierze_spec_obrazenia_func(cios)
 
     if cios == "mija jednak cel" or cios == "uchyla sie" then
         fg'plum'
-        scripts.spece:ustaw_kolor_i_prefiks_atakujacego("SZ", false)
+        scripts.spece:ustaw_kolor_i_prefiks_atakujacego("SZ 0/8", false)
+	elseif cios == "nieznaczny uszczerbek" or cios == "niewielki uszczerbek" or cios == "zauwazalny uszczerbek" or cios == "spory uszczerbek" or cios == "gleboka dziure" or cios == "paskudny uszczerbek" or cios == "prawie smiertelny w skutkach brak" or cios == "zmasakrowane szczatki" then	
+	    ipoz, max = scripts.opisy_poziomow:jakiPoziomOpisu(scripts.opisy_poziomow.szermierz_sila_speca_zywiolaki, cios:lower())
+        scripts.spece:ustaw_kolor_i_prefiks_atakujacego("SZ "..ipoz.."/"..max-1, true)
     else
         ipoz, max = scripts.opisy_poziomow:jakiPoziomOpisu(scripts.opisy_poziomow.szermierz_sila_speca, cios:lower())
-        scripts.spece:ustaw_kolor_i_prefiks_atakujacego("SZ", true)
+        scripts.spece:ustaw_kolor_i_prefiks_atakujacego("SZ "..ipoz.."/"..max-1, true)
     end
-
-
+	
+    resetFormat()
 end
 
 function trigger_szermierze_spec_rozbrojenie_func()
@@ -81,7 +84,9 @@ function trigger_szermierze_spec_rozbrojenie_func()
         fg'orange_red'
     else
         fg'plum'
-    end    
+    end
+
+    resetFormat()    
 end
 
 function trigger_szermierze_spec_unik_func()
@@ -96,4 +101,6 @@ function trigger_szermierze_spec_unik_func()
     else
         fg'plum'
     end
+	
+    resetFormat()
 end

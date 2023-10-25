@@ -3,7 +3,7 @@ function trigger_jest_prompt_func()
 end
 function trigger_usun_prompt_func()
     selectCurrentLine()
-    replaceLine()
+    replaceLine("")
 end
 function trigger_podmieniaj_taby_func()
     while selectString("\t",1) > -1 do

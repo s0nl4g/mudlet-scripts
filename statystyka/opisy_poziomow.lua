@@ -108,6 +108,18 @@ scripts.opisy_poziomow["szermierz_sila_speca"] = {
 		""
 	}
 	
+scripts.opisy_poziomow["szermierz_sila_speca_zywiolaki"] = {
+		"nieznaczny uszczerbek",
+		"niewielki uszczerbek",
+		"zauwazalny uszczerbek",
+		"spory uszczerbek",
+		"gleboka dziure",
+		"paskudny uszczerbek",
+		"prawie smiertelny w skutkach brak",
+		"zmasakrowane szczatki",
+		""
+	}
+	
 scripts.opisy_poziomow["szeregi"] = {["pierwszym"] = 1, ["drugim"] = 2, ["trzecim"] = 3}
 
 function scripts.opisy_poziomow:jakiPoziomOpisu(tabelka, opis)
