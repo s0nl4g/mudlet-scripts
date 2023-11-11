@@ -1705,8 +1705,10 @@
 					<string>koncentr</string>
 					<string>zaklec</string>
 					<string>czar</string>
+					<string>run</string>
 				</regexCodeList>
 				<regexCodePropertyList>
+					<integer>0</integer>
 					<integer>0</integer>
 					<integer>0</integer>
 					<integer>0</integer>
@@ -1844,9 +1846,11 @@
 					<colorTriggerBgColor>#000000</colorTriggerBgColor>
 					<regexCodeList>
 						<string>Probujesz opanowac zaklecie, ale masz zbyt male umiejetnosci, by temu sprostac.</string>
+						<string>Jestes zbyt oslabion(y|a|e) mentalnie, aby stworzyc jakakolwiek rune.</string>
 					</regexCodeList>
 					<regexCodePropertyList>
 						<integer>0</integer>
+						<integer>1</integer>
 					</regexCodePropertyList>
 				</Trigger>
 				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
@@ -1863,7 +1867,7 @@
 					<colorTriggerFgColor>#000000</colorTriggerFgColor>
 					<colorTriggerBgColor>#000000</colorTriggerBgColor>
 					<regexCodeList>
-						<string>Mozesz sie ponownie skoncentrowac nad zakleciem (.+).</string>
+						<string>Mozesz sie ponownie skoncentrowac nad (zakleciem|runa) (.+).</string>
 					</regexCodeList>
 					<regexCodePropertyList>
 						<integer>1</integer>
@@ -1910,8 +1914,10 @@
 						<string>Unosisz do gory rece i koncentrujesz sie nad modlitwa.</string>
 						<string>bierze gleboki oddech, probujac skoncentrowac sie i wyciszyc swoj umysl.</string>
 						<string>inkantuje slowa zaklecia.</string>
+						<string>Powtarzajac cicho ezoteryczna mantre, koncentrujesz sie na zrodlach wewnetrznej sily swojego umyslu.</string>
 					</regexCodeList>
 					<regexCodePropertyList>
+						<integer>0</integer>
 						<integer>0</integer>
 						<integer>0</integer>
 						<integer>0</integer>
