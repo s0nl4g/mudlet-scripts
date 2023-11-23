@@ -2795,7 +2795,7 @@ resetFormat()</script>
 					<colorTriggerFgColor>#000000</colorTriggerFgColor>
 					<colorTriggerBgColor>#000000</colorTriggerBgColor>
 					<regexCodeList>
-						<string>\b(((\w+|(dobrze|bardzo) \w+) (\w+ (splugawiony |)(kobold|gnoll|ogr|troll|ryboczlek|gigant|topielec|topielce|hobgoblin|szkielet|czarnotrup|kula|zombie|zombi|cien|goblin|wodz|barbarzynca|minotaur|goblinka|piekielny ogar|zmijoszpon|harpia|ork|uruk|(karzel|karly)|ogrylion|harpie|zywiolak|gobor|mezczyzna|mezczyzni|hobgobor|kosciej|kosciotrup|upior|marynarz|zjawa)(e|y|i|))))\b</string>
+						<string>\b(((\w+|(dobrze|bardzo) \w+) (\w+ (splugawiony |)(kobold|gnoll|ogr|troll|ryboczlek|gigant|topielec|topielce|hobgoblin|szkielet|czarnotrup|kula|zombie|zombi|cien|goblin|wodz|barbarzynca|minotaur|goblinka|piekielny ogar|zmijoszpon|harpia|ork|uruk|(karzel|karly)|ogrylion|harpie|gobor|mezczyzna|mezczyzni|hobgobor|kosciej|kosciotrup|upior|marynarz|zjawa)(e|y|i|))))\b</string>
 					</regexCodeList>
 					<regexCodePropertyList>
 						<integer>1</integer>
