@@ -10,6 +10,7 @@ return {
     "okienka/utils",
     "okienka/czat_windows",
     "okienka/stats_groups",
+	"okienka/okno_kondycji",
     "okienka/startup",
     "mapper/mapper",
     "mapper/minimap",
@@ -48,6 +49,7 @@ return {
     "installer/latest",
     "installer/installer",
     "event_register",
+	"utils/invalid_command",
     "help/help",
     "aliases/aliases",
     "aliases/wyjscia",
@@ -63,6 +65,7 @@ return {
     "statystyka/cechy",
     "aliases/postepy",
     "walka/walka",
+	"walka/manewry",
     "gmcp/gmcp_Objects_Nums",
     "gmcp/gmcp_Objects_Data"
 }

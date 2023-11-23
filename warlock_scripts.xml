@@ -2603,6 +2603,34 @@ resetFormat()</script>
 				</Alias>
 			</AliasGroup>
 			<AliasGroup isActive="yes" isFolder="yes">
+				<name>Manewry</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>zabij po symbolu</name>
+					<script>zabij_po_symbolu()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/z (.*)</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>zaslon po symbolu</name>
+					<script>zaslon_po_symbolu()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/zas (.*)</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>wycofka za symbol</name>
+					<script>wycofka_po_symbolu()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/wyc (.*)</regex>
+				</Alias>
+			</AliasGroup>
+			<AliasGroup isActive="yes" isFolder="yes">
 				<name>Wyjscia</name>
 				<script></script>
 				<command></command>

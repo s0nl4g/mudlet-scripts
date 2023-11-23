@@ -141,11 +141,8 @@ function scripts.speedwalk:wyjdzSpecjalnym4()
 	end
 end
 
-if scripts.event_handlers["scipts/mapper/speedwalk/newroom"] then
-    killAnonymousEventHandler(scripts.event_handlers["scipts/mapper/speedwalk/newroom"])
+if scripts.event_handlers["scripts/mapper/speedwalk/newroom"] then
+    killAnonymousEventHandler(scripts.event_handlers["scripts/mapper/speedwalk/newroom"])
 end
 
-scripts.event_handlers["scipts/mapper/speedwalk/newroom"] = registerAnonymousEventHandler("warlock.newRoom", "scripts.speedwalk:doSpeedWalkStep")
-
-
-
+scripts.event_handlers["scripts/mapper/speedwalk/newroom"] = registerAnonymousEventHandler("warlock.newRoom", "scripts.speedwalk:doSpeedWalkStep")

@@ -135,8 +135,10 @@ function poziom_zuzycia_func()
 		["jest w zlym stanie."] = 4,
 		["jest poszczerbiony."] = 5,
 		["jest poszczerbiona."] = 5,
+		["jest poszczerbione."] = 5,
 		["jest lekko poszczerbiony."] = 6,
 		["jest lekko poszczerbiona."] = 6,
+		["jest lekko poszczerbione."] = 6,
 		["widac na nim liczne slady walk."] = 7,
 		["widac na niej liczne slady walk."] = 7,
 		["widac na nim slady walk."] = 8,
@@ -146,15 +148,15 @@ function poziom_zuzycia_func()
 	}
 
 	local przetrwanieMap = {
-		["jeszcze chwile sluzyc."] = 1,
-		["jeszcze krotko sluzyc."] = 2,
-		["jeszcze troche sluzyc."] = 3,
-		["jeszcze przecietnie dlugo sluzyc."] = 4,
-		["jeszcze dlugo sluzyc."] = 5,
-		["jeszcze bardzo dlugo sluzyc."] = 6,
-		["jeszcze nieprawdopodobnie dlugo sluzyc."] = 7,
-		["jeszcze nieskonczenie dlugo sluzyc."] = 8,
-		["wiecznie sluzyc."] = 8
+		["jeszcze chwile sluzyc."] = {1, "0-4h"},
+		["jeszcze krotko sluzyc."] = {2, "4-12h"},
+		["jeszcze troche sluzyc."] = {3, "12-18h"},
+		["jeszcze przecietnie dlugo sluzyc."] = {4, "18-24h"},
+		["jeszcze dlugo sluzyc."] = {5, "1-3 dni"},
+		["jeszcze bardzo dlugo sluzyc."] = {6, "3-7 dni"},
+		["jeszcze nieprawdopodobnie dlugo sluzyc."] = {7, "7+ dni"},
+		["jeszcze nieskonczenie dlugo sluzyc."] = {8, "PERM"},
+		["wiecznie sluzyc."] = {8, "PERM"}
 	}
 
 	if zniszczenieMap[matches[2]] ~= nil then
@@ -191,24 +193,24 @@ function poziom_zuzycia_func()
 
 	if przetrwanieMap[matches[3]] ~= nil then
 
-		local poziom_przetrwania = matches[2] .. (przetrwanieMap[matches[3]] == 8 and " [PERM]"or " [" .. przetrwanieMap[matches[3]] .. "/7]")
-		local kolor_przetrwania = "red"
+		local poziom_przetrwania = matches[2] .. " [" .. przetrwanieMap[matches[3]][2] .. "]"
+		local kolor_przetrwania
 
-		if przetrwanieMap[matches[3]] == 1 then
+		if przetrwanieMap[matches[3]][1] == 1 then
 			kolor_przetrwania = "56,153,153"
-		elseif przetrwanieMap[matches[3]] == 2 then
+		elseif przetrwanieMap[matches[3]][1] == 2 then
 			kolor_przetrwania = "72,169,163"
-		elseif przetrwanieMap[matches[3]] == 3 then
+		elseif przetrwanieMap[matches[3]][1] == 3 then
 			kolor_przetrwania = "88,185,174"
-		elseif przetrwanieMap[matches[3]] == 4 then
+		elseif przetrwanieMap[matches[3]][1] == 4 then
 			kolor_przetrwania = "104,201,184"
-		elseif przetrwanieMap[matches[3]] == 5 then
+		elseif przetrwanieMap[matches[3]][1] == 5 then
 			kolor_przetrwania = "120,217,195"
-		elseif przetrwanieMap[matches[3]] == 6 then
+		elseif przetrwanieMap[matches[3]][1] == 6 then
 			kolor_przetrwania = "136,233,205"
-		elseif przetrwanieMap[matches[3]] == 7 then
+		elseif przetrwanieMap[matches[3]][1] == 7 then
 			kolor_przetrwania = "152,249,216"
-		elseif przetrwanieMap[matches[3]] == 8 then
+		elseif przetrwanieMap[matches[3]][1] == 8 then
 			kolor_przetrwania = "168,247,237"
 		end
 
