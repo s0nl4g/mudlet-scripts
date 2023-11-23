@@ -6,9 +6,9 @@ scripts.character_id = ""
 function scripts:print_log(msg, new_line)
     if msg then
         if new_line then
-            cecho("\n<CadetBlue>(skrypty)<purple>: " .. msg .. "\n")
+            cecho("\n<CadetBlue>(skrypty):<purple> " .. msg .. "\n")
         else
-            cecho("<CadetBlue>(skrypty)<purple>: " .. msg .. "\n")
+            cecho("<CadetBlue>(skrypty):<purple> " .. msg .. "\n")
         end
     end
 end
@@ -18,7 +18,7 @@ function scripts:print_log_nobr(msg, new_line, color)
         if new_line then
             echo("\n")
         end
-        cecho(string.format("<CadetBlue>(skrypty)<%s>: %s", color, msg))
+        cecho(string.format("<CadetBlue>(skrypty):<%s> %s", color, msg))
     end
     resetFormat()
 end

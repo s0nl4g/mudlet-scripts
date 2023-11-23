@@ -51,7 +51,9 @@ function scripts.windows:createChatWindows(window)
 	chatConsole = Geyser.MiniConsole:new({
   		name="chat_rozmowy", x = "1px", y = "1px",
   		width="-1px", height="-1px",
-		wrapAt=100,
+		autoWrap = true,
+		fontSize = getFontSize("main"),
+		font = getFont("main"),
 	}, chatContainer)
 	scripts.windows:createBox(chatContainer, "chatBox", "2px", "gray")
 	chatConsole:setColor(0, 10, 0)

@@ -18,7 +18,7 @@ function load_scripts(force)
         cecho("\n\n<red>Zaktualizuj Mudlet. Skrypty moga nie dzialac poprawnie! Wymagana wersja 4.15+\n\n")
     end
 
-    cecho("\n<CadetBlue>(skrypty)<tomato>: Laduje pliki skryptow\n")
+    cecho("\n<CadetBlue>(skrypty):<tomato> Laduje pliki skryptow.\n")
     package.loaded.scriptsList = nil
 
     local mudlet_modules = require("scriptsList")
@@ -33,8 +33,8 @@ function load_scripts(force)
             cecho("\n\n")
             cecho("<red>" .. err)
             cecho("\n")
-            cecho("\n<CadetBlue>(skrypty)<red>: Jezeli widzisz ten blad to cos poszlo nie tak z ladowaniem skryptow.")
-            cecho("\n<CadetBlue>(skrypty)<red>: Przeinstaluj skrypty. Jezeli to nie pomoze to zglos problem zalaczajac powyzszy komunikat bledu.")
+            cecho("\n<CadetBlue>(skrypty):<red> Jezeli widzisz ten blad to cos poszlo nie tak z ladowaniem skryptow.")
+            cecho("\n<CadetBlue>(skrypty):<red> Przeinstaluj skrypty. Jezeli to nie pomoze to zglos problem zalaczajac powyzszy komunikat bledu.")
             cecho("\n\n")
         end
     end
