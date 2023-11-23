@@ -6,7 +6,7 @@ function zabij_po_symbolu()
 
 	for k, v in pairs(scripts.walka.objects) do
 		if tostring(v.symbol) == matches[2] then
-			if v.avatar == 1 or v.team then
+			if v.avatar == 1 or v.team == 1 then
 				scripts:print_log("<light_steel_blue>Chyba nie chcesz zaatakowac takiego slabeusza?")
 			elseif (v.player == 1 or v.mercenary == 1) and player_killer == 0 then
 				scripts:print_log("<i><grey>No, no, tyle agresji.</i>")
