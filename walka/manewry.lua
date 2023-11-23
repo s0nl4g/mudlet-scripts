@@ -30,8 +30,8 @@ end
 
 function zaslon_po_symbolu()
 
-local znaleziono_cel = 0
-local potwierdzenie_zaslony = 1
+	local znaleziono_cel = 0
+	local potwierdzenie_zaslony = 1
 
 	for k, v in pairs(scripts.walka.objects) do
 		if tostring(v.symbol) == matches[2] then
