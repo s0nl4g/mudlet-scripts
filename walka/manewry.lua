@@ -34,7 +34,7 @@ function zaslon_po_symbolu()
 	local potwierdzenie_zaslony = 1
 
 	for k, v in pairs(scripts.walka.objects) do
-		if tostring(v.symbol) == matches[2] then
+		if tostring(v.symbol) == string.upper(matches[2]) then
 			if v.avatar == 1 then
 				scripts:print_log("<light_steel_blue>Ktos inny musi cie uratowac.")
 			elseif v.team == 1 then
@@ -62,7 +62,7 @@ function wycofka_po_symbolu()
 	local potwierdzenie_wycofki = 1
 
 	for k, v in pairs(scripts.walka.objects) do
-		if tostring(v.symbol) == matches[2] then
+		if tostring(v.symbol) == string.upper(matches[2]) then
 			if v.avatar == 1 then
 				scripts:print_log("<light_steel_blue>Ktos inny musi cie uratowac.")
 			elseif v.team == 1 then

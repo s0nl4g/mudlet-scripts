@@ -37,7 +37,7 @@ function update_okno_kondycji()
 
 	--for k, v in pairs(scripts.walka.objects) do
 	for _, id in ipairs(scripts.walka.nums) do --ipairs + nums to keep correct object order
-		local v = scripts.walka.objects[tostring(id)]
+		local v = scripts.walka.objects[tostring(id)] or {}
 		if v.avatar == 1 then
 			local kolor_hp = "<"..table.concat(hp_color_scale[v.hp+1],",")..">"
 			local kolor1 = kolor_druzyny
@@ -52,13 +52,13 @@ function update_okno_kondycji()
 			end
 			local strzalka = v.targeted_by and kolor_ramek.."<-- ["..kolor2..table.concat(v.targeted_by, kolor_ramek..","..kolor2)..kolor_ramek.."]" or ""
 			local kratki_hp = string.rep(symbol_hp, v.hp+1)
-			local szyk = v.team_rank == 0 and " " or v.team_rank
+			local szyk = v.team_rank == 0 and " " or (v.team_rank == 10 and 3) or v.team_rank
 			decho("Okno Kondycji",string.format("\n"..kolor_ramek.."%3s["..kolor_hp.."%-14s"..kolor_ramek.."][%s]"..kolor1.." %s %s", symbol, kratki_hp, szyk, desc, strzalka))
 		end
 	end
 
 	for _, id in ipairs(scripts.walka.nums) do
-		local v = scripts.walka.objects[tostring(id)]
+		local v = scripts.walka.objects[tostring(id)] or {}
 		if v.team == 1 and v.avatar == 0 then
 			local kolor_hp = "<"..table.concat(hp_color_scale[v.hp+1],",")..">"
 			local kolor1 = kolor_druzyny
@@ -73,13 +73,13 @@ function update_okno_kondycji()
 			end
 			local strzalka = v.targeted_by and kolor_ramek.."<-- ["..kolor2..table.concat(v.targeted_by, kolor_ramek..","..kolor2)..kolor_ramek.."]" or ""
 			local kratki_hp = string.rep(symbol_hp, v.hp+1)
-			local szyk = v.team_rank == 0 and " " or v.team_rank
+			local szyk = v.team_rank == 0 and " " or (v.team_rank == 10 and 3) or v.team_rank
 			decho("Okno Kondycji",string.format("\n"..kolor_ramek.."%3s["..kolor_hp.."%-14s"..kolor_ramek.."][%s]"..kolor1.." %s %s", symbol, kratki_hp, szyk, desc, strzalka))
 		end
 	end
 
 	for _, id in ipairs(scripts.walka.nums) do
-		local v = scripts.walka.objects[tostring(id)]
+		local v = scripts.walka.objects[tostring(id)] or {}
 		if v.team == 0 and v.avatar == 0 then
 			local kolor_hp = "<"..table.concat(hp_color_scale[v.hp+1],",")..">"
 			local kolor1 = kolor_neutralnych
@@ -96,7 +96,7 @@ function update_okno_kondycji()
 			local desc = v.desc or ""
 			local strzalka = v.targeted_by and kolor_ramek.."<-- ["..kolor2..table.concat(v.targeted_by, kolor_ramek..","..kolor2)..kolor_ramek.."]" or ""
 			local kratki_hp = string.rep(symbol_hp, v.hp+1)
-			local szyk = v.team_rank == 0 and " " or v.team_rank
+			local szyk = v.team_rank == 0 and " " or (v.team_rank == 10 and 3) or v.team_rank
 			decho("Okno Kondycji",string.format("\n"..kolor_ramek.."%3s["..kolor_hp.."%-14s"..kolor_ramek.."][%s]"..kolor1.." %s %s", symbol, kratki_hp, szyk, desc, strzalka))
 		end
 	end
