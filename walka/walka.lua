@@ -10,7 +10,13 @@ end
 function scripts.walka:process_objects(objects)
 
     for k,v in pairs(scripts.walka.objects) do
-        if not table.contains(scripts.walka.nums, tonumber(k)) then
+		local remove = true;
+		for z,n in pairs(scripts.walka.nums) do
+			if tonumber(k) == n then
+				remove = false
+			end
+		end
+        if remove then
             scripts.walka.objects[k] = nil
             scripts.windows:hideEnemyStatsFor(tonumber(k))
         end
