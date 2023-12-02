@@ -23,7 +23,7 @@ function scripts.walka:process_objects(objects)
 	local letters = 0
 	
 	for _, id in ipairs(scripts.walka.nums) do --ipairs + nums to keep correct symbol order
-		local v = scripts.walka.objects[tostring(id)]
+		local v = scripts.walka.objects[tostring(id)] or {}
 		if v.avatar == 1 then
 			v.symbol = "@"
 			v.hostile = 0
