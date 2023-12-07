@@ -74,7 +74,7 @@ function update_okno_kondycji()
 			local strzalka = v.targeted_by and kolor_ramek.."<-- ["..kolor2..table.concat(v.targeted_by, kolor_ramek..","..kolor2)..kolor_ramek.."]" or ""
 			local kratki_hp = string.rep(symbol_hp, v.hp+1)
 			local szyk = v.team_rank == 0 and " " or (v.team_rank == 10 and 3) or v.team_rank
-			decho("Okno Kondycji",string.format("\n"..kolor_ramek.."%3s["..kolor_hp.."%-14s"..kolor_ramek.."][%s]"..kolor1.." %s %s", symbol, kratki_hp, szyk, desc, strzalka))
+			dechoLink("Okno Kondycji",string.format("\n"..kolor_ramek.."%3s["..kolor_hp.."%-14s"..kolor_ramek.."][%s]"..kolor1.." %s %s", symbol, kratki_hp, szyk, desc, strzalka), function() expandAlias("/zas "..symbol) end, "zaslon "..symbol.." - "..desc.." ("..id..")", true)
 		end
 	end
 
@@ -97,7 +97,7 @@ function update_okno_kondycji()
 			local strzalka = v.targeted_by and kolor_ramek.."<-- ["..kolor2..table.concat(v.targeted_by, kolor_ramek..","..kolor2)..kolor_ramek.."]" or ""
 			local kratki_hp = string.rep(symbol_hp, v.hp+1)
 			local szyk = v.team_rank == 0 and " " or (v.team_rank == 10 and 3) or v.team_rank
-			decho("Okno Kondycji",string.format("\n"..kolor_ramek.."%3s["..kolor_hp.."%-14s"..kolor_ramek.."][%s]"..kolor1.." %s %s", symbol, kratki_hp, szyk, desc, strzalka))
+			dechoLink("Okno Kondycji",string.format("\n"..kolor_ramek.."%3s["..kolor_hp.."%-14s"..kolor_ramek.."][%s]"..kolor1.." %s %s", symbol, kratki_hp, szyk, desc, strzalka),	function() expandAlias("/z "..symbol) end, "zabij "..symbol.." - "..desc.." ("..id..")", true)
 		end
 	end
 
