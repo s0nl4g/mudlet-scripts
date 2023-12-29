@@ -67,5 +67,7 @@ return {
     "walka/walka",
 	"walka/manewry",
     "gmcp/gmcp_Objects_Nums",
-    "gmcp/gmcp_Objects_Data"
+    "gmcp/gmcp_Objects_Data",
+	"mapper/zaznaczanie",
+	"media/dzwieki"
 }

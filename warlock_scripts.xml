@@ -1321,6 +1321,112 @@
 							</regexCodePropertyList>
 						</Trigger>
 					</TriggerGroup>
+					<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>spece druid</name>
+						<script></script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList />
+						<regexCodePropertyList />
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>susy</name>
+							<script>deleteLine()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>^W dwoch szybkich susach skracasz dystans do (.*?) i przemykajac tuz obok (.*?) umykasz (.*?) zastawie. Wykonujesz nagly zwrot, by z dziko obnazonymi klami rzucic sie do ataku!$</string>
+								<string>^Z poteznym rykiem stajesz na tylnych nogach, dajac (.*?) do zrozumienia, ze oto zbliza sie potezny atak! Opadasz ciezko na cztery lapy i rozpoczynasz dzika szarze, nie zwracajac uwagi na wymierzone w ciebie ciosy!$</string>
+								<string>^Zwinnie skrecasz cialo do skoku i juz masz rzucic sie na (.*?), lecz zupelnie niespodziewanie przeskakujesz nad (.*?), by znalezc sie za (.*?) plecami. Wykonujesz nagly zwrot, by z rzucic sie do ataku!$</string>
+								<string>^Nieznacznie zmieniasz tempo by z dzikim blyskiem w oku ominac zastawe (.*?) i ze skutecznoscia atakujacej pantery wyprowadzic szybki atak!$</string>
+								<string>^Instynktownie wyczuwasz luke w obronie (.*?) i nie zwlekajac ani chwili rzucasz sie do ataku niczym polujacy jastrzab!$</string>
+								<string>^W dwoch szybkich krokach skracasz dystans do (.*?) i wirujac tuz kolo (.*?) umykasz (.*?) zastawie. Wykonujesz nagly zwrot, by z wilczo obnazonymi zebami rzucic sie do ataku!$</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+								<integer>1</integer>
+								<integer>1</integer>
+								<integer>1</integer>
+								<integer>1</integer>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>spec_wilk</name>
+							<script>spec_druid_wilk_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>^Wykorzystujac swa zwierzeca zajadlosc, probujesz dosiegnac (.*?) wyszczerzonymi zebami. Twoj cios trafia w (.*?), (.*?) Z satysfakcja umykasz poza zasieg przeciwnika.$</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>spec_pantera</name>
+							<script>spec_druid_pantera_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>^Wykorzystujac swa zwierzeca zrecznosc, probujesz dosiegnac (.*?) ostrymi pazurami. Twoj cios trafia w (.*?), (.*?) Z satysfakcja umykasz poza zasieg przeciwnika.$</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>spec_niedzwiedz</name>
+							<script>spec_druid_niedzwiedz_func()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>Wykorzystujac swa zwierzeca sile, probujesz dosiegnac (.*?) wielkimi lapami. Twoj cios trafia w (.*?), (.*?) Z satysfakcja umykasz poza zasieg przeciwnika.</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+					</TriggerGroup>
 				</TriggerGroup>
 			</TriggerGroup>
 			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
@@ -2071,6 +2177,30 @@
 						<integer>1</integer>
 					</regexCodePropertyList>
 				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>plecaki</name>
+					<script>wyswietlZawartoscPlecaka(matches[2])</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>plecak zawiera(.+)</string>
+						<string>sakwa zawiera(.+)</string>
+						<string>torba zawiera(.+)</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
 			</TriggerGroup>
 			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 				<name>Skrzynie</name>
@@ -2465,6 +2595,64 @@ resetFormat()</script>
 					<regexCodeList>
 						<string>^Wydaje ci sie ze poczyni(l|lo|la) (znikome|minimalne|nieznaczne|malutkie|male|nieduze|spore|znaczne|pokazne|duze|wielkie|wspaniale|wysmienite|ogromne|gigantyczne|kolosalne|niesamowite|fantastyczne) postepy jako najemnik.$</string>
 						<string>^Poczynil(es|as) (znikome|minimalne|nieznaczne|malutkie|male|nieduze|spore|znaczne|pokazne|duze|wielkie|wspaniale|wysmienite|ogromne|gigantyczne|kolosalne|niesamowite|fantastyczne) postepy, odkad pojawiles sie w tym swiecie.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>dzwieki</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>event: swieta</name>
+					<script>swieta_event_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^Nie wiedziec skad w twojej dloni znajduje sie malutka migoczaca gwiazdka.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>achievements</name>
+					<script>achievements_sound_func()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#00ffff</mFgColor>
+					<mBgColor>#55007f</mBgColor>
+					<mSoundFile>C:/Users/mateu/.config/mudlet/profiles/Warlock Dev/warlock_scripts/media/pop.wav</mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^(Zdobyles osiagniecie|Zdobylas osiagniecie)</string>
+						<string>^(Zdobyles unikalne przechodnie osiagniecie|Zdobylas unikalne przechodnie osiagniecie)</string>
 					</regexCodeList>
 					<regexCodePropertyList>
 						<integer>1</integer>
@@ -4412,6 +4600,20 @@ replaceLine(("[WIR 5/5] =====&gt; " ..matches[2]))</script>
 					<packageName></packageName>
 					<regex>^/team$</regex>
 				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>zaznaczaj</name>
+					<script>mapper_zaznaczaj_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/zaznaczaj$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>odznaczaj</name>
+					<script>mapper_odznaczaj_func()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/odznaczaj$</regex>
+				</Alias>
 			</AliasGroup>
 			<AliasGroup isActive="yes" isFolder="yes">
 				<name>Manewry</name>
@@ -4730,7 +4932,6 @@ cecho("\n +------------------------+ \n")</script>
 				<regex>/kolory_wylacz</regex>
 			</Alias>
 		</AliasGroup>
-
 	</AliasPackage>
 	<ActionPackage />
 	<ScriptPackage>

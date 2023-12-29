@@ -104,3 +104,51 @@ function trigger_szermierze_spec_unik_func()
 	
     resetFormat()
 end
+
+function spec_druid_wilk_func()
+	local sila_speca = {
+	["nie zadajac zadnych obrazen."] = 0,
+	["pozostawiajac niewiele wiecej niz uklucie."] = 1,
+	["pozostawiajac wyrazne uklucie, ktore po chwili podbiega krwia."] = 2,
+	["pozostawiajac spory, obficie krwawiacy otwor w tkance."] = 3,
+	["pozostawiajac poszarpany, obficie krwawiacy i z pewnoscia bolesny otwor."] = 4,
+	["otwierajac z glosnym mlasnieciem duzy i piekielnie bolesny otwor, ktory juz po chwili wybucha gejzerem krwi, resztek tkanek i kosci!"] = 5
+	}
+
+	prefix("<deep_sky_blue>[WILK "..sila_speca[matches[4]].."/5] ", cecho)
+	selectCaptureGroup(4)
+	setFgColor(230 - (sila_speca[matches[4]] * 255 / 6), 230 - (sila_speca[matches[4]] * 200 / 6), 255)
+	resetFormat()
+end
+
+function spec_druid_pantera_func()
+	local sila_speca = {
+	["nie zadajac zadnych obrazen."] = 0,
+	["pozostawiajac nieznaczna szrame."] = 1,
+	["pozostawiajac brzydka blizne."] = 2,
+	["zostawiajac krwawiaca rane."] = 3,
+	["raniac dotkliwie i bolesnie!"] = 4,
+	["gleboko rozcinajac miesnie, sciegna i kosci, zamieniajac wszystko w krwawa papke!"] = 5
+	}
+
+	prefix("<deep_sky_blue>[PANT "..sila_speca[matches[4]].."/5] ", cecho)
+	selectCaptureGroup(4)
+	setFgColor(230 - (sila_speca[matches[4]] * 255 / 6), 230 - (sila_speca[matches[4]] * 200 / 6), 255)
+	resetFormat()
+end
+
+function spec_druid_niedzwiedz_func()
+	local sila_speca = {
+	["nie zadajac zadnych obrazen."] = 0,
+	["ledwo uderzajac."] = 1,
+	["uderzajac rykoszetem, nie czyniac wiele szkod."] = 2,
+	["silnie uderzajac, pozostawiajac niewielki siniak."] = 3,
+	["mocno uderzajac, pozostawiajac spory podbiegly swieza krwia siniak."] = 4,
+	["precyzyjnie i niezwykle mocno uderzajac, powodujac spore zniszczenia z groznymi i bolesnymi zlamaniami na czele. Paskudnie peknieta i broczaca rana dopelnia obrazu zniszczen!"] = 5
+	}
+
+	prefix("<deep_sky_blue>[MIS "..sila_speca[matches[4]].."/5] ", cecho)
+	selectCaptureGroup(4)
+	setFgColor(230 - (sila_speca[matches[4]] * 255 / 6), 230 - (sila_speca[matches[4]] * 200 / 6), 255)
+	resetFormat()
+end
