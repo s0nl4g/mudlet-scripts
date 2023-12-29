@@ -220,3 +220,127 @@ function poziom_zuzycia_func()
 	end
 
 end
+
+function klasyfikujPrzedmiot(przedmiot)
+    local wzorce_klejnotow = {
+        "turmali", "obsydia", "nefryt", "labrado", "oliwi", "gaga", "fluory", "burszty", "ametys", 
+        "kwar", "rubi", "piry", "serpenty", "per", "malachi", "karneo", "lazury", "aleksandry", 
+        "celesty", "monacy", "azury", "jaspi", "onyk", "awentury", "turku", "opa", "hematy", 
+        "rodoli", "aga", "jaskrawozolt", "apaty", "kyani", "akwamary", "ioli", "diopsy", "cyrko", 
+        "zoisy", "grana", "almandy", "ortokla", "topa", "tytani", "krwawni", "diamen", "szafi", 
+        "szmaragd", "chryzoberyl", "spinel", "chryzopraz", "rodochrozyt", "heliodor", "anataz", 
+        "ruty", "sydery", "beryl", "wiwiani", "mandary"
+    }
+
+    for _, wzorzec in ipairs(wzorce_klejnotow) do
+        if przedmiot:match(wzorzec) then
+            return "klejnoty", przedmiot:match("splugawion") and "orange" or nil
+        end
+    end
+
+    
+    local wzorce_broni = {
+        "darda", "dardy", "multon", "kord", "puginal", "gladius", "topor", "berdysz", "siekier", 
+        "czekan", "oskard", "kilof", "tasak", "tabar", "nadziak", "macan", "miecz", "sihill", 
+        "drannach", "szabl", "szabel", "rapier", "scimitar", "katzbalger", "stilett", "pal", 
+        "sztylet", "halabard", "falchion", "mlot", "obusz", "wloczni", "pik", "noz", "maczug", 
+        "morgenstern", "kordelas", "mizerykordi", "buzdygan", "korbacz", "bulaw", "drag", "kiscien", 
+        "dag", "wloczni", "floret", "wekier", "walek", "kostur", 
+        "kos", "szponton", "partyzan", "glewi", "gizarm", "dzid", "naginat", "rohatyn", 
+        "korsek", "cep", "trojz", "ronkon", "runk", "flamberg", "poltorak", "bulat", "nimsz", 
+        "szamszir", "lami", "schiavon", "lewak", "sierp", "lask", "wid", "saif", "koncerz", 
+        "kij", "espadon", "claymor", "cinquend", "szpad", "karabel", "jatagan", "baselard", "katar", 
+        "bastard", "kafar", "kindzal", "harpun", "kotwic", "kadzielnic", "lancet", "ostrz", "berl", 
+        "chepesz", "talwar", "dluto", "pejcz", "kanczug", "parazonium", "lancuch", "kropacz", 
+        "piernacz", "estok", "bosak", "fink[aei]", "parazoni", "tulich", "navaj",
+    }
+
+    for _, wzorzec in ipairs(wzorce_broni) do
+        if przedmiot:match(wzorzec) then
+            return "bronie", przedmiot:match("splugawion") and "orange" or nil
+        end
+    end
+
+    local wzorce_monet = {
+        {wzorzec = "platynow[%a]* monet", kolor = "cyan"},
+        {wzorzec = "zlot[%a]* monet", kolor = "yellow"},
+        {wzorzec = "srebrn[%a]* monet", kolor = "snow"},
+        {wzorzec = "miedzian[%a]* monet", kolor = "brown"}
+    }
+
+    for _, para in ipairs(wzorce_monet) do
+        if przedmiot:match(para.wzorzec) then
+            return "monety", para.kolor
+        end
+    end
+    
+    local wzorce_zbroi = {
+        "aketon", "rekawice", "pasy", "pas", "koszula", "koszule", "spodnie", "naramienniki",
+        "kirys", "nogawice", "plaszcz", "plaszcze", "nagolenniki", "rekawiczki", "kaptur",
+        "karwasze", "helm", "helmy", "zbroje", "zbroja", "nareczaki", "nalokietniki", "pancerz",
+        "pancerze", "spodenki", "tunika", "tuniki", "dzelaba", "mask", "przylbi"
+    }
+
+    for _, wzorzec in ipairs(wzorce_zbroi) do
+        if przedmiot:match(wzorzec) then
+            return "zbroje", przedmiot:match("splugawion") and "orange" or nil
+        end
+    end
+    
+    local wzorce_tarcz = {
+        "tarcza", "pokrywk", "tarcze", "tarcz", "pawez", "paweze", "pawezy", "puklerz", "puklerzy", "puklerze"
+    }
+
+    for _, wzorzec in ipairs(wzorce_tarcz) do
+        if przedmiot:match(wzorzec) then
+            return "tarcze", przedmiot:match("splugawion") and "orange" or nil
+        end
+    end
+    
+    local wzorce_magiczne = {
+      "zwoj", "ksieg", "ksiazk", "kryszta", "symbol", "run", "gwiazdk", "grymuar"
+      }
+      
+    for _, wzorzec in ipairs(wzorce_magiczne) do
+        if przedmiot:match(wzorzec) then
+         return "magia", przedmiot:match("splugawion") and "orange" or nil
+        end
+    end
+
+    return "inne", nil
+end
+
+function wyswietlZawartoscPlecaka(zawartosc)
+    zawartosc = zawartosc:gsub("^%s+", ""):gsub("%s+$", "") 
+    zawartosc = zawartosc:gsub(" i ", ", ") 
+    zawartosc = zawartosc:gsub("%.", "")
+
+    local linia = "+---------------------------------------------------------------+"
+    cecho("\n/---------------------------------------------------------------\\\n")
+    cecho("|                        P O J E M N I K                        |\n")
+
+  
+    local przedmioty = {}
+    for przedmiot in string.gmatch(zawartosc, '([^,]+)') do
+        przedmiot = przedmiot:gsub("^%s+", ""):gsub("%s+$", "") 
+        local kategoria, kolor = klasyfikujPrzedmiot(przedmiot)
+        przedmioty[kategoria] = przedmioty[kategoria] or {}
+        table.insert(przedmioty[kategoria], {przedmiot, kolor})
+    end
+
+    for kategoria, lista in pairs(przedmioty) do
+        cecho(linia .. "\n")
+        cecho("|     " .. kategoria .. "\n")
+        cecho(linia .. "\n")
+        for _, para in ipairs(lista) do
+            local przedmiot, kolor = unpack(para)
+            if kolor then
+                cecho("<grey>|<" .. kolor .. ">" .. " " .. przedmiot .. "<reset>\n")
+            else
+                cecho("| " .. przedmiot .. "\n")
+            end
+        end
+    end
+
+    cecho(linia .. "\n")
+end
