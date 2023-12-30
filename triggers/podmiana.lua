@@ -31,3 +31,26 @@ function podmiana_postepow_func()
 	resetFormat()
 
 end
+
+function colorizeSkillLevel()
+    local level = matches[2]
+    local levels = {
+        ["ledwo"] = 1, ["mizernie"] = 2, ["slabo"] = 3, ["powierzchownie"] = 4,
+        ["znosnie"] = 5, ["poprawnie"] = 6, ["umiejetnie"] = 7, ["swietnie"] = 8,
+        ["wspaniale"] = 9, ["fenomenalnie"] = 10
+    }
+    local ipoz = levels[level]
+    local max = 10  -- Maksymalna wartość
+
+    if ipoz then
+        selectCaptureGroup(2)
+
+        local greenValue = math.min(255, ipoz * 255 / max)  -- Zwiększa się z poziomem umiejętności
+        local redValue = math.max(0, 255 - ipoz * 255 / max)  -- Zmniejsza się z poziomem umiejętności
+        local blueValue = 0  -- Stała niska wartość, można dostosować
+
+        setFgColor(redValue, greenValue, blueValue)
+    end
+
+    resetFormat()
+end
