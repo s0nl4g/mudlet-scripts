@@ -222,28 +222,6 @@ function poziom_zuzycia_func()
 end
 
 function klasyfikujPrzedmiot(przedmiot)
-    local wzorce_broni = {
-        "darda", "dardy", "multon", "kord", "puginal", "gladius", "topor", "berdysz", "siekier", 
-        "czekan", "oskard", "kilof", "tasak", "tabar", "nadziak", "macan", "miecz", "sihill", 
-        "drannach", "szabl", "szabel", "rapier", "scimitar", "katzbalger", "stilett", 
-        "sztylet", "halabard", "falchion", "mlot", "obusz", "wloczni", "pik", "noz", "maczug", 
-        "morgenstern", "kordelas", "mizerykordi", "buzdygan", "korbacz", "bulaw", "drag", "kiscien", 
-        "dag", "wloczni", "floret", "wekier", "walek", "kostur", 
-        "kos", "szponton", "partyzan", "glewi", "gizarm", "dzid", "naginat", "rohatyn", 
-        "korsek", "cep", "trojz", "ronkon", "runk", "flamberg", "poltorak", "bulat", "nimsz", 
-        "szamszir", "lami", "schiavon", "lewak", "sierp", "lask", "wid", "saif", "koncerz", 
-        "kij", "espadon", "claymor", "cinquend", "szpad", "karabel", "jatagan", "baselard", "katar", 
-        "bastard", "kafar", "kindzal", "harpun", "kotwic", "kadzielnic", "lancet", "ostrz", "berl", 
-        "chepesz", "talwar", "dluto", "pejcz", "kanczug", "parazonium", "lancuch", "kropacz", 
-        "piernacz", "estok", "bosak", "fink[aei]", "parazoni", "tulich", "navaj",
-    }
-
-    for _, wzorzec in ipairs(wzorce_broni) do
-        if przedmiot:match(wzorzec) then
-            return "bronie", przedmiot:match("splugawion") and "orange" or nil
-        end
-    end
-
     local wzorce_monet = {
         {wzorzec = "platynow[%a]* monet", kolor = "cyan"},
         {wzorzec = "zlot[%a]* monet", kolor = "yellow"},
@@ -314,6 +292,29 @@ local kolor = "sea_green"
             return "klejnoty", kolor, przedmiot:match("splugawion") and "orange" or nil
         end
     end
+
+  local wzorce_broni = {
+        "darda", "dardy", "multon", "kord", "puginal", "gladius", "topor", "berdysz", "siekier", 
+        "czekan", "oskard", "kilof", "tasak", "tabar", "nadziak", "macan", "miecz", "sihill", 
+        "drannach", "szabl", "szabel", "rapier", "scimitar", "katzbalger", "stilett", 
+        "sztylet", "halabard", "falchion", "mlot", "obusz", "wloczni", "pik", "noz", "maczug", 
+        "morgenstern", "kordelas", "mizerykordi", "buzdygan", "korbacz", "bulaw", "drag", "kiscien", 
+        "dag", "wloczni", "floret", "wekier", "walek", "kostur", 
+        "kos", "szponton", "partyzan", "glewi", "gizarm", "dzid", "naginat", "rohatyn", 
+        "korsek", "cep", "trojz", "ronkon", "runk", "flamberg", "poltorak", "bulat", "nimsz", 
+        "szamszir", "lami", "schiavon", "lewak", "sierp", "lask", "wid", "saif", "koncerz", 
+        "kij", "espadon", "claymor", "cinquend", "szpad", "karabel", "jatagan", "baselard", "katar", 
+        "bastard", "kafar", "kindzal", "harpun", "kotwic", "kadzielnic", "lancet", "ostrz", "berl", 
+        "chepesz", "talwar", "dluto", "pejcz", "kanczug", "parazonium", "lancuch", "kropacz", 
+        "piernacz", "estok", "bosak", "fink[aei]", "parazoni", "tulich", "navaj",
+    }
+
+    for _, wzorzec in ipairs(wzorce_broni) do
+        if przedmiot:match(wzorzec) then
+            return "bronie", przedmiot:match("splugawion") and "orange" or nil
+        end
+    end
+
 
 local wzorce_mikstur = {
         {wzorzec = "mikstur", kolor = "tan"},
@@ -391,6 +392,11 @@ function wyswietlZawartoscPlecaka(zawartosc)
             else
                 cecho("| " .. przedmiot .. "\n")
             end
+        end
+    end
+
+    cecho(linia .. "\n")
+end
         end
     end
 
