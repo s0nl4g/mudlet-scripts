@@ -397,8 +397,3 @@ function wyswietlZawartoscPlecaka(zawartosc)
 
     cecho(linia .. "\n")
 end
-        end
-    end
-
-    cecho(linia .. "\n")
-end
